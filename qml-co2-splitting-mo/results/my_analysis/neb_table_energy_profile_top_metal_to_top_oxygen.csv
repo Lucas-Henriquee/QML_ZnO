@@ -1,0 +1,6 @@
+material,path,initial_site,final_site,image_index,energy_ev,relative_energy_ev
+ZnO,top_metal_to_top_oxygen,top_metal,top_oxygen,0,294.89489202514477,0.0
+ZnO,top_metal_to_top_oxygen,top_metal,top_oxygen,1,325.209334,30.314441974855242
+ZnO,top_metal_to_top_oxygen,top_metal,top_oxygen,2,327.417998,32.52310597485524
+ZnO,top_metal_to_top_oxygen,top_metal,top_oxygen,3,325.226671,30.33177897485524
+ZnO,top_metal_to_top_oxygen,top_metal,top_oxygen,4,294.91347773984586,0.018585714701089273

@@ -1,0 +1,4 @@
+material,site,tddft_onset_ev,tddft_status
+ZnO,top_metal,0.3010373330858048,ok
+ZnO,top_oxygen,0.3011904243347849,ok
+ZnO,bridge,0.29979805851482905,ok

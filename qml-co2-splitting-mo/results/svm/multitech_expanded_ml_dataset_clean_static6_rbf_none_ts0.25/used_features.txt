@@ -1,0 +1,6 @@
+feature_dft_adsorption_energy_ev
+feature_dft_c_surface_distance_a
+feature_dft_gap_change_ev
+feature_co2rr_deltaG_CO2_to_COOH_ev
+feature_co2rr_deltaG_COOH_to_CO_ev
+feature_co2rr_limiting_potential_v

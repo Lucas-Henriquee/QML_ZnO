@@ -1,0 +1,33 @@
+{
+  "input_csv":"results\/datasets\/multitech_expanded_ml_dataset_clean.csv",
+  "samples":960,
+  "n_features":4,
+  "features":[
+    "feature_tddft_transition_energy_ev",
+    "feature_tddft_transition_oscillator_strength",
+    "feature_md_window_c_surface_distance_mean_a",
+    "feature_md_window_c_surface_distance_std_a"
+  ],
+  "feature_set":"dynamic4",
+  "label":"label_site_id",
+  "classes":[
+    0,
+    1,
+    2
+  ],
+  "kernel":"rbf",
+  "scaler":"minmax",
+  "test_size":0.2,
+  "accuracy":0.8229166667,
+  "balanced_accuracy":0.8229166667,
+  "cv_balanced_accuracy_mean":0.7885416667,
+  "cv_balanced_accuracy_std":0.0209890017,
+  "fit_time_s":0.005878012,
+  "predict_time_s":0.001983475,
+  "cv_time_s":0.043507954,
+  "total_time_s":0.051369441,
+  "train_balanced_accuracy":0.7942708333,
+  "fit_diagnosis":"good_fit",
+  "train_test_gap":-0.0286458333,
+  "shuffle_label":false
+}

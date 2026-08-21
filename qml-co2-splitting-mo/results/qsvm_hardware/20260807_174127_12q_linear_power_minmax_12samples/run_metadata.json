@@ -1,0 +1,122 @@
+{
+  "input_csv": "results/datasets/multitech_expanded_ml_dataset_clean.csv",
+  "features": [
+    "feature_md_window_c_surface_distance_mean_a",
+    "feature_md_window_c_surface_distance_std_a",
+    "feature_md_window_mean_oco_angle_deg"
+  ],
+  "label": "label_site_id",
+  "samples": 12,
+  "train_samples": 8,
+  "test_samples": 4,
+  "class_counts": {
+    "2": 4,
+    "1": 4,
+    "0": 4
+  },
+  "random_state": 42,
+  "test_size": 0.3,
+  "scaler": "power_minmax",
+  "encoding": "custom_multiqubit_zz_reupload",
+  "hardware_kernel_implementation": "manual_bound_compute_uncompute_workaround",
+  "n_data_features": 3,
+  "n_feature_map_parameters": 3,
+  "n_logical_qubits": 12,
+  "reps": 1,
+  "entanglement": "linear",
+  "feature_map_depth_pretranspile": 35,
+  "feature_map_size_pretranspile": 57,
+  "backend": "ibm_marrakesh",
+  "backend_num_qubits": 156,
+  "shots": 512,
+  "optimization_level": 2,
+  "max_circuits_per_job": 100,
+  "runtime_job_tag": "qsvm-33b5357f6e94",
+  "kernel_workload_estimate": {
+    "train_off_diagonal_pairs": 28,
+    "test_train_pairs": 32,
+    "approx_total_fidelity_entries": 60
+  },
+  "classical_rbf": {
+    "accuracy_train": 1.0,
+    "accuracy_test": 0.75,
+    "balanced_accuracy_train": 1.0,
+    "balanced_accuracy_test": 0.8333333333333334,
+    "cpu_wall_time_s": 0.0009940930012817262,
+    "fit_diagnosis": {
+      "train_score": 1.0,
+      "test_score": 0.8333333333333334,
+      "train_test_gap": 0.16666666666666663,
+      "diagnosis": "possible_overfitting"
+    }
+  },
+  "qsvm_hardware": {
+    "accuracy_train": 1.0,
+    "accuracy_test": 0.75,
+    "balanced_accuracy_train": 1.0,
+    "balanced_accuracy_test": 0.8333333333333334,
+    "fit_diagnosis": {
+      "train_score": 1.0,
+      "test_score": 0.8333333333333334,
+      "train_test_gap": 0.16666666666666663,
+      "diagnosis": "possible_overfitting"
+    },
+    "kernel_train_wall_s": 12.086291129000529,
+    "kernel_test_wall_s": 19.160065178000877,
+    "kernel_total_wall_s": 31.246356307001406,
+    "precomputed_svc_cpu_wall_s": 0.0010304900006303797,
+    "reported_quantum_seconds_sum": 13.0
+  },
+  "runtime_jobs": [
+    {
+      "job_id": "d9r462ntfhrs73dr5hdg",
+      "status": "DONE",
+      "tags": [
+        "qsvm-33b5357f6e94"
+      ],
+      "quantum_seconds": 7.0,
+      "metrics": {
+        "caller": "qiskit_ibm_runtime~sampler.py",
+        "qiskit_version": "qiskit_ibm_runtime-0.43.1,qiskit-1.4.6*,qiskit_machine_learning-0.8.4",
+        "timestamps": {
+          "created": "2026-08-07T20:41:46.828592Z",
+          "finished": "2026-08-07T20:42:03.819102Z",
+          "running": "2026-08-07T20:41:48.830624Z"
+        },
+        "bss": {
+          "seconds": 7
+        },
+        "usage": {
+          "quantum_seconds": 7,
+          "seconds": 7,
+          "status": "complete"
+        }
+      }
+    },
+    {
+      "job_id": "d9r45vntfhrs73dr5h5g",
+      "status": "DONE",
+      "tags": [
+        "qsvm-33b5357f6e94"
+      ],
+      "quantum_seconds": 6.0,
+      "metrics": {
+        "caller": "qiskit_ibm_runtime~sampler.py",
+        "qiskit_version": "qiskit_ibm_runtime-0.43.1,qiskit-1.4.6*,qiskit_machine_learning-0.8.4",
+        "timestamps": {
+          "created": "2026-08-07T20:41:34.472179Z",
+          "finished": "2026-08-07T20:41:44.499914Z",
+          "running": "2026-08-07T20:41:36.280158Z"
+        },
+        "bss": {
+          "seconds": 6
+        },
+        "usage": {
+          "quantum_seconds": 6,
+          "seconds": 6,
+          "status": "complete"
+        }
+      }
+    }
+  ]
+}

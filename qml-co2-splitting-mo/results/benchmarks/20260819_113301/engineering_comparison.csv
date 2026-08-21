@@ -1,0 +1,6 @@
+requested_model,model,status,feature_set,n_features,n_qubits,simulator,backend,shots,trial,scaler,encoding,entanglement,reps,test_accuracy,test_balanced_accuracy,test_f1_macro,train_balanced_accuracy,train_test_gap,preprocessing_time_s,kernel_time_s,training_time_s,prediction_time_s,transpilation_time_s,queue_time_s,quantum_time_s,job_wait_time_s,end_to_end_test_time_s,feature_map_depth_pretranspile,feature_map_size_pretranspile,train_transpiled_depth_mean,train_transpiled_2q_mean,fidelity_circuit_count,requested_circuit_shots,runtime_job_count,fair_local_ibm_comparison,fairness_issues,kernel_train_mae_vs_ideal,kernel_test_mae_vs_ideal
+svm,,planned,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+qsvm,,planned,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+qsvm_ibm,,planned,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+qsvm_ibm,,planned,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+qsvm_ibm,,planned,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,

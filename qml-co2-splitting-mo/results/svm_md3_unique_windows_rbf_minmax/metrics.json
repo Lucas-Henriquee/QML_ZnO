@@ -1,0 +1,25 @@
+{
+  "input_csv":"results\/datasets\/md_window_unique_dataset.csv",
+  "samples":30,
+  "n_features":3,
+  "features":[
+    "feature_md_window_c_surface_distance_mean_a",
+    "feature_md_window_c_surface_distance_std_a",
+    "feature_md_window_mean_oco_angle_deg"
+  ],
+  "feature_set":"md3",
+  "label":"label_site_id",
+  "classes":[
+    0,
+    1,
+    2
+  ],
+  "kernel":"rbf",
+  "scaler":"minmax",
+  "test_size":0.25,
+  "accuracy":0.75,
+  "balanced_accuracy":0.6666666667,
+  "cv_balanced_accuracy_mean":0.7666666667,
+  "cv_balanced_accuracy_std":0.1333333333,
+  "shuffle_label":false
+}

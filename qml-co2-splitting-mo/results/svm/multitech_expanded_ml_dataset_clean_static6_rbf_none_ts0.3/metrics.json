@@ -1,0 +1,35 @@
+{
+  "input_csv":"results\/datasets\/multitech_expanded_ml_dataset_clean.csv",
+  "samples":960,
+  "n_features":6,
+  "features":[
+    "feature_dft_adsorption_energy_ev",
+    "feature_dft_c_surface_distance_a",
+    "feature_dft_gap_change_ev",
+    "feature_co2rr_deltaG_CO2_to_COOH_ev",
+    "feature_co2rr_deltaG_COOH_to_CO_ev",
+    "feature_co2rr_limiting_potential_v"
+  ],
+  "feature_set":"static6",
+  "label":"label_site_id",
+  "classes":[
+    0,
+    1,
+    2
+  ],
+  "kernel":"rbf",
+  "scaler":"none",
+  "test_size":0.3,
+  "accuracy":1.0,
+  "balanced_accuracy":1.0,
+  "cv_balanced_accuracy_mean":1.0,
+  "cv_balanced_accuracy_std":0.0,
+  "fit_time_s":0.001479914,
+  "predict_time_s":0.000673846,
+  "cv_time_s":0.015097823,
+  "total_time_s":0.017251583,
+  "train_balanced_accuracy":1.0,
+  "fit_diagnosis":"good_fit",
+  "train_test_gap":0.0,
+  "shuffle_label":false
+}

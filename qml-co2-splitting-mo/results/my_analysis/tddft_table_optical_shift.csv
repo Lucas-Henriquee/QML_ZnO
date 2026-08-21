@@ -1,0 +1,4 @@
+material,site,broadened_peak_ev,shift_from_reference_ev,reference_site
+ZnO,top_metal,0.5320641282565131,0.0,ZnO_top_metal
+ZnO,top_oxygen,0.5320641282565131,0.0,ZnO_top_metal
+ZnO,bridge,0.5320641282565131,0.0,ZnO_top_metal

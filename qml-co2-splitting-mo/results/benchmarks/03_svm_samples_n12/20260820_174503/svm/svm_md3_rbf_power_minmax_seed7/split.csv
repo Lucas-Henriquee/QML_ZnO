@@ -1,0 +1,13 @@
+row_id,split,true_label
+630,train,0
+429,train,0
+935,train,1
+908,train,1
+351,train,0
+706,train,1
+287,train,2
+84,train,2
+298,train,2
+919,test,1
+415,test,0
+318,test,2

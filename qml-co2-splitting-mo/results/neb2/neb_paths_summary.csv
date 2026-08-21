@@ -1,0 +1,4 @@
+material,initial_site,final_site,path,internal_images,total_images,fmax,max_steps,ecut,kpts,interpolation,climb,optimizer,parallel_images,mpi_size,status
+ZnO,top_metal,top_oxygen,top_metal_to_top_oxygen,3,5,0.1,800,350.0,2 2 1,linear,True,FIRE,True,9,converged
+ZnO,top_metal,bridge,top_metal_to_bridge,3,5,0.1,800,350.0,2 2 1,linear,True,FIRE,True,9,max_steps_reached
+ZnO,top_oxygen,bridge,top_oxygen_to_bridge,3,5,0.1,800,350.0,2 2 1,linear,True,FIRE,True,9,converged

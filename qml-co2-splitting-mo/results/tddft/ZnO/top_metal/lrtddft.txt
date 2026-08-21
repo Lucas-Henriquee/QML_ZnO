@@ -1,0 +1,184 @@
+
+Kohn-Sham single transitions
+
+KSS 32 transitions (restrict={})
+KSS TRK sum 2.67149 (1.92335,2.66964,3.42149)
+KSS polarisabilities(l=0-3) 2.67149, 21.9294, 200.371, 1940.21
+
+Linear response TDDFT calculation
+
+RPA 32 transitions
+RPA kss[0]= # <KSSingle> 0->8 0(0) eji=27.9674[eV] (-0.00585789,0.0028975,-0.0126595)
+RPA estimated time left 6s
+RPA kss[1]= # <KSSingle> 0->9 0(0) eji=28.3295[eV] (-0.0368593,-0.00670494,0.0160901)
+RPA estimated time left 5s
+RPA kss[2]= # <KSSingle> 0->10 0(0) eji=28.3401[eV] (0.00385763,0.0337394,0.0230497)
+RPA estimated time left 5s
+RPA kss[3]= # <KSSingle> 0->11 0(0) eji=29.4271[eV] (0.000841038,-0.00213161,0.0037562)
+RPA estimated time left 4s
+RPA kss[4]= # <KSSingle> 1->8 0(0) eji=26.9478[eV] (0.0958766,-0.137389,0.168433)
+RPA estimated time left 4s
+RPA kss[5]= # <KSSingle> 1->9 0(0) eji=27.3099[eV] (-0.00245844,-0.000595899,0.00126945)
+RPA estimated time left 4s
+RPA kss[6]= # <KSSingle> 1->10 0(0) eji=27.3205[eV] (0.0125284,-0.015178,0.023172)
+RPA estimated time left 4s
+RPA kss[7]= # <KSSingle> 1->11 0(0) eji=28.4075[eV] (0.000393422,-0.000807161,0.000722673)
+RPA estimated time left 4s
+RPA kss[8]= # <KSSingle> 2->8 0(0) eji=12.8246[eV] (0.0119935,0.081614,0.063776)
+RPA estimated time left 3s
+RPA kss[9]= # <KSSingle> 2->9 0(0) eji=13.1867[eV] (0.526503,0.0930858,-0.225452)
+RPA estimated time left 3s
+RPA kss[10]= # <KSSingle> 2->10 0(0) eji=13.1973[eV] (-0.0621222,-0.457687,-0.334867)
+RPA estimated time left 3s
+RPA kss[11]= # <KSSingle> 2->11 0(0) eji=14.2843[eV] (-0.0421892,0.0566299,-0.0650984)
+RPA estimated time left 3s
+RPA kss[12]= # <KSSingle> 3->8 0(0) eji=11.7031[eV] (-0.128585,0.39315,-0.260533)
+RPA estimated time left 2s
+RPA kss[13]= # <KSSingle> 3->9 0(0) eji=12.0652[eV] (0.00883813,0.0019498,-0.0021928)
+RPA estimated time left 2s
+RPA kss[14]= # <KSSingle> 3->10 0(0) eji=12.0757[eV] (-0.0179236,0.0482104,-0.0421205)
+RPA estimated time left 2s
+RPA kss[15]= # <KSSingle> 3->11 0(0) eji=13.1628[eV] (-0.000577596,0.00193782,-0.000577422)
+RPA estimated time left 2s
+RPA kss[16]= # <KSSingle> 4->8 0(0) eji=11.6845[eV] (0.462379,0.163434,0.0162763)
+RPA estimated time left 2s
+RPA kss[17]= # <KSSingle> 4->9 0(0) eji=12.0466[eV] (0.00635282,0.000308359,0.015268)
+RPA estimated time left 2s
+RPA kss[18]= # <KSSingle> 4->10 0(0) eji=12.0572[eV] (0.0723429,0.0294619,-0.00605282)
+RPA estimated time left 1s
+RPA kss[19]= # <KSSingle> 4->11 0(0) eji=13.1442[eV] (0.000287814,-0.000808385,0.000498174)
+RPA estimated time left 1s
+RPA kss[20]= # <KSSingle> 5->8 0(0) eji=11.6723[eV] (0.0994498,-0.244535,-0.416406)
+RPA estimated time left 1s
+RPA kss[21]= # <KSSingle> 5->9 0(0) eji=12.0344[eV] (0.00226195,-0.000387114,0.00722666)
+RPA estimated time left 1s
+RPA kss[22]= # <KSSingle> 5->10 0(0) eji=12.045[eV] (0.0243049,-0.041743,-0.0507268)
+RPA estimated time left 1s
+RPA kss[23]= # <KSSingle> 5->11 0(0) eji=13.132[eV] (-0.000766049,0.00133184,-0.000946993)
+RPA estimated time left 1s
+RPA kss[24]= # <KSSingle> 6->8 0(0) eji=8.12228[eV] (-0.0503229,0.0803862,-0.0939071)
+RPA estimated time left 1s
+RPA kss[25]= # <KSSingle> 6->9 0(0) eji=8.48438[eV] (-0.310642,0.443636,-0.545082)
+RPA estimated time left 1s
+RPA kss[26]= # <KSSingle> 6->10 0(0) eji=8.49493[eV] (0.323342,-0.459261,0.566918)
+RPA estimated time left 0s
+RPA kss[27]= # <KSSingle> 6->11 0(0) eji=9.58198[eV] (0.0929553,0.0894121,0.0222292)
+RPA estimated time left 0s
+RPA kss[28]= # <KSSingle> 7->8 0(0) eji=8.11201[eV] (-0.0549171,0.0762185,-0.0876543)
+RPA estimated time left 0s
+RPA kss[29]= # <KSSingle> 7->9 0(0) eji=8.47411[eV] (0.326601,-0.467916,0.575164)
+RPA estimated time left 0s
+RPA kss[30]= # <KSSingle> 7->10 0(0) eji=8.48466[eV] (0.30555,-0.435808,0.538225)
+RPA estimated time left 0s
+RPA kss[31]= # <KSSingle> 7->11 0(0) eji=9.57171[eV] (-0.0785233,0.0600937,0.085927)
+XC 32 transitions
+XC kss[0]
+XC estimated time left 9s
+XC kss[1]
+XC estimated time left 9s
+XC kss[2]
+XC estimated time left 8s
+XC kss[3]
+XC estimated time left 8s
+XC kss[4]
+XC estimated time left 8s
+XC kss[5]
+XC estimated time left 7s
+XC kss[6]
+XC estimated time left 7s
+XC kss[7]
+XC estimated time left 7s
+XC kss[8]
+XC estimated time left 6s
+XC kss[9]
+XC estimated time left 6s
+XC kss[10]
+XC estimated time left 6s
+XC kss[11]
+XC estimated time left 5s
+XC kss[12]
+XC estimated time left 5s
+XC kss[13]
+XC estimated time left 5s
+XC kss[14]
+XC estimated time left 4s
+XC kss[15]
+XC estimated time left 4s
+XC kss[16]
+XC estimated time left 4s
+XC kss[17]
+XC estimated time left 4s
+XC kss[18]
+XC estimated time left 3s
+XC kss[19]
+XC estimated time left 3s
+XC kss[20]
+XC estimated time left 3s
+XC kss[21]
+XC estimated time left 2s
+XC kss[22]
+XC estimated time left 2s
+XC kss[23]
+XC estimated time left 2s
+XC kss[24]
+XC estimated time left 2s
+XC kss[25]
+XC estimated time left 1s
+XC kss[26]
+XC estimated time left 1s
+XC kss[27]
+XC estimated time left 1s
+XC kss[28]
+XC estimated time left 1s
+XC kss[29]
+XC estimated time left 0s
+XC kss[30]
+XC estimated time left 0s
+XC kss[31]
+# diagonalize: 32 transitions original
+# diagonalize: 32 transitions now
+LrTDDFT digonalized:
+  <LrTDDFTExcitation> om=8.19164[eV] |me|=0.00475864 (0.78,-0.46,-0.42)
+  <LrTDDFTExcitation> om=8.20428[eV] |me|=0.00491026 (0.40,0.92,-0.01)
+  <LrTDDFTExcitation> om=8.48524[eV] |me|=0.000365207 (0.93,0.15,-0.34)
+  <LrTDDFTExcitation> om=8.78533[eV] |me|=0.00101591 (0.01,-0.51,-0.86)
+  <LrTDDFTExcitation> om=8.78597[eV] |me|=0.00147783 (-0.13,-0.63,0.77)
+  <LrTDDFTExcitation> om=9.56291[eV] |me|=0.127983 (0.61,-0.48,-0.63)
+  <LrTDDFTExcitation> om=9.57321[eV] |me|=0.127636 (0.72,0.67,0.18)
+  <LrTDDFTExcitation> om=11.7045[eV] |me|=0.12766 (0.41,-0.48,0.77)
+  <LrTDDFTExcitation> om=11.9221[eV] |me|=0.409786 (0.75,-0.24,-0.62)
+  <LrTDDFTExcitation> om=11.9343[eV] |me|=0.421455 (-0.48,-0.80,-0.36)
+  <LrTDDFTExcitation> om=12.055[eV] |me|=0.137209 (0.91,0.18,-0.37)
+  <LrTDDFTExcitation> om=12.2984[eV] |me|=0.0388935 (-0.03,-0.78,-0.63)
+  <LrTDDFTExcitation> om=12.3012[eV] |me|=0.0408715 (-0.91,-0.27,0.31)
+  <LrTDDFTExcitation> om=12.7398[eV] |me|=0.0394924 (-0.43,0.42,-0.80)
+  <LrTDDFTExcitation> om=12.7445[eV] |me|=0.00793728 (0.74,0.30,-0.60)
+  <LrTDDFTExcitation> om=12.8902[eV] |me|=0.0283908 (-0.20,-0.64,-0.74)
+  <LrTDDFTExcitation> om=13.1353[eV] |me|=0.00326803 (-0.49,0.86,-0.15)
+  <LrTDDFTExcitation> om=13.1479[eV] |me|=0.00196823 (-0.43,-0.83,0.35)
+  <LrTDDFTExcitation> om=13.227[eV] |me|=0.00624205 (-0.14,0.99,0.08)
+  <LrTDDFTExcitation> om=14.1541[eV] |me|=0.590542 (-0.41,0.58,-0.71)
+  <LrTDDFTExcitation> om=14.7515[eV] |me|=0.631553 (0.20,0.81,0.55)
+  <LrTDDFTExcitation> om=14.7587[eV] |me|=0.632857 (-0.90,-0.08,0.44)
+  <LrTDDFTExcitation> om=16.1714[eV] |me|=1.48431 (-0.40,0.58,-0.71)
+  <LrTDDFTExcitation> om=18.4862[eV] |me|=0.0478502 (0.36,0.13,0.92)
+  <LrTDDFTExcitation> om=28.0201[eV] |me|=0.143642 (-0.40,0.59,-0.70)
+  <LrTDDFTExcitation> om=28.0334[eV] |me|=0.027714 (-0.31,0.60,-0.74)
+  <LrTDDFTExcitation> om=28.0998[eV] |me|=0.449226 (-0.40,0.58,-0.71)
+  <LrTDDFTExcitation> om=28.4131[eV] |me|=0.0359596 (0.40,-0.58,0.71)
+  <LrTDDFTExcitation> om=28.8505[eV] |me|=0.0277839 (-0.42,0.42,-0.81)
+  <LrTDDFTExcitation> om=29.2934[eV] |me|=0.0465289 (-0.26,0.69,0.68)
+  <LrTDDFTExcitation> om=29.2986[eV] |me|=0.0460701 (-0.87,-0.47,0.13)
+  <LrTDDFTExcitation> om=29.4577[eV] |me|=0.0710254 (0.40,-0.57,0.72)
+Timing:          incl.     excl.
+---------------------------------------
+diagonalize:     0.001     0.000   0.0% |
+ build:          0.000     0.000   0.0% |
+ clean:          0.000     0.000   0.0% |
+ omega:          0.001     0.001   0.0% |
+Other:          16.270    16.270 100.0% |---------------------------------------|
+---------------------------------------
+Total:                    16.271 100.0%
+
+Memory usage: 239.38 MiB
+Date: Wed May 13 22:53:14 2026

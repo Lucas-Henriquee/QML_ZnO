@@ -1,0 +1,74 @@
+{
+  "model": "QSVM_IDEAL",
+  "implementation": "manual_compute_uncompute_aer_mps + SVC(precomputed)",
+  "input_csv": "results/datasets/multitech_expanded_ml_dataset_clean.csv",
+  "feature_set": "md3",
+  "features": [
+    "feature_md_window_c_surface_distance_mean_a",
+    "feature_md_window_c_surface_distance_std_a",
+    "feature_md_window_mean_oco_angle_deg"
+  ],
+  "n_features": 3,
+  "n_qubits": 3,
+  "encoding": "standard_zz_feature_map",
+  "feature_map": "zz_feature_map",
+  "reps": 1,
+  "entanglement": "linear",
+  "feature_map_depth": 8,
+  "feature_map_size": 12,
+  "samples": 12,
+  "train_samples": 9,
+  "test_samples": 3,
+  "scaler": "power_minmax",
+  "simulator": "aer_mps",
+  "mps_max_bond_dimension": 0,
+  "mps_truncation_threshold": 0.0,
+  "mps_approximate": false,
+  "C": 1.0,
+  "class_weight": "balanced",
+  "test_size": 0.25,
+  "random_state": 42,
+  "max_samples": 0,
+  "split_file": "results/benchmarks/20260807_212548/splits/split_md3_n12_test0.25_seed42.csv",
+  "train_metrics": {
+    "accuracy": 0.8888888888888888,
+    "balanced_accuracy": 0.8888888888888888,
+    "f1_macro": 0.8857142857142857,
+    "f1_weighted": 0.8857142857142857,
+    "precision_macro": 0.9166666666666666,
+    "recall_macro": 0.8888888888888888
+  },
+  "test_metrics": {
+    "accuracy": 0.6666666666666666,
+    "balanced_accuracy": 0.6666666666666666,
+    "f1_macro": 0.5555555555555555,
+    "f1_weighted": 0.5555555555555555,
+    "precision_macro": 0.5,
+    "recall_macro": 0.6666666666666666
+  },
+  "cv_folds": 0,
+  "cv_balanced_accuracy_mean": null,
+  "cv_balanced_accuracy_std": null,
+  "fit_diagnosis": {
+    "train_score": 0.8888888888888888,
+    "test_score": 0.6666666666666666,
+    "cv_score": null,
+    "train_test_gap": 0.2222222222222222,
+    "diagnosis": "possible_overfitting"
+  },
+  "timing": {
+    "kernel_train_time_s": 0.027391167997848243,
+    "kernel_test_time_s": 0.019199623002350563,
+    "kernel_total_time_s": 0.046590791000198806,
+    "precomputed_svc_time_s": 0.0011443299990787636,
+    "total_test_pipeline_s": 0.04773512099927757,
+    "cv_time_s": null
+  },
+  "environment": {
+    "python": "3.9.23",
+    "qiskit": "1.4.6",
+    "qiskit_machine_learning": "0.8.4",
+    "qiskit_aer": "0.17.2",
+    "scikit_learn": "1.6.1"
+  }
+}

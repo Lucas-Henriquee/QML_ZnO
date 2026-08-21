@@ -1,0 +1,23 @@
+{
+  "material": "ZnO",
+  "initial_site": "top_metal",
+  "final_site": "bridge",
+  "path": "top_metal_to_bridge",
+  "internal_images": 3,
+  "total_images": 5,
+  "fmax": 0.1,
+  "max_steps": 80,
+  "ecut": 350.0,
+  "kpts": [
+    2,
+    2,
+    1
+  ],
+  "interpolation": "linear",
+  "climb": true,
+  "optimizer": "FIRE",
+  "parallel_images": true,
+  "mpi_size": 6,
+  "status": "done",
+  "note": "Energy barrier analysis should be performed later from neb.traj or neb_final_images.traj in analysis_plot.py."
+}

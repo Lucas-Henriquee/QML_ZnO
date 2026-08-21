@@ -1,0 +1,83 @@
+{
+  "model": "QSVM_IDEAL",
+  "implementation": "manual_compute_uncompute_aer_mps + SVC(precomputed)",
+  "input_csv": "results/datasets/multitech_expanded_ml_dataset_clean.csv",
+  "feature_set": "all12",
+  "features": [
+    "feature_tddft_transition_energy_ev",
+    "feature_tddft_transition_oscillator_strength",
+    "feature_tddft_transition_delta_from_peak_ev",
+    "feature_dft_adsorption_energy_ev",
+    "feature_dft_c_surface_distance_a",
+    "feature_dft_gap_change_ev",
+    "feature_co2rr_deltaG_CO2_to_COOH_ev",
+    "feature_co2rr_deltaG_COOH_to_CO_ev",
+    "feature_co2rr_limiting_potential_v",
+    "feature_md_window_c_surface_distance_mean_a",
+    "feature_md_window_c_surface_distance_std_a",
+    "feature_md_window_mean_oco_angle_deg"
+  ],
+  "n_features": 12,
+  "n_qubits": 12,
+  "encoding": "standard_zz_feature_map",
+  "feature_map": "zz_feature_map",
+  "reps": 1,
+  "entanglement": "linear",
+  "feature_map_depth": 35,
+  "feature_map_size": 57,
+  "samples": 60,
+  "train_samples": 45,
+  "test_samples": 15,
+  "scaler": "minmax_pi",
+  "simulator": "aer_mps",
+  "mps_max_bond_dimension": 0,
+  "mps_truncation_threshold": 0.0,
+  "mps_approximate": false,
+  "C": 1.0,
+  "class_weight": "balanced",
+  "test_size": 0.25,
+  "random_state": 7,
+  "max_samples": 0,
+  "split_file": "results/benchmarks/20260807_193415/splits/split_all12_n60_test0.25_seed7.csv",
+  "train_metrics": {
+    "accuracy": 1.0,
+    "balanced_accuracy": 1.0,
+    "f1_macro": 1.0,
+    "f1_weighted": 1.0,
+    "precision_macro": 1.0,
+    "recall_macro": 1.0
+  },
+  "test_metrics": {
+    "accuracy": 0.9333333333333333,
+    "balanced_accuracy": 0.9333333333333332,
+    "f1_macro": 0.9326599326599326,
+    "f1_weighted": 0.9326599326599326,
+    "precision_macro": 0.9444444444444445,
+    "recall_macro": 0.9333333333333332
+  },
+  "cv_folds": 0,
+  "cv_balanced_accuracy_mean": null,
+  "cv_balanced_accuracy_std": null,
+  "fit_diagnosis": {
+    "train_score": 1.0,
+    "test_score": 0.9333333333333332,
+    "cv_score": null,
+    "train_test_gap": 0.06666666666666676,
+    "diagnosis": "no_obvious_train_test_gap"
+  },
+  "timing": {
+    "kernel_train_time_s": 2.622457301000395,
+    "kernel_test_time_s": 1.7788875559999724,
+    "kernel_total_time_s": 4.4013448570003675,
+    "precomputed_svc_time_s": 0.0013081380020594224,
+    "total_test_pipeline_s": 4.402652995002427,
+    "cv_time_s": null
+  },
+  "environment": {
+    "python": "3.9.23",
+    "qiskit": "1.4.6",
+    "qiskit_machine_learning": "0.8.4",
+    "qiskit_aer": "0.17.2",
+    "scikit_learn": "1.6.1"
+  }
+}

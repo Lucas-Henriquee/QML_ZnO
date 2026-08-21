@@ -1,0 +1,37 @@
+{
+  "input_csv":"results\/datasets\/multitech_expanded_ml_dataset_clean.csv",
+  "samples":60,
+  "train_samples":45,
+  "test_samples":15,
+  "n_features":3,
+  "features":[
+    "feature_md_window_c_surface_distance_mean_a",
+    "feature_md_window_c_surface_distance_std_a",
+    "feature_md_window_mean_oco_angle_deg"
+  ],
+  "feature_set":"md3",
+  "label":"label_site_id",
+  "classes":[
+    0,
+    1,
+    2
+  ],
+  "accuracy":0.9333333333,
+  "balanced_accuracy":0.9333333333,
+  "fit_time_s":0.963405277,
+  "predict_time_s":0.65173717,
+  "train_predict_time_s":0.979761746,
+  "total_time_s":1.615142447,
+  "total_time_with_diagnostics_s":2.594904193,
+  "train_accuracy":0.9333333333,
+  "train_balanced_accuracy":0.9333333333,
+  "fit_diagnosis":"good_fit",
+  "train_test_gap":0.0,
+  "test_size":0.25,
+  "reps":1,
+  "entanglement":"full",
+  "feature_map":"ZZFeatureMap",
+  "kernel":"FidelityQuantumKernel",
+  "scaler":"power_minmax",
+  "max_samples":60
+}

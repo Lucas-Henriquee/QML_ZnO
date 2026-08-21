@@ -1,0 +1,22 @@
+{
+  "material": "ZnO",
+  "initial_site": "top_metal",
+  "final_site": "top_oxygen",
+  "path": "top_metal_to_top_oxygen",
+  "internal_images": 3,
+  "total_images": 5,
+  "fmax": 0.1,
+  "max_steps": 300,
+  "ecut": 350.0,
+  "kpts": [
+    2,
+    2,
+    1
+  ],
+  "interpolation": "linear",
+  "climb": true,
+  "optimizer": "FIRE",
+  "parallel_images": true,
+  "mpi_size": 9,
+  "status": "converged"
+}

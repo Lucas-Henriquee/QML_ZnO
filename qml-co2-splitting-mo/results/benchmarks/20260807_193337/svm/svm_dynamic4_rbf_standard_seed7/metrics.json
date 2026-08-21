@@ -1,0 +1,68 @@
+{
+  "model": "SVM",
+  "input_csv": "results/datasets/multitech_expanded_ml_dataset_clean.csv",
+  "feature_set": "dynamic4",
+  "features": [
+    "feature_tddft_transition_energy_ev",
+    "feature_tddft_transition_oscillator_strength",
+    "feature_md_window_c_surface_distance_mean_a",
+    "feature_md_window_c_surface_distance_std_a"
+  ],
+  "n_features": 4,
+  "samples": 960,
+  "train_samples": 720,
+  "test_samples": 240,
+  "classes": [
+    0,
+    1,
+    2
+  ],
+  "kernel": "rbf",
+  "C": 1.0,
+  "gamma": "scale",
+  "degree": 3,
+  "class_weight": "balanced",
+  "scaler": "standard",
+  "test_size": 0.25,
+  "random_state": 7,
+  "max_samples": 0,
+  "split_file": "results/benchmarks/20260807_193337/splits/split_dynamic4_nall_test0.25_seed7.csv",
+  "shuffle_label": false,
+  "train_metrics": {
+    "accuracy": 0.8166666666666667,
+    "balanced_accuracy": 0.8166666666666668,
+    "f1_macro": 0.819218027920687,
+    "f1_weighted": 0.8192180279206871,
+    "precision_macro": 0.8817204301075269,
+    "recall_macro": 0.8166666666666668
+  },
+  "test_metrics": {
+    "accuracy": 0.8166666666666667,
+    "balanced_accuracy": 0.8166666666666668,
+    "f1_macro": 0.8188315588315588,
+    "f1_weighted": 0.8188315588315589,
+    "precision_macro": 0.8705128205128205,
+    "recall_macro": 0.8166666666666668
+  },
+  "cv_folds": 5,
+  "cv_balanced_accuracy_mean": 0.803125,
+  "cv_balanced_accuracy_std": 0.022678688601122127,
+  "fit_diagnosis": {
+    "train_score": 0.8166666666666668,
+    "test_score": 0.8166666666666668,
+    "cv_score": 0.803125,
+    "train_test_gap": 0.0,
+    "diagnosis": "no_obvious_train_test_gap"
+  },
+  "timing": {
+    "fit_time_s": 0.005665091000992106,
+    "predict_test_time_s": 0.0022191440002643503,
+    "predict_train_time_s": 0.005166016999282874,
+    "fit_plus_test_predict_s": 0.007884235001256457,
+    "cv_time_s": 0.044859710997116053
+  },
+  "environment": {
+    "python": "3.9.23",
+    "scikit_learn": "1.6.1"
+  }
+}

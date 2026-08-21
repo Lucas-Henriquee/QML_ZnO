@@ -1,0 +1,15 @@
+# Table 1 - SVM results
+
+| run | dataset | feature_set | method | scaler | samples | n_features | accuracy | balanced_accuracy | cv_balanced_accuracy | purpose |
+|---|---|---|---|---|---|---|---|---|---|---|
+| SVM all12 RBF | Expanded | all12 | RBF | standard | 960 | 12 | 1.0000 | 1.0000 | 1.0000 +/- 0.0000 | Full feature diagnostic |
+| SVM static6 linear | Expanded | static6 | linear | standard | 960 | 6 | 1.0000 | 1.0000 | 1.0000 +/- 0.0000 | Static fingerprint test |
+| SVM dynamic6 linear | Expanded | dynamic6 | linear | standard | 960 | 6 | 0.8542 | 0.8542 | 0.8104 +/- 0.0267 | Dynamic linear baseline |
+| SVM dynamic6 RBF | Expanded | dynamic6 | RBF | standard | 960 | 6 | 0.9333 | 0.9333 | 0.9010 +/- 0.0195 | Main dynamic SVM baseline |
+| SVM dynamic4 linear | Expanded | dynamic4 | linear | standard | 960 | 4 | 0.7625 | 0.7625 | 0.7000 +/- 0.0176 | Compact linear baseline |
+| SVM dynamic4 RBF | Expanded | dynamic4 | RBF | standard | 960 | 4 | 0.8583 | 0.8583 | 0.8073 +/- 0.0257 | Compact nonlinear baseline |
+| SVM tddft3 RBF | Expanded | tddft3 | RBF | standard | 960 | 3 | 0.2917 | 0.2917 | 0.3385 +/- 0.0321 | TDDFT-only test |
+| SVM md3 RBF | Expanded | md3 | RBF | standard | 960 | 3 | 1.0000 | 1.0000 | 0.9812 +/- 0.0232 | MD-only expanded test |
+| SVM shuffled labels | Expanded | dynamic6 | linear | standard | 960 | 6 | 0.3167 | 0.3167 | 0.3458 +/- 0.0307 | Sanity check |
+| SVM unique MD RBF | Unique MD windows | md3 | RBF | minmax | 30 | 3 | 0.7500 | 0.6667 | 0.7667 +/- 0.1333 | Unique-window RBF validation |
+| SVM unique MD linear | Unique MD windows | md3 | linear | minmax | 30 | 3 | 0.5000 | 0.5000 | 0.7000 +/- 0.1247 | Unique-window linear validation |

@@ -1,0 +1,18 @@
+run,model,dataset,feature_set,method,scaler,samples,n_features,accuracy,balanced_accuracy,cv_balanced_accuracy,reps,entanglement,max_samples,purpose
+SVM all12 RBF,SVM,Expanded,all12,RBF,standard,960,12,1.0000,1.0000,1.0000 +/- 0.0000,,,,Full feature diagnostic
+SVM static6 linear,SVM,Expanded,static6,linear,standard,960,6,1.0000,1.0000,1.0000 +/- 0.0000,,,,Static fingerprint test
+SVM dynamic6 linear,SVM,Expanded,dynamic6,linear,standard,960,6,0.8542,0.8542,0.8104 +/- 0.0267,,,,Dynamic linear baseline
+SVM dynamic6 RBF,SVM,Expanded,dynamic6,RBF,standard,960,6,0.9333,0.9333,0.9010 +/- 0.0195,,,,Main dynamic SVM baseline
+SVM dynamic4 linear,SVM,Expanded,dynamic4,linear,standard,960,4,0.7625,0.7625,0.7000 +/- 0.0176,,,,Compact linear baseline
+SVM dynamic4 RBF,SVM,Expanded,dynamic4,RBF,standard,960,4,0.8583,0.8583,0.8073 +/- 0.0257,,,,Compact nonlinear baseline
+SVM tddft3 RBF,SVM,Expanded,tddft3,RBF,standard,960,3,0.2917,0.2917,0.3385 +/- 0.0321,,,,TDDFT-only test
+SVM md3 RBF,SVM,Expanded,md3,RBF,standard,960,3,1.0000,1.0000,0.9812 +/- 0.0232,,,,MD-only expanded test
+SVM shuffled labels,SVM,Expanded,dynamic6,linear,standard,960,6,0.3167,0.3167,0.3458 +/- 0.0307,,,,Sanity check
+SVM unique MD RBF,SVM,Unique MD windows,md3,RBF,minmax,30,3,0.7500,0.6667,0.7667 +/- 0.1333,,,,Unique-window RBF validation
+SVM unique MD linear,SVM,Unique MD windows,md3,linear,minmax,30,3,0.5000,0.5000,0.7000 +/- 0.1247,,,,Unique-window linear validation
+QSVM md3 reps1 90,QSVM,Expanded subset,md3,ZZFeatureMap,"minmax [0, pi]",90,3,0.8261,0.8214,,1.0,linear,90.0,Small QSVM pipeline test
+QSVM md3 reps1 300,QSVM,Expanded subset,md3,ZZFeatureMap,"minmax [0, pi]",300,3,1.0000,1.0000,,1.0,linear,300.0,Larger expanded QSVM test
+QSVM md3 reps2 150,QSVM,Expanded subset,md3,ZZFeatureMap,"minmax [0, pi]",150,3,0.9211,0.9167,,2.0,linear,150.0,Deeper QSVM feature map
+QSVM unique MD reps1,QSVM,Unique MD windows,md3,ZZFeatureMap,"minmax [0, pi]",30,3,0.3750,0.3333,,1.0,linear,0.0,Unique-window QSVM reps1
+QSVM unique MD reps2,QSVM,Unique MD windows,md3,ZZFeatureMap,"minmax [0, pi]",30,3,0.5000,0.5000,,2.0,linear,0.0,Unique-window QSVM reps2
+QSVM dynamic4 reps1 300,QSVM,Expanded subset,dynamic4,ZZFeatureMap,"minmax [0, pi]",300,4,0.7067,0.7067,,1.0,linear,300.0,Direct comparison with dynamic4 SVM

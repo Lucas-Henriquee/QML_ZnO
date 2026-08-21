@@ -1,0 +1,77 @@
+{
+  "model": "QSVM_IDEAL",
+  "implementation": "manual_compute_uncompute_aer_mps + SVC(precomputed)",
+  "input_csv": "results/datasets/multitech_expanded_ml_dataset_clean.csv",
+  "feature_set": "static6",
+  "features": [
+    "feature_dft_adsorption_energy_ev",
+    "feature_dft_c_surface_distance_a",
+    "feature_dft_gap_change_ev",
+    "feature_co2rr_deltaG_CO2_to_COOH_ev",
+    "feature_co2rr_deltaG_COOH_to_CO_ev",
+    "feature_co2rr_limiting_potential_v"
+  ],
+  "n_features": 6,
+  "n_qubits": 6,
+  "encoding": "standard_zz_feature_map",
+  "feature_map": "zz_feature_map",
+  "reps": 1,
+  "entanglement": "linear",
+  "feature_map_depth": 17,
+  "feature_map_size": 27,
+  "samples": 60,
+  "train_samples": 45,
+  "test_samples": 15,
+  "scaler": "power_minmax",
+  "simulator": "aer_mps",
+  "mps_max_bond_dimension": 0,
+  "mps_truncation_threshold": 0.0,
+  "mps_approximate": false,
+  "C": 1.0,
+  "class_weight": "balanced",
+  "test_size": 0.25,
+  "random_state": 7,
+  "max_samples": 0,
+  "split_file": "results/benchmarks/20260807_193415/splits/split_static6_n60_test0.25_seed7.csv",
+  "train_metrics": {
+    "accuracy": 1.0,
+    "balanced_accuracy": 1.0,
+    "f1_macro": 1.0,
+    "f1_weighted": 1.0,
+    "precision_macro": 1.0,
+    "recall_macro": 1.0
+  },
+  "test_metrics": {
+    "accuracy": 1.0,
+    "balanced_accuracy": 1.0,
+    "f1_macro": 1.0,
+    "f1_weighted": 1.0,
+    "precision_macro": 1.0,
+    "recall_macro": 1.0
+  },
+  "cv_folds": 0,
+  "cv_balanced_accuracy_mean": null,
+  "cv_balanced_accuracy_std": null,
+  "fit_diagnosis": {
+    "train_score": 1.0,
+    "test_score": 1.0,
+    "cv_score": null,
+    "train_test_gap": 0.0,
+    "diagnosis": "no_obvious_train_test_gap"
+  },
+  "timing": {
+    "kernel_train_time_s": 1.3650642659995356,
+    "kernel_test_time_s": 0.8888311410009919,
+    "kernel_total_time_s": 2.2538954070005275,
+    "precomputed_svc_time_s": 0.0012821889977203682,
+    "total_test_pipeline_s": 2.255177595998248,
+    "cv_time_s": null
+  },
+  "environment": {
+    "python": "3.9.23",
+    "qiskit": "1.4.6",
+    "qiskit_machine_learning": "0.8.4",
+    "qiskit_aer": "0.17.2",
+    "scikit_learn": "1.6.1"
+  }
+}

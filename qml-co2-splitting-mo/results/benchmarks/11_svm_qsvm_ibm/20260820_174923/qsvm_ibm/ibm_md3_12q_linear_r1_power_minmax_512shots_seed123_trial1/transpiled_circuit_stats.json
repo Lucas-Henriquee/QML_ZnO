@@ -1,0 +1,26 @@
+{
+  "K_train": {
+    "n_circuits": 36,
+    "depth_min": 22.0,
+    "depth_mean": 102.41666666666667,
+    "depth_max": 165.0,
+    "size_min": 42.0,
+    "size_mean": 196.41666666666666,
+    "size_max": 259.0,
+    "two_qubit_gates_min": 4.0,
+    "two_qubit_gates_mean": 29.88888888888889,
+    "two_qubit_gates_max": 42.0
+  },
+  "K_test": {
+    "n_circuits": 27,
+    "depth_min": 83.0,
+    "depth_mean": 138.40740740740742,
+    "depth_max": 166.0,
+    "size_min": 201.0,
+    "size_mean": 235.55555555555554,
+    "size_max": 265.0,
+    "two_qubit_gates_min": 28.0,
+    "two_qubit_gates_mean": 37.55555555555556,
+    "two_qubit_gates_max": 42.0
+  }
+}

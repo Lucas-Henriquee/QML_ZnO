@@ -1,0 +1,28 @@
+{
+  "input_csv":"results\/datasets\/md_window_unique_dataset.csv",
+  "samples":30,
+  "train_samples":22,
+  "test_samples":8,
+  "n_features":3,
+  "features":[
+    "feature_md_window_c_surface_distance_mean_a",
+    "feature_md_window_c_surface_distance_std_a",
+    "feature_md_window_mean_oco_angle_deg"
+  ],
+  "feature_set":"md3",
+  "label":"label_site_id",
+  "classes":[
+    0,
+    1,
+    2
+  ],
+  "accuracy":0.375,
+  "balanced_accuracy":0.3333333333,
+  "test_size":0.25,
+  "reps":1,
+  "entanglement":"linear",
+  "feature_map":"ZZFeatureMap",
+  "kernel":"FidelityQuantumKernel",
+  "scaler":"MinMaxScaler(feature_range=(0, pi))",
+  "max_samples":0
+}

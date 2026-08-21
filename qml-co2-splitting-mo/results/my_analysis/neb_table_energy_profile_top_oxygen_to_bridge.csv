@@ -1,0 +1,6 @@
+material,path,initial_site,final_site,image_index,energy_ev,relative_energy_ev
+ZnO,top_oxygen_to_bridge,top_oxygen,bridge,0,294.91347773984586,0.0
+ZnO,top_oxygen_to_bridge,top_oxygen,bridge,1,325.106951,30.19347326015412
+ZnO,top_oxygen_to_bridge,top_oxygen,bridge,2,325.980138,31.06666026015415
+ZnO,top_oxygen_to_bridge,top_oxygen,bridge,3,325.096164,30.182686260154128
+ZnO,top_oxygen_to_bridge,top_oxygen,bridge,4,295.4149836255845,0.5015058857386521

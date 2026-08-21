@@ -1,0 +1,32 @@
+{
+  "input_csv":"results\/datasets\/multitech_expanded_ml_dataset_clean.csv",
+  "samples":960,
+  "n_features":3,
+  "features":[
+    "feature_tddft_transition_energy_ev",
+    "feature_tddft_transition_oscillator_strength",
+    "feature_tddft_transition_delta_from_peak_ev"
+  ],
+  "feature_set":"tddft3",
+  "label":"label_site_id",
+  "classes":[
+    0,
+    1,
+    2
+  ],
+  "kernel":"linear",
+  "scaler":"power",
+  "test_size":0.2,
+  "accuracy":0.390625,
+  "balanced_accuracy":0.390625,
+  "cv_balanced_accuracy_mean":0.359375,
+  "cv_balanced_accuracy_std":0.0135816717,
+  "fit_time_s":0.011006816,
+  "predict_time_s":0.001838311,
+  "cv_time_s":0.06623866,
+  "total_time_s":0.079083787,
+  "train_balanced_accuracy":0.3450520833,
+  "fit_diagnosis":"underfitting",
+  "train_test_gap":-0.0455729167,
+  "shuffle_label":false
+}

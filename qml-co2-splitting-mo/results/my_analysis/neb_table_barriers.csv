@@ -1,0 +1,3 @@
+rank,material,path,initial_site,final_site,n_images,energy_initial_ev,energy_final_ev,reaction_energy_ev,barrier_ev,highest_image
+1,ZnO,top_metal_to_bridge,top_metal,bridge,5,295.8821991466057,295.23771286994395,-0.6444862766617803,30.197861853394272,1
+2,ZnO,top_metal_to_top_oxygen,top_metal,top_oxygen,5,295.8821991466057,294.90371647232513,-0.978482674280599,30.202417853394252,1

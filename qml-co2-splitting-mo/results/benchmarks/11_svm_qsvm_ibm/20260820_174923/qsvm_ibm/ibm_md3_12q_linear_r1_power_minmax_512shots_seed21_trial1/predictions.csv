@@ -1,0 +1,4 @@
+row_id,true_label,qsvm_hardware_pred
+928,1,0
+268,2,1
+535,0,0

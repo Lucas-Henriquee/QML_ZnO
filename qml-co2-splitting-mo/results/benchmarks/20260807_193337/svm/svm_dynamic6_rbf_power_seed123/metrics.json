@@ -1,0 +1,70 @@
+{
+  "model": "SVM",
+  "input_csv": "results/datasets/multitech_expanded_ml_dataset_clean.csv",
+  "feature_set": "dynamic6",
+  "features": [
+    "feature_tddft_transition_energy_ev",
+    "feature_tddft_transition_oscillator_strength",
+    "feature_tddft_transition_delta_from_peak_ev",
+    "feature_md_window_c_surface_distance_mean_a",
+    "feature_md_window_c_surface_distance_std_a",
+    "feature_md_window_mean_oco_angle_deg"
+  ],
+  "n_features": 6,
+  "samples": 960,
+  "train_samples": 720,
+  "test_samples": 240,
+  "classes": [
+    0,
+    1,
+    2
+  ],
+  "kernel": "rbf",
+  "C": 1.0,
+  "gamma": "scale",
+  "degree": 3,
+  "class_weight": "balanced",
+  "scaler": "power",
+  "test_size": 0.25,
+  "random_state": 123,
+  "max_samples": 0,
+  "split_file": "results/benchmarks/20260807_193337/splits/split_dynamic6_nall_test0.25_seed123.csv",
+  "shuffle_label": false,
+  "train_metrics": {
+    "accuracy": 0.9361111111111111,
+    "balanced_accuracy": 0.936111111111111,
+    "f1_macro": 0.9372433763227295,
+    "f1_weighted": 0.9372433763227295,
+    "precision_macro": 0.9463869463869464,
+    "recall_macro": 0.936111111111111
+  },
+  "test_metrics": {
+    "accuracy": 0.925,
+    "balanced_accuracy": 0.9249999999999999,
+    "f1_macro": 0.9260609886095311,
+    "f1_weighted": 0.9260609886095312,
+    "precision_macro": 0.9387755102040817,
+    "recall_macro": 0.9249999999999999
+  },
+  "cv_folds": 5,
+  "cv_balanced_accuracy_mean": 0.9375,
+  "cv_balanced_accuracy_std": 0.017430417219459912,
+  "fit_diagnosis": {
+    "train_score": 0.936111111111111,
+    "test_score": 0.9249999999999999,
+    "cv_score": 0.9375,
+    "train_test_gap": 0.011111111111111072,
+    "diagnosis": "no_obvious_train_test_gap"
+  },
+  "timing": {
+    "fit_time_s": 0.010079089002829278,
+    "predict_test_time_s": 0.0023362079991784412,
+    "predict_train_time_s": 0.004912007996608736,
+    "fit_plus_test_predict_s": 0.012415297002007719,
+    "cv_time_s": 0.06912643800023943
+  },
+  "environment": {
+    "python": "3.9.23",
+    "scikit_learn": "1.6.1"
+  }
+}

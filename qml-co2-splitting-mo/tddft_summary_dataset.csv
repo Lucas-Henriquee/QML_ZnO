@@ -1,0 +1,4 @@
+material,site,label_site,label_id,feature_1_total_oscillator_strength,feature_2_onset_ev,feature_3_peak_energy_ev
+ZnO,bridge,bridge,2,6.085840149999999,0.299798058514829,0.593452016824483
+ZnO,top_metal,top_metal,0,5.766382737,0.3010373330858048,0.5942895604366474
+ZnO,top_oxygen,top_oxygen,1,5.316105652,0.3011904243347849,0.5941275958513292

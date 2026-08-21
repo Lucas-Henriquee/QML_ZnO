@@ -1,0 +1,32 @@
+{
+  "input_csv":"results\/datasets\/multitech_expanded_ml_dataset_clean.csv",
+  "samples":960,
+  "n_features":3,
+  "features":[
+    "feature_md_window_c_surface_distance_mean_a",
+    "feature_md_window_c_surface_distance_std_a",
+    "feature_md_window_mean_oco_angle_deg"
+  ],
+  "feature_set":"md3",
+  "label":"label_site_id",
+  "classes":[
+    0,
+    1,
+    2
+  ],
+  "kernel":"linear",
+  "scaler":"none",
+  "test_size":0.2,
+  "accuracy":0.8177083333,
+  "balanced_accuracy":0.8177083333,
+  "cv_balanced_accuracy_mean":0.8333333333,
+  "cv_balanced_accuracy_std":0.0279508497,
+  "fit_time_s":0.004617959,
+  "predict_time_s":0.001035331,
+  "cv_time_s":0.033055978,
+  "total_time_s":0.038709268,
+  "train_balanced_accuracy":0.8372395833,
+  "fit_diagnosis":"good_fit",
+  "train_test_gap":0.01953125,
+  "shuffle_label":false
+}

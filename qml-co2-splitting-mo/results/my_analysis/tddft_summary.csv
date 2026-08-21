@@ -1,0 +1,4 @@
+material,site,tddft_status,tddft_mode,error_message,tddft_onset_ev,tddft_peak_energy_ev,tddft_peak_oscillator_strength,tddft_total_oscillator_strength,tddft_num_transitions
+ZnO,top_metal,ok,adsorbate-fd,,0.3010373330858048,0.5942895604366474,1.48431,5.766382737,32.0
+ZnO,top_oxygen,ok,adsorbate-fd,,0.3011904243347849,0.5941275958513292,1.48948,5.316105652,32.0
+ZnO,bridge,ok,adsorbate-fd,,0.29979805851482905,0.593452016824483,1.48446,6.085840149999999,32.0

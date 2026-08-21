@@ -1,0 +1,5 @@
+feature_set,n_features,n_qubits
+md3,3,3
+dynamic4,4,4
+dynamic6,6,6
+all12,12,12

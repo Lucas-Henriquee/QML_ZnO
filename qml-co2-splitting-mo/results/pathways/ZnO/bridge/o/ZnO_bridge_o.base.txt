@@ -1,0 +1,4899 @@
+
+  ___ ___ ___ _ _ _  
+ |   |   |_  | | | | 
+ | | | | | . | | | | 
+ |__ |  _|___|_____|  25.7.0
+ |___|_|             
+
+User:   bpdtec@projeto-H610M-H-DDR4
+Date:   Wed May 13 22:44:38 2026
+Arch:   x86_64
+Pid:    3381483
+CWD:    /home/bpdtec/Documents/matmod/qml-co2-splitting-mo
+Python: 3.10.20
+gpaw:   /home/bpdtec/miniconda3/envs/gpaw-dft/lib/python3.10/site-packages/gpaw
+_gpaw:  /home/bpdtec/miniconda3/envs/gpaw-dft/lib/python3.10/site-packages/
+        _gpaw.cpython-310-x86_64-linux-gnu.so
+ase:    /home/bpdtec/miniconda3/envs/gpaw-dft/lib/python3.10/site-packages/ase (version 3.28.0)
+numpy:  /home/bpdtec/.local/lib/python3.10/site-packages/numpy (version 2.1.3)
+scipy:  /home/bpdtec/miniconda3/envs/gpaw-dft/lib/python3.10/site-packages/scipy (version 1.15.2)
+libxc:  7.0.0
+units:  Angstrom and eV
+cores: 6
+OpenMP: True
+OMP_NUM_THREADS: 1
+
+Input parameters:
+  kpts: [3 3 1]
+  maxiter: 180
+  mixer: {backend: pulay,
+          beta: 0.05,
+          method: separate,
+          nmaxold: 5,
+          weight: 50}
+  mode: {ecut: 500.0,
+         name: pw}
+  occupations: {fixmagmom: False,
+                name: fermi-dirac,
+                width: 0.05}
+  symmetry: off
+  xc: PBE
+
+System changes: positions, numbers, cell, pbc, initial_charges, initial_magmoms 
+
+Initialize ...
+
+species:
+  Zn:
+    name: Zinc
+    id: 9da902d12d12265ad8e0029a903fe3c0
+    Z: 30.0
+    valence: 12
+    core: 18
+    charge: 0.0
+    file: /home/bpdtec/gpaw-datasets/gpaw-setups-24.11.0/Zn.PBE.gz
+    compensation charges: {type: gauss,
+                           rc: 0.37,
+                           lmax: 2}
+    cutoffs: {filter: 2.14,
+              core: 2.28}
+    projectors:
+      #              energy  rcut
+      - 4s(2.00)    -5.977   1.286
+      - 4p(0.00)    -1.117   1.270
+      - 3d(10.00)   -10.142   1.180
+      -  s          21.234   1.286
+      -  p          26.095   1.270
+      -  d          17.070   1.180
+  
+    # Using partial waves for Zn as LCAO basis
+
+  O:
+    name: Oxygen
+    id: 32ecd46bf208036f09c70b0ec9a88b78
+    Z: 8.0
+    valence: 6
+    core: 2
+    charge: 0.0
+    file: /home/bpdtec/gpaw-datasets/gpaw-setups-24.11.0/O.PBE.gz
+    compensation charges: {type: gauss,
+                           rc: 0.21,
+                           lmax: 2}
+    cutoffs: {filter: 1.17,
+              core: 0.83}
+    projectors:
+      #              energy  rcut
+      - 2s(2.00)   -23.961   0.688
+      - 2p(4.00)    -9.029   0.598
+      -  s           3.251   0.688
+      -  p          18.182   0.598
+      -  d           0.000   0.619
+  
+    # Using partial waves for O as LCAO basis
+
+Reference energy: -205649.568117  # eV
+
+Spin-paired calculation
+
+Convergence criteria:
+ Maximum [total energy] change in last 3 cyles: 0.0005 eV / valence electron
+ Maximum integral of absolute [dens]ity change: 0.0001 electrons / valence electron
+ Maximum integral of absolute [eigenst]ate change: 4e-08 eV^2 / valence electron
+ Maximum number of scf [iter]ations: 180
+ (Square brackets indicate name in SCF output, whereas a 'c' in
+ the SCF output indicates the quantity has converged.)
+
+Symmetries present (total): 1
+
+  ( 1  0  0)
+  ( 0  1  0)
+  ( 0  0  1)
+
+9 k-points: 3 x 3 x 1 Monkhorst-Pack grid
+9 k-points in the irreducible part of the Brillouin zone
+       k-points in crystal coordinates                weights
+   0:    -0.33333333   -0.33333333    0.00000000          1/9
+   1:    -0.33333333    0.00000000    0.00000000          1/9
+   2:    -0.33333333    0.33333333    0.00000000          1/9
+   3:     0.00000000   -0.33333333    0.00000000          1/9
+   4:     0.00000000    0.00000000    0.00000000          1/9
+   5:     0.00000000    0.33333333    0.00000000          1/9
+   6:     0.33333333   -0.33333333    0.00000000          1/9
+   7:     0.33333333    0.00000000    0.00000000          1/9
+   8:     0.33333333    0.33333333    0.00000000          1/9
+
+Wave functions: Plane wave expansion
+  Cutoff energy: 500.000 eV
+  Number of coefficients (min, max): 9755, 9848
+  Pulay-stress correction: 0.000000 eV/Ang^3 (de/decut=0.000000)
+  Using FFTW library
+  ScaLapack parameters: grid=1x1, blocksize=None
+  Wavefunction extrapolation:
+    Improved wavefunction reuse through dual PAW basis 
+
+Occupation numbers: Fermi-Dirac:
+  width: 0.0500  # eV
+ 
+
+Eigensolver
+   Davidson(niter=2) 
+
+Densities:
+  Coarse grid: 18*27*120 grid
+  Fine grid: 36*54*240 grid
+  Total Charge: 0.000000 
+
+Density mixing:
+  Method: separate
+  Backend: pulay
+  Linear mixing parameter: 0.05
+  old densities: 5
+  Damping of long wavelength oscillations: 50 
+
+Hamiltonian:
+  XC and Coulomb potentials evaluated on a 36*54*240 grid
+  Using the PBE Exchange-Correlation functional
+  External potential:
+    NoExternalPotential
+ 
+
+XC parameters: PBE with 2 nearest neighbor stencil
+
+Memory estimate:
+  Process memory now: 1082.39 MiB
+  Calculator: 39.47 MiB
+    Density: 14.51 MiB
+      Arrays: 5.78 MiB
+      Localized functions: 6.50 MiB
+      Mixer: 2.22 MiB
+    Hamiltonian: 3.94 MiB
+      Arrays: 3.78 MiB
+      XC: 0.00 MiB
+      Poisson: 0.00 MiB
+      vbar: 0.16 MiB
+    Wavefunctions: 21.02 MiB
+      Arrays psit_nG: 11.50 MiB
+      Eigensolver: 4.61 MiB
+      Projections: 0.16 MiB
+      Projectors: 2.25 MiB
+      PW-descriptor: 2.51 MiB
+
+Total number of cores used: 6
+Parallelization over k-points: 3
+Domain decomposition: 1 x 1 x 2
+
+Number of atoms: 9
+Number of atomic orbitals: 56
+Number of bands in calculation: 51
+Number of valence electrons: 78
+Bands to converge: occupied
+
+... initialized
+
+Initializing position-dependent things.
+
+Density initialized from atomic densities
+Creating initial wave functions:
+  51 bands from LCAO basis set
+
+    .-------.  
+   /|       |  
+  / |       |  
+ *  |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  |  O    |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  On   O  |  
+ |  |  Zn   |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  O       |  
+ | Zn       |  
+ |O |       |  
+ Zn |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  .-------.  
+ | /       /   
+ |/       /    
+ *-------*     
+
+Atomic positions and initial magnetic moments
+
+Positions:
+   0 Zn     0.000000    0.000000   10.000000    ( 0.0000,  0.0000,  0.0000)
+   1 Zn     0.000000    2.603000   10.000000    ( 0.0000,  0.0000,  0.0000)
+   2 O      0.000000    1.991295   10.000000    ( 0.0000,  0.0000,  0.0000)
+   3 O     -0.000000    4.594295   10.000000    ( 0.0000,  0.0000,  0.0000)
+   4 Zn     2.318580    0.524975   15.137697    ( 0.0000,  0.0000,  0.0000)
+   5 Zn     0.651296    3.129750   14.701105    ( 0.0000,  0.0000,  0.0000)
+   6 O      0.691946    1.397750   15.441500    ( 0.0000,  0.0000,  0.0000)
+   7 O      2.279508    4.006430   14.393276    ( 0.0000,  0.0000,  0.0000)
+   8 O      1.327098    5.036441   17.367228    ( 0.0000,  0.0000,  0.0000)
+
+Unit cell:
+           periodic     x           y           z      points  spacing
+  1. axis:    yes    3.249000    0.000000    0.000000    18     0.1805
+  2. axis:    yes    0.000000    5.206000    0.000000    27     0.1928
+  3. axis:    no     0.000000    0.000000   22.813717   120     0.1901
+
+  Lengths:   3.249000   5.206000  22.813717
+  Angles:   90.000000  90.000000  90.000000
+
+Effective grid spacing dv^(1/3) = 0.1877
+
+     iter     time        total  log10-change:
+                         energy   eigst   dens
+iter:   1 22:44:40   290.531040
+iter:   2 22:44:41   282.473313   +0.97  -0.95
+iter:   3 22:44:41   275.539515   +0.39  -0.91
+iter:   4 22:44:42   293.243948   -0.47  -0.85
+iter:   5 22:44:43   309.633455   -0.36  -0.98
+iter:   6 22:44:44   312.544066   -0.94  -1.15
+iter:   7 22:44:44   312.207661   -1.65  -1.24
+iter:   8 22:44:45   314.446144   -0.92  -1.29
+iter:   9 22:44:46   307.187289   -1.20  -1.28
+iter:  10 22:44:46   314.819736   -1.96  -0.86
+iter:  11 22:44:47   303.765477   -1.39  -1.28
+iter:  12 22:44:48   315.012751   -1.58  -0.84
+iter:  13 22:44:49   313.996822   -1.32  -1.33
+iter:  14 22:44:49   314.701526   -1.40  -1.37
+iter:  15 22:44:50   314.835065   -1.91  -1.62
+iter:  16 22:44:51   315.566936   -2.30  -1.66
+iter:  17 22:44:52   316.142914   -2.23  -1.81
+iter:  18 22:44:52   316.237867   -2.65  -1.92
+iter:  19 22:44:53   316.133545   -2.91  -1.95
+iter:  20 22:44:54   316.208798   -2.34  -1.94
+iter:  21 22:44:55   316.239230   -1.86  -1.95
+iter:  22 22:44:55   316.399310   -2.20  -1.84
+iter:  23 22:44:56   316.527990   -2.45  -2.03
+iter:  24 22:44:57   316.426265   -2.74  -2.13
+iter:  25 22:44:58   316.568638   -3.17  -1.93
+iter:  26 22:44:58   316.552538   -2.91  -2.24
+iter:  27 22:44:59   316.554043c  -3.36  -2.34
+iter:  28 22:45:00   316.554890c  -3.66  -2.38
+iter:  29 22:45:01   316.558529c  -3.98  -2.46
+iter:  30 22:45:01   316.597486   -3.16  -2.52
+iter:  31 22:45:02   316.600495   -4.05  -2.65
+iter:  32 22:45:03   316.567436c  -3.26  -2.68
+iter:  33 22:45:03   316.597594c  -3.91  -2.55
+iter:  34 22:45:04   316.580293c  -3.82  -2.81
+iter:  35 22:45:05   316.599739c  -4.13  -2.11
+iter:  36 22:45:06   316.602805c  -4.49  -2.91
+iter:  37 22:45:06   316.602967c  -4.65  -2.58
+iter:  38 22:45:07   316.601624c  -4.82  -3.26
+iter:  39 22:45:08   316.601915c  -5.48  -3.13
+iter:  40 22:45:09   316.604167c  -5.10  -3.15
+iter:  41 22:45:09   316.604459c  -5.40  -3.48
+iter:  42 22:45:10   316.603084c  -5.68  -3.09
+iter:  43 22:45:11   316.604126c  -5.77  -3.43
+iter:  44 22:45:12   316.604147c  -5.88  -3.59
+iter:  45 22:45:12   316.603879c  -6.53  -3.56
+iter:  46 22:45:13   316.603865c  -7.01  -4.08c
+iter:  47 22:45:14   316.603850c  -6.92  -4.19c
+iter:  48 22:45:15   316.603820c  -7.44c -4.47c
+
+Converged after 48 iterations.
+
+Dipole moment: (-1.690986, 3.702709, -0.559685) |e|*Ang
+
+Energy contributions relative to reference atoms: (reference = -205649.568117)
+
+Kinetic:       +1086.733485
+Potential:     -701.728944
+External:        +0.000000
+XC:            -124.894264
+Entropy (-ST):   -0.119946
+Local:          +56.553517
+SIC:             +0.000000
+--------------------------
+Free energy:   +316.543847
+Extrapolated:  +316.603820
+
+Showing only first 2 kpts
+ Kpt  Band  Eigenvalues  Occupancy
+  0    37     -4.24060    1.99988
+  0    38     -3.82587    1.60860
+  0    39     -3.76684    1.11590
+  0    40      0.93731    0.00000
+
+  1    37     -3.87305    1.82700
+  1    38     -3.82269    1.58819
+  1    39     -3.77317    1.17783
+  1    40      0.46871    0.00000
+
+
+Fermi level: -3.75520
+
+No gap
+No difference between direct/indirect transitions
+
+Forces in eV/Ang:
+  0 Zn   -0.00069  435.28317   -0.00981
+  1 Zn   -0.00051  435.30774   -0.00522
+  2 O     0.00140 -435.26749    0.11991
+  3 O     0.00159 -435.28133    0.10241
+  4 Zn   -0.13248   -0.38919    1.32047
+  5 Zn    0.09297    0.26537    0.45931
+  6 O    -0.11962    0.38486   -0.65699
+  7 O     0.04248   -0.32864   -0.39375
+  8 O     0.11913    0.03372   -0.77667
+
+System changes: positions 
+
+Initializing position-dependent things.
+
+Density initialized from wave functions
+    .-------.  
+   /|       |  
+  / |       |  
+ *  |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  |  O    |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  On   O  |  
+ |  |  Zn   |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  O       |  
+ | Zn       |  
+ |O |       |  
+ Zn |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  .-------.  
+ | /       /   
+ |/       /    
+ *-------*     
+
+Atomic positions and initial magnetic moments
+
+Positions:
+   0 Zn     0.000000    0.000000   10.000000    ( 0.0000,  0.0000,  0.0000)
+   1 Zn     0.000000    2.603000   10.000000    ( 0.0000,  0.0000,  0.0000)
+   2 O      0.000000    1.991295   10.000000    ( 0.0000,  0.0000,  0.0000)
+   3 O     -0.000000    4.594295   10.000000    ( 0.0000,  0.0000,  0.0000)
+   4 Zn     2.316688    0.519415   15.156561    ( 0.0000,  0.0000,  0.0000)
+   5 Zn     0.652624    3.133541   14.707667    ( 0.0000,  0.0000,  0.0000)
+   6 O      0.690237    1.403248   15.432114    ( 0.0000,  0.0000,  0.0000)
+   7 O      2.280115    4.001735   14.387651    ( 0.0000,  0.0000,  0.0000)
+   8 O      1.328800    5.036922   17.356132    ( 0.0000,  0.0000,  0.0000)
+
+Unit cell:
+           periodic     x           y           z      points  spacing
+  1. axis:    yes    3.249000    0.000000    0.000000    18     0.1805
+  2. axis:    yes    0.000000    5.206000    0.000000    27     0.1928
+  3. axis:    no     0.000000    0.000000   22.813717   120     0.1901
+
+  Lengths:   3.249000   5.206000  22.813717
+  Angles:   90.000000  90.000000  90.000000
+
+Effective grid spacing dv^(1/3) = 0.1877
+
+     iter     time        total  log10-change:
+                         energy   eigst   dens
+iter:   1 22:45:16   316.541019   -2.14
+iter:   2 22:45:17   316.533061   -2.82  -2.39
+iter:   3 22:45:17   316.546306c  -3.61  -2.43
+iter:   4 22:45:18   316.548879c  -4.12  -2.75
+iter:   5 22:45:19   316.551251c  -4.48  -2.95
+iter:   6 22:45:20   316.551375c  -5.09  -2.78
+iter:   7 22:45:20   316.551612c  -4.83  -2.87
+iter:   8 22:45:21   316.550840c  -4.45  -2.97
+iter:   9 22:45:22   316.550991c  -4.86  -3.53
+iter:  10 22:45:23   316.551118c  -5.85  -3.66
+iter:  11 22:45:23   316.551147c  -6.35  -3.89
+iter:  12 22:45:24   316.551149c  -6.58  -4.04c
+iter:  13 22:45:25   316.551166c  -6.90  -4.19c
+iter:  14 22:45:25   316.551160c  -7.19  -4.37c
+iter:  15 22:45:26   316.551165c  -7.56c -4.48c
+
+Converged after 15 iterations.
+
+Dipole moment: (-1.694052, 3.672408, -0.559053) |e|*Ang
+
+Energy contributions relative to reference atoms: (reference = -205649.568117)
+
+Kinetic:       +1086.591007
+Potential:     -701.608345
+External:        +0.000000
+XC:            -124.931557
+Entropy (-ST):   -0.118764
+Local:          +56.559443
+SIC:             +0.000000
+--------------------------
+Free energy:   +316.491783
+Extrapolated:  +316.551165
+
+Showing only first 2 kpts
+ Kpt  Band  Eigenvalues  Occupancy
+  0    37     -4.24524    1.99989
+  0    38     -3.83085    1.63037
+  0    39     -3.76815    1.11455
+  0    40      1.01734    0.00000
+
+  1    37     -3.87152    1.81733
+  1    38     -3.82692    1.60612
+  1    39     -3.77704    1.20121
+  1    40      0.54143    0.00000
+
+
+Fermi level: -3.75664
+
+No gap
+No difference between direct/indirect transitions
+
+Forces in eV/Ang:
+  0 Zn   -0.00073  435.28175   -0.00443
+  1 Zn   -0.00071  435.30532   -0.00015
+  2 O     0.00132 -435.26116    0.12310
+  3 O     0.00154 -435.27413    0.10562
+  4 Zn   -0.14103   -0.45266    1.31806
+  5 Zn    0.08304    0.30809    0.40762
+  6 O    -0.13220    0.28790   -0.60128
+  7 O     0.05825   -0.20791   -0.33416
+  8 O     0.13217    0.03577   -0.81131
+
+System changes: positions 
+
+Initializing position-dependent things.
+
+Density initialized from wave functions
+    .-------.  
+   /|       |  
+  / |       |  
+ *  |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  |  O    |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ | OZn   O  |  
+ |  |  Zn   |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  O       |  
+ | Zn       |  
+ |O |       |  
+ Zn |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  .-------.  
+ | /       /   
+ |/       /    
+ *-------*     
+
+Atomic positions and initial magnetic moments
+
+Positions:
+   0 Zn     0.000000    0.000000   10.000000    ( 0.0000,  0.0000,  0.0000)
+   1 Zn     0.000000    2.603000   10.000000    ( 0.0000,  0.0000,  0.0000)
+   2 O      0.000000    1.991295   10.000000    ( 0.0000,  0.0000,  0.0000)
+   3 O     -0.000000    4.594295   10.000000    ( 0.0000,  0.0000,  0.0000)
+   4 Zn     2.296823    0.457125   15.345572    ( 0.0000,  0.0000,  0.0000)
+   5 Zn     0.664930    3.175958   14.768196    ( 0.0000,  0.0000,  0.0000)
+   6 O      0.671802    1.448463   15.343664    ( 0.0000,  0.0000,  0.0000)
+   7 O      2.287821    3.967015   14.337329    ( 0.0000,  0.0000,  0.0000)
+   8 O      1.347212    5.041966   17.241262    ( 0.0000,  0.0000,  0.0000)
+
+Unit cell:
+           periodic     x           y           z      points  spacing
+  1. axis:    yes    3.249000    0.000000    0.000000    18     0.1805
+  2. axis:    yes    0.000000    5.206000    0.000000    27     0.1928
+  3. axis:    no     0.000000    0.000000   22.813717   120     0.1901
+
+  Lengths:   3.249000   5.206000  22.813717
+  Angles:   90.000000  90.000000  90.000000
+
+Effective grid spacing dv^(1/3) = 0.1877
+
+     iter     time        total  log10-change:
+                         energy   eigst   dens
+iter:   1 22:45:27   314.836880   -0.19
+iter:   2 22:45:28   315.538642   -0.72  -1.38
+iter:   3 22:45:29   315.831949   -1.35  -1.76
+iter:   4 22:45:30   315.947889   -1.89  -1.91
+iter:   5 22:45:30   315.953623   -2.79  -2.10
+iter:   6 22:45:31   316.009296   -3.07  -2.10
+iter:   7 22:45:32   315.780700   -2.21  -2.19
+iter:   8 22:45:33   316.068561   -2.81  -1.79
+iter:   9 22:45:33   316.074696   -3.17  -2.44
+iter:  10 22:45:34   316.076210c  -3.56  -2.41
+iter:  11 22:45:35   316.057846c  -3.26  -2.51
+iter:  12 22:45:36   316.073327c  -3.65  -2.12
+iter:  13 22:45:36   316.070635c  -4.27  -2.67
+iter:  14 22:45:37   316.069291c  -4.41  -2.66
+iter:  15 22:45:38   316.071693c  -4.46  -2.69
+iter:  16 22:45:39   316.073015c  -5.14  -2.76
+iter:  17 22:45:39   316.078984c  -4.43  -2.79
+iter:  18 22:45:40   316.074511c  -4.69  -2.73
+iter:  19 22:45:41   316.078552c  -5.37  -2.84
+iter:  20 22:45:41   316.079313c  -5.51  -3.40
+iter:  21 22:45:42   316.077981c  -5.46  -2.95
+iter:  22 22:45:43   316.079294c  -5.49  -3.27
+iter:  23 22:45:44   316.078547c  -5.72  -2.99
+iter:  24 22:45:44   316.078865c  -6.75  -3.64
+iter:  25 22:45:45   316.078919c  -6.98  -4.15c
+iter:  26 22:45:46   316.078879c  -7.62c -4.10c
+
+Converged after 26 iterations.
+
+Dipole moment: (-1.747354, 3.405714, -0.544202) |e|*Ang
+
+Energy contributions relative to reference atoms: (reference = -205649.568117)
+
+Kinetic:       +1084.111070
+Potential:     -699.504544
+External:        +0.000000
+XC:            -125.030313
+Entropy (-ST):   -0.107607
+Local:          +56.556470
+SIC:             +0.000000
+--------------------------
+Free energy:   +316.025076
+Extrapolated:  +316.078879
+
+Showing only first 2 kpts
+ Kpt  Band  Eigenvalues  Occupancy
+  0    37     -4.27916    1.99992
+  0    38     -3.88461    1.80267
+  0    39     -3.77580    1.01800
+  0    40      1.62976    0.00000
+
+  1    37     -3.87438    1.76318
+  1    38     -3.86527    1.72240
+  1    39     -3.81388    1.37885
+  1    40      1.07837    0.00000
+
+
+Fermi level: -3.77400
+
+No gap
+No difference between direct/indirect transitions
+
+Forces in eV/Ang:
+  0 Zn   -0.00094  435.20833    0.01739
+  1 Zn   -0.00086  435.23994    0.01997
+  2 O     0.00113 -435.19478    0.10087
+  3 O     0.00140 -435.19412    0.08590
+  4 Zn   -0.17378   -0.44627    1.31679
+  5 Zn    0.02543    0.57188   -0.02956
+  6 O    -0.28354   -0.68095   -0.14026
+  7 O     0.15943    0.45627    0.03448
+  8 O     0.27150    0.06059   -1.10513
+
+System changes: positions 
+
+Initializing position-dependent things.
+
+Density initialized from wave functions
+    .-------.  
+   /|       |  
+  / |       |  
+ *  |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  |  O    |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ | O|Zn  O  |  
+ |  |  Zn   |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  O       |  
+ | Zn       |  
+ |O |       |  
+ Zn |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  .-------.  
+ | /       /   
+ |/       /    
+ *-------*     
+
+Atomic positions and initial magnetic moments
+
+Positions:
+   0 Zn     0.000000    0.000000   10.000000    ( 0.0000,  0.0000,  0.0000)
+   1 Zn     0.000000    2.603000   10.000000    ( 0.0000,  0.0000,  0.0000)
+   2 O      0.000000    1.991295   10.000000    ( 0.0000,  0.0000,  0.0000)
+   3 O     -0.000000    4.594295   10.000000    ( 0.0000,  0.0000,  0.0000)
+   4 Zn     2.276674    0.396396   15.535061    ( 0.0000,  0.0000,  0.0000)
+   5 Zn     0.676714    3.221059   14.824089    ( 0.0000,  0.0000,  0.0000)
+   6 O      0.651536    1.482752   15.260015    ( 0.0000,  0.0000,  0.0000)
+   7 O      2.296553    3.938396   14.290510    ( 0.0000,  0.0000,  0.0000)
+   8 O      1.367275    5.047314   17.122917    ( 0.0000,  0.0000,  0.0000)
+
+Unit cell:
+           periodic     x           y           z      points  spacing
+  1. axis:    yes    3.249000    0.000000    0.000000    18     0.1805
+  2. axis:    yes    0.000000    5.206000    0.000000    27     0.1928
+  3. axis:    no     0.000000    0.000000   22.813717   120     0.1901
+
+  Lengths:   3.249000   5.206000  22.813717
+  Angles:   90.000000  90.000000  90.000000
+
+Effective grid spacing dv^(1/3) = 0.1877
+
+     iter     time        total  log10-change:
+                         energy   eigst   dens
+iter:   1 22:45:47   315.302967   -0.18
+iter:   2 22:45:48   315.377826   -0.90  -1.57
+iter:   3 22:45:49   315.640647   -1.46  -1.73
+iter:   4 22:45:49   315.715879   -2.17  -1.94
+iter:   5 22:45:50   315.740378   -3.07  -2.11
+iter:   6 22:45:51   315.635045   -2.55  -2.19
+iter:   7 22:45:51   315.337992   -2.91  -1.96
+iter:   8 22:45:52   315.776099   -2.69  -1.61
+iter:   9 22:45:53   315.724536   -2.63  -2.21
+iter:  10 22:45:54   315.741853   -3.49  -2.38
+iter:  11 22:45:54   315.767317   -3.83  -2.42
+iter:  12 22:45:55   315.765200c  -4.43  -2.47
+iter:  13 22:45:56   315.787395c  -3.92  -2.47
+iter:  14 22:45:57   315.759386c  -3.73  -2.62
+iter:  15 22:45:57   315.742110   -3.33  -2.08
+iter:  16 22:45:58   315.756931c  -3.98  -2.45
+iter:  17 22:45:59   315.765802c  -4.32  -2.54
+iter:  18 22:46:00   315.771530c  -4.66  -2.58
+iter:  19 22:46:00   315.780796c  -4.69  -2.60
+iter:  20 22:46:01   315.719551   -3.73  -2.65
+iter:  21 22:46:02   315.787484   -4.08  -2.02
+iter:  22 22:46:03   315.788378   -4.77  -2.81
+iter:  23 22:46:03   315.778690c  -4.64  -2.86
+iter:  24 22:46:04   315.790733c  -4.79  -2.25
+iter:  25 22:46:05   315.791724c  -5.75  -3.23
+iter:  26 22:46:06   315.791451c  -5.47  -2.99
+iter:  27 22:46:06   315.791262c  -6.19  -3.88
+iter:  28 22:46:07   315.791408c  -6.94  -3.72
+iter:  29 22:46:08   315.791418c  -6.27  -4.00
+iter:  30 22:46:09   315.791378c  -7.25  -4.25c
+iter:  31 22:46:09   315.791383c  -7.31  -4.40c
+iter:  32 22:46:10   315.791383c  -7.82c -4.55c
+
+Converged after 32 iterations.
+
+Dipole moment: (-1.810536, 3.241913, -0.514294) |e|*Ang
+
+Energy contributions relative to reference atoms: (reference = -205649.568117)
+
+Kinetic:       +1081.054660
+Potential:     -696.773682
+External:        +0.000000
+XC:            -124.957131
+Entropy (-ST):   -0.114163
+Local:          +56.524617
+SIC:             +0.000000
+--------------------------
+Free energy:   +315.734301
+Extrapolated:  +315.791383
+
+Showing only first 2 kpts
+ Kpt  Band  Eigenvalues  Occupancy
+  0    37     -4.26632    1.99991
+  0    38     -3.88639    1.83996
+  0    39     -3.74990    0.85710
+  0    40      1.88815    0.00000
+
+  1    37     -3.87441    1.80092
+  1    38     -3.83838    1.62968
+  1    39     -3.79893    1.33320
+  1    40      1.29276    0.00000
+
+
+Fermi level: -3.76429
+
+No gap
+No difference between direct/indirect transitions
+
+Forces in eV/Ang:
+  0 Zn   -0.00061  435.13006    0.03802
+  1 Zn   -0.00124  435.16879    0.03889
+  2 O     0.00075 -435.12594    0.08225
+  3 O     0.00123 -435.11275    0.06970
+  4 Zn    0.34385    0.32508    0.41151
+  5 Zn   -0.01141    0.65855   -0.33545
+  6 O    -0.46826   -1.64514    0.12467
+  7 O     0.25809    0.80622    0.36785
+  8 O    -0.12693   -0.22386   -0.74054
+
+System changes: positions 
+
+Initializing position-dependent things.
+
+Density initialized from wave functions
+    .-------.  
+   /|       |  
+  / |       |  
+ *  |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  |  O    |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ | O|Zn  O  |  
+ |  |  Zn   |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  O       |  
+ | Zn       |  
+ |O |       |  
+ Zn |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  .-------.  
+ | /       /   
+ |/       /    
+ *-------*     
+
+Atomic positions and initial magnetic moments
+
+Positions:
+   0 Zn     0.000000    0.000000   10.000000    ( 0.0000,  0.0000,  0.0000)
+   1 Zn     0.000000    2.603000   10.000000    ( 0.0000,  0.0000,  0.0000)
+   2 O      0.000000    1.991295   10.000000    ( 0.0000,  0.0000,  0.0000)
+   3 O     -0.000000    4.594295   10.000000    ( 0.0000,  0.0000,  0.0000)
+   4 Zn     2.278648    0.391356   15.579892    ( 0.0000,  0.0000,  0.0000)
+   5 Zn     0.679516    3.238057   14.833861    ( 0.0000,  0.0000,  0.0000)
+   6 O      0.641083    1.471239   15.240992    ( 0.0000,  0.0000,  0.0000)
+   7 O      2.301459    3.938400   14.283228    ( 0.0000,  0.0000,  0.0000)
+   8 O      1.368078    5.044555   17.089795    ( 0.0000,  0.0000,  0.0000)
+
+Unit cell:
+           periodic     x           y           z      points  spacing
+  1. axis:    yes    3.249000    0.000000    0.000000    18     0.1805
+  2. axis:    yes    0.000000    5.206000    0.000000    27     0.1928
+  3. axis:    no     0.000000    0.000000   22.813717   120     0.1901
+
+  Lengths:   3.249000   5.206000  22.813717
+  Angles:   90.000000  90.000000  90.000000
+
+Effective grid spacing dv^(1/3) = 0.1877
+
+     iter     time        total  log10-change:
+                         energy   eigst   dens
+iter:   1 22:46:11   315.706700   -1.43
+iter:   2 22:46:12   315.718634   -2.35  -2.24
+iter:   3 22:46:13   315.727844c  -2.98  -2.16
+iter:   4 22:46:14   315.736320c  -3.66  -2.49
+iter:   5 22:46:14   315.719311c  -3.37  -2.63
+iter:   6 22:46:15   315.656635   -4.00  -2.14
+iter:   7 22:46:16   315.714814   -3.45  -2.01
+iter:   8 22:46:17   315.742230   -4.14  -2.51
+iter:   9 22:46:17   315.741686c  -4.24  -2.59
+iter:  10 22:46:18   315.730353c  -4.14  -2.53
+iter:  11 22:46:19   315.744272c  -4.67  -2.61
+iter:  12 22:46:20   315.744179c  -5.18  -3.28
+iter:  13 22:46:20   315.741198c  -5.22  -2.88
+iter:  14 22:46:21   315.741373c  -5.77  -2.89
+iter:  15 22:46:22   315.740851c  -5.98  -2.91
+iter:  16 22:46:23   315.743611c  -5.85  -2.87
+iter:  17 22:46:23   315.744362c  -5.84  -3.40
+iter:  18 22:46:24   315.743424c  -6.24  -3.33
+iter:  19 22:46:25   315.744180c  -6.70  -3.33
+iter:  20 22:46:26   315.743808c  -6.63  -3.80
+iter:  21 22:46:26   315.744057c  -7.16  -3.66
+iter:  22 22:46:27   315.744059c  -7.96c -4.70c
+
+Converged after 22 iterations.
+
+Dipole moment: (-1.828085, 3.284709, -0.501272) |e|*Ang
+
+Energy contributions relative to reference atoms: (reference = -205649.568117)
+
+Kinetic:       +1080.553865
+Potential:     -696.289006
+External:        +0.000000
+XC:            -124.979519
+Entropy (-ST):   -0.116178
+Local:          +56.516808
+SIC:             +0.000000
+--------------------------
+Free energy:   +315.685969
+Extrapolated:  +315.744059
+
+Showing only first 2 kpts
+ Kpt  Band  Eigenvalues  Occupancy
+  0    37     -4.24862    1.99991
+  0    38     -3.86515    1.83225
+  0    39     -3.72823    0.82800
+  0    40      1.94198    0.00000
+
+  1    37     -3.85631    1.80302
+  1    38     -3.81701    1.61321
+  1    39     -3.76894    1.22922
+  1    40      1.34467    0.00000
+
+
+Fermi level: -3.74561
+
+No gap
+No difference between direct/indirect transitions
+
+Forces in eV/Ang:
+  0 Zn   -0.00052  435.11230    0.04373
+  1 Zn   -0.00133  435.15178    0.04433
+  2 O     0.00072 -435.11507    0.07828
+  3 O     0.00120 -435.09988    0.06587
+  4 Zn    0.61597    0.56627   -0.07041
+  5 Zn    0.03638    0.31993   -0.28767
+  6 O    -0.40292   -1.35835    0.11282
+  7 O     0.20970    0.79368    0.44251
+  8 O    -0.46440   -0.40740   -0.31038
+
+System changes: positions 
+
+Initializing position-dependent things.
+
+Density initialized from wave functions
+    .-------.  
+   /|       |  
+  / |       |  
+ *  |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  |  O    |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ | O|Zn  O  |  
+ |  |  Zn   |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  O       |  
+ | Zn       |  
+ |O |       |  
+ Zn |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  .-------.  
+ | /       /   
+ |/       /    
+ *-------*     
+
+Atomic positions and initial magnetic moments
+
+Positions:
+   0 Zn     0.000000    0.000000   10.000000    ( 0.0000,  0.0000,  0.0000)
+   1 Zn     0.000000    2.603000   10.000000    ( 0.0000,  0.0000,  0.0000)
+   2 O      0.000000    1.991295   10.000000    ( 0.0000,  0.0000,  0.0000)
+   3 O     -0.000000    4.594295   10.000000    ( 0.0000,  0.0000,  0.0000)
+   4 Zn     2.301557    0.415423   15.597854    ( 0.0000,  0.0000,  0.0000)
+   5 Zn     0.681879    3.258748   14.829211    ( 0.0000,  0.0000,  0.0000)
+   6 O      0.621163    1.415434   15.234379    ( 0.0000,  0.0000,  0.0000)
+   7 O      2.311132    3.959979   14.292419    ( 0.0000,  0.0000,  0.0000)
+   8 O      1.353027    5.029445   17.063480    ( 0.0000,  0.0000,  0.0000)
+
+Unit cell:
+           periodic     x           y           z      points  spacing
+  1. axis:    yes    3.249000    0.000000    0.000000    18     0.1805
+  2. axis:    yes    0.000000    5.206000    0.000000    27     0.1928
+  3. axis:    no     0.000000    0.000000   22.813717   120     0.1901
+
+  Lengths:   3.249000   5.206000  22.813717
+  Angles:   90.000000  90.000000  90.000000
+
+Effective grid spacing dv^(1/3) = 0.1877
+
+     iter     time        total  log10-change:
+                         energy   eigst   dens
+iter:   1 22:46:28   315.561048   -1.49
+iter:   2 22:46:29   315.583506   -2.47  -2.20
+iter:   3 22:46:30   315.594946c  -3.17  -2.09
+iter:   4 22:46:30   315.610036c  -3.86  -2.35
+iter:   5 22:46:31   315.628374c  -3.11  -2.42
+iter:   6 22:46:32   315.618743c  -3.46  -2.47
+iter:   7 22:46:33   315.615882c  -3.81  -2.52
+iter:   8 22:46:33   315.618669c  -3.91  -2.53
+iter:   9 22:46:34   315.631547c  -4.41  -2.60
+iter:  10 22:46:35   315.635690c  -4.46  -2.77
+iter:  11 22:46:36   315.631360c  -4.87  -2.74
+iter:  12 22:46:36   315.636070c  -5.03  -2.77
+iter:  13 22:46:37   315.635712c  -5.45  -2.94
+iter:  14 22:46:38   315.635314c  -5.21  -2.79
+iter:  15 22:46:39   315.636104c  -6.03  -3.31
+iter:  16 22:46:39   315.635908c  -6.44  -3.37
+iter:  17 22:46:40   315.635773c  -6.64  -3.85
+iter:  18 22:46:41   315.635824c  -6.73  -3.84
+iter:  19 22:46:42   315.635840c  -6.56  -4.15c
+iter:  20 22:46:42   315.635851c  -6.98  -4.37c
+iter:  21 22:46:43   315.635850c  -7.41c -4.49c
+
+Converged after 21 iterations.
+
+Dipole moment: (-1.835970, 3.511247, -0.486612) |e|*Ang
+
+Energy contributions relative to reference atoms: (reference = -205649.568117)
+
+Kinetic:       +1080.236818
+Potential:     -696.040273
+External:        +0.000000
+XC:            -125.021590
+Entropy (-ST):   -0.113838
+Local:          +56.517813
+SIC:             +0.000000
+--------------------------
+Free energy:   +315.578931
+Extrapolated:  +315.635850
+
+Showing only first 2 kpts
+ Kpt  Band  Eigenvalues  Occupancy
+  0    37     -4.20778    1.99989
+  0    38     -3.83001    1.81460
+  0    39     -3.70042    0.84599
+  0    40      2.03077    0.00000
+
+  1    37     -3.82256    1.78800
+  1    38     -3.78738    1.61338
+  1    39     -3.73405    1.17909
+  1    40      1.43606    0.00000
+
+
+Fermi level: -3.71595
+
+No gap
+No difference between direct/indirect transitions
+
+Forces in eV/Ang:
+  0 Zn   -0.00055  435.11767    0.04706
+  1 Zn   -0.00143  435.15463    0.04668
+  2 O     0.00072 -435.11550    0.08027
+  3 O     0.00134 -435.10301    0.06636
+  4 Zn    0.28251    0.24883    0.08974
+  5 Zn    0.18644   -0.41499   -0.06707
+  6 O     0.08775   -0.10903   -0.19539
+  7 O     0.00675    0.64674    0.42932
+  8 O    -0.55454   -0.41328   -0.34835
+
+System changes: positions 
+
+Initializing position-dependent things.
+
+Density initialized from wave functions
+    .-------.  
+   /|       |  
+  / |       |  
+ *  |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  |  O    |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  |Zn  O  |  
+ | O|  Zn   |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  O       |  
+ | Zn       |  
+ |O |       |  
+ Zn |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  .-------.  
+ | /       /   
+ |/       /    
+ *-------*     
+
+Atomic positions and initial magnetic moments
+
+Positions:
+   0 Zn     0.000000    0.000000   10.000000    ( 0.0000,  0.0000,  0.0000)
+   1 Zn     0.000000    2.603000   10.000000    ( 0.0000,  0.0000,  0.0000)
+   2 O      0.000000    1.991295   10.000000    ( 0.0000,  0.0000,  0.0000)
+   3 O     -0.000000    4.594295   10.000000    ( 0.0000,  0.0000,  0.0000)
+   4 Zn     2.319068    0.431148   15.623607    ( 0.0000,  0.0000,  0.0000)
+   5 Zn     0.687965    3.265339   14.829323    ( 0.0000,  0.0000,  0.0000)
+   6 O      0.610098    1.383301   15.220116    ( 0.0000,  0.0000,  0.0000)
+   7 O      2.317414    3.982715   14.302809    ( 0.0000,  0.0000,  0.0000)
+   8 O      1.334427    5.012630   17.032495    ( 0.0000,  0.0000,  0.0000)
+
+Unit cell:
+           periodic     x           y           z      points  spacing
+  1. axis:    yes    3.249000    0.000000    0.000000    18     0.1805
+  2. axis:    yes    0.000000    5.206000    0.000000    27     0.1928
+  3. axis:    no     0.000000    0.000000   22.813717   120     0.1901
+
+  Lengths:   3.249000   5.206000  22.813717
+  Angles:   90.000000  90.000000  90.000000
+
+Effective grid spacing dv^(1/3) = 0.1877
+
+     iter     time        total  log10-change:
+                         energy   eigst   dens
+iter:   1 22:46:44   315.541431   -1.66
+iter:   2 22:46:45   315.565960   -2.61  -2.32
+iter:   3 22:46:46   315.570194c  -3.31  -2.45
+iter:   4 22:46:46   315.537322c  -3.34  -2.54
+iter:   5 22:46:47   315.571011c  -4.08  -2.04
+iter:   6 22:46:48   315.572761c  -3.82  -2.22
+iter:   7 22:46:49   315.577978c  -4.01  -2.54
+iter:   8 22:46:49   315.586020c  -3.77  -2.65
+iter:   9 22:46:50   315.586986c  -4.20  -2.66
+iter:  10 22:46:51   315.585996c  -5.06  -2.86
+iter:  11 22:46:52   315.586981c  -5.70  -3.20
+iter:  12 22:46:52   315.586768c  -6.08  -3.30
+iter:  13 22:46:53   315.586732c  -5.78  -3.56
+iter:  14 22:46:54   315.586569c  -6.04  -3.69
+iter:  15 22:46:55   315.586694c  -6.58  -3.83
+iter:  16 22:46:55   315.586645c  -6.77  -4.05c
+iter:  17 22:46:56   315.586642c  -7.41c -4.12c
+
+Converged after 17 iterations.
+
+Dipole moment: (-1.798167, 3.687267, -0.471288) |e|*Ang
+
+Energy contributions relative to reference atoms: (reference = -205649.568117)
+
+Kinetic:       +1079.929909
+Potential:     -695.733544
+External:        +0.000000
+XC:            -125.067828
+Entropy (-ST):   -0.112186
+Local:          +56.514198
+SIC:             +0.000000
+--------------------------
+Free energy:   +315.530549
+Extrapolated:  +315.586642
+
+Showing only first 2 kpts
+ Kpt  Band  Eigenvalues  Occupancy
+  0    37     -4.17946    1.99990
+  0    38     -3.78980    1.79001
+  0    39     -3.67392    0.91294
+  0    40      2.08465    0.00000
+
+  1    37     -3.79253    1.80008
+  1    38     -3.75485    1.61815
+  1    39     -3.69172    1.09041
+  1    40      1.51081    0.00000
+
+
+Fermi level: -3.68265
+
+No gap
+No difference between direct/indirect transitions
+
+Forces in eV/Ang:
+  0 Zn   -0.00052  435.11982    0.04925
+  1 Zn   -0.00140  435.15404    0.04823
+  2 O     0.00072 -435.11951    0.08025
+  3 O     0.00135 -435.10942    0.06526
+  4 Zn    0.08603    0.04745    0.16068
+  5 Zn    0.19080   -0.57228   -0.00524
+  6 O     0.47115    0.48433   -0.33737
+  7 O    -0.02399    0.52437    0.43525
+  8 O    -0.72239   -0.44831   -0.32924
+
+System changes: positions 
+
+Initializing position-dependent things.
+
+Density initialized from wave functions
+    .-------.  
+   /|       |  
+  / |       |  
+ *  |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  |  O    |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  |ZnZnO  |  
+ | O|       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  O       |  
+ | Zn       |  
+ |O |       |  
+ Zn |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  .-------.  
+ | /       /   
+ |/       /    
+ *-------*     
+
+Atomic positions and initial magnetic moments
+
+Positions:
+   0 Zn     0.000000    0.000000   10.000000    ( 0.0000,  0.0000,  0.0000)
+   1 Zn     0.000000    2.603000   10.000000    ( 0.0000,  0.0000,  0.0000)
+   2 O      0.000000    1.991295   10.000000    ( 0.0000,  0.0000,  0.0000)
+   3 O     -0.000000    4.594295   10.000000    ( 0.0000,  0.0000,  0.0000)
+   4 Zn     2.354428    0.458661   15.694180    ( 0.0000,  0.0000,  0.0000)
+   5 Zn     0.704698    3.271713   14.833366    ( 0.0000,  0.0000,  0.0000)
+   6 O      0.598150    1.331629   15.177231    ( 0.0000,  0.0000,  0.0000)
+   7 O      2.331017    4.037547   14.329925    ( 0.0000,  0.0000,  0.0000)
+   8 O      1.281002    4.968735   16.953553    ( 0.0000,  0.0000,  0.0000)
+
+Unit cell:
+           periodic     x           y           z      points  spacing
+  1. axis:    yes    3.249000    0.000000    0.000000    18     0.1805
+  2. axis:    yes    0.000000    5.206000    0.000000    27     0.1928
+  3. axis:    no     0.000000    0.000000   22.813717   120     0.1901
+
+  Lengths:   3.249000   5.206000  22.813717
+  Angles:   90.000000  90.000000  90.000000
+
+Effective grid spacing dv^(1/3) = 0.1877
+
+     iter     time        total  log10-change:
+                         energy   eigst   dens
+iter:   1 22:46:57   315.422709   -0.78
+iter:   2 22:46:58   315.432401   -1.87  -2.17
+iter:   3 22:46:59   315.436992c  -2.62  -2.19
+iter:   4 22:47:00   315.468734c  -2.89  -2.30
+iter:   5 22:47:00   315.469136c  -3.49  -2.36
+iter:   6 22:47:01   315.470134c  -3.17  -2.48
+iter:   7 22:47:02   315.471616c  -2.94  -2.53
+iter:   8 22:47:02   315.478363c  -3.98  -2.60
+iter:   9 22:47:03   315.481020c  -4.75  -2.81
+iter:  10 22:47:04   315.481318c  -5.36  -3.12
+iter:  11 22:47:05   315.481981c  -5.10  -3.19
+iter:  12 22:47:05   315.480425c  -5.26  -3.24
+iter:  13 22:47:06   315.481684c  -5.18  -3.12
+iter:  14 22:47:07   315.481405c  -6.06  -3.49
+iter:  15 22:47:08   315.481517c  -6.45  -3.69
+iter:  16 22:47:08   315.481402c  -6.08  -3.79
+iter:  17 22:47:09   315.481560c  -6.36  -3.71
+iter:  18 22:47:10   315.481577c  -6.59  -4.06c
+iter:  19 22:47:11   315.481571c  -7.13  -4.44c
+iter:  20 22:47:11   315.481587c  -7.34  -4.47c
+iter:  21 22:47:12   315.481576c  -7.78c -4.54c
+
+Converged after 21 iterations.
+
+Dipole moment: (-1.635860, 3.815018, -0.430192) |e|*Ang
+
+Energy contributions relative to reference atoms: (reference = -205649.568117)
+
+Kinetic:       +1078.554557
+Potential:     -694.472925
+External:        +0.000000
+XC:            -125.057637
+Entropy (-ST):   -0.103307
+Local:          +56.509235
+SIC:             +0.000000
+--------------------------
+Free energy:   +315.429922
+Extrapolated:  +315.481576
+
+Showing only first 2 kpts
+ Kpt  Band  Eigenvalues  Occupancy
+  0    37     -4.13912    1.99996
+  0    38     -3.70064    1.78882
+  0    39     -3.59962    1.05807
+  0    40      2.15708    0.00000
+
+  1    37     -3.73300    1.88359
+  1    38     -3.66591    1.61751
+  1    39     -3.56933    0.75993
+  1    40      1.60948    0.00000
+
+
+Fermi level: -3.59381
+
+No gap
+No difference between direct/indirect transitions
+
+Forces in eV/Ang:
+  0 Zn   -0.00096  435.12264    0.04686
+  1 Zn   -0.00120  435.15346    0.04439
+  2 O     0.00078 -435.11382    0.07432
+  3 O     0.00126 -435.10947    0.05653
+  4 Zn   -0.02101   -0.28080    0.27883
+  5 Zn    0.10529   -0.54670    0.06785
+  6 O     1.04858    1.36624   -0.54283
+  7 O     0.02024    0.08825    0.43832
+  8 O    -1.14355   -0.51450   -0.29743
+
+System changes: positions 
+
+Initializing position-dependent things.
+
+Density initialized from wave functions
+    .-------.  
+   /|       |  
+  / |       |  
+ *  |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  |  O    |  
+ |  |       |  
+ |  |       |  
+ |  |ZnZnO  |  
+ | O|       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  O       |  
+ | Zn       |  
+ |O |       |  
+ Zn |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  .-------.  
+ | /       /   
+ |/       /    
+ *-------*     
+
+Atomic positions and initial magnetic moments
+
+Positions:
+   0 Zn     0.000000    0.000000   10.000000    ( 0.0000,  0.0000,  0.0000)
+   1 Zn     0.000000    2.603000   10.000000    ( 0.0000,  0.0000,  0.0000)
+   2 O      0.000000    1.991295   10.000000    ( 0.0000,  0.0000,  0.0000)
+   3 O     -0.000000    4.594295   10.000000    ( 0.0000,  0.0000,  0.0000)
+   4 Zn     2.415041    0.495895   15.834296    ( 0.0000,  0.0000,  0.0000)
+   5 Zn     0.734695    3.282300   14.845306    ( 0.0000,  0.0000,  0.0000)
+   6 O      0.589201    1.262836   15.090541    ( 0.0000,  0.0000,  0.0000)
+   7 O      2.356351    4.129164   14.378532    ( 0.0000,  0.0000,  0.0000)
+   8 O      1.174803    4.887167   16.804998    ( 0.0000,  0.0000,  0.0000)
+
+Unit cell:
+           periodic     x           y           z      points  spacing
+  1. axis:    yes    3.249000    0.000000    0.000000    18     0.1805
+  2. axis:    yes    0.000000    5.206000    0.000000    27     0.1928
+  3. axis:    no     0.000000    0.000000   22.813717   120     0.1901
+
+  Lengths:   3.249000   5.206000  22.813717
+  Angles:   90.000000  90.000000  90.000000
+
+Effective grid spacing dv^(1/3) = 0.1877
+
+     iter     time        total  log10-change:
+                         energy   eigst   dens
+iter:   1 22:47:13   314.790786   -0.31
+iter:   2 22:47:14   315.180365   -0.90  -1.59
+iter:   3 22:47:15   315.239535   -1.78  -1.97
+iter:   4 22:47:16   315.281142   -2.48  -2.05
+iter:   5 22:47:16   315.307721   -2.83  -2.18
+iter:   6 22:47:17   315.308734c  -2.43  -2.26
+iter:   7 22:47:18   315.321085c  -2.98  -2.44
+iter:   8 22:47:19   315.297148c  -3.33  -2.49
+iter:   9 22:47:19   315.326304c  -3.94  -2.05
+iter:  10 22:47:20   315.337665   -4.50  -2.55
+iter:  11 22:47:21   315.333065c  -4.10  -2.87
+iter:  12 22:47:21   315.326416c  -4.01  -2.33
+iter:  13 22:47:22   315.329644c  -4.96  -2.64
+iter:  14 22:47:23   315.337912c  -4.65  -2.68
+iter:  15 22:47:24   315.337601c  -4.57  -3.24
+iter:  16 22:47:24   315.334318c  -4.85  -2.55
+iter:  17 22:47:25   315.335858c  -5.49  -2.85
+iter:  18 22:47:26   315.337400c  -6.09  -2.97
+iter:  19 22:47:27   315.339186c  -5.64  -3.20
+iter:  20 22:47:27   315.337993c  -5.19  -3.07
+iter:  21 22:47:28   315.339055c  -5.74  -3.54
+iter:  22 22:47:29   315.338947c  -6.10  -3.32
+iter:  23 22:47:30   315.338633c  -6.73  -3.55
+iter:  24 22:47:30   315.338623c  -7.13  -4.31c
+iter:  25 22:47:31   315.338616c  -7.51c -4.47c
+
+Converged after 25 iterations.
+
+Dipole moment: (-1.298339, 3.148226, -0.332160) |e|*Ang
+
+Energy contributions relative to reference atoms: (reference = -205649.568117)
+
+Kinetic:       +1074.907863
+Potential:     -691.386017
+External:        +0.000000
+XC:            -124.666206
+Entropy (-ST):   -0.075046
+Local:          +56.520499
+SIC:             +0.000000
+--------------------------
+Free energy:   +315.301093
+Extrapolated:  +315.338616
+
+Showing only first 2 kpts
+ Kpt  Band  Eigenvalues  Occupancy
+  0    37     -4.08525    2.00000
+  0    38     -3.57038    1.95314
+  0    39     -3.37145    0.87643
+  0    40      2.18265    0.00000
+
+  1    37     -3.59753    1.97251
+  1    38     -3.45614    1.61857
+  1    39     -3.31099    0.37764
+  1    40      1.78636    0.00000
+
+
+Fermi level: -3.38387
+
+No gap
+No difference between direct/indirect transitions
+
+Forces in eV/Ang:
+  0 Zn   -0.00084  435.13366    0.05867
+  1 Zn   -0.00103  435.15938    0.05271
+  2 O     0.00106 -435.11547    0.07037
+  3 O     0.00138 -435.11488    0.04997
+  4 Zn   -0.00875   -0.77635   -0.04767
+  5 Zn   -0.03767   -0.27122    0.08973
+  6 O     1.37435    2.14070   -0.60251
+  7 O     0.14560   -0.62004    0.48606
+  8 O    -1.46399   -0.59750    0.01853
+
+System changes: positions 
+
+Initializing position-dependent things.
+
+Density initialized from wave functions
+    .-------.  
+   /|       |  
+  / |       |  
+ *  |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  |  O    |  
+ |  |       |  
+ |  |       |  
+ |  |ZnZnO  |  
+ | O|       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  O       |  
+ | Zn       |  
+ |O |       |  
+ Zn |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  .-------.  
+ | /       /   
+ |/       /    
+ *-------*     
+
+Atomic positions and initial magnetic moments
+
+Positions:
+   0 Zn     0.000000    0.000000   10.000000    ( 0.0000,  0.0000,  0.0000)
+   1 Zn     0.000000    2.603000   10.000000    ( 0.0000,  0.0000,  0.0000)
+   2 O      0.000000    1.991295   10.000000    ( 0.0000,  0.0000,  0.0000)
+   3 O     -0.000000    4.594295   10.000000    ( 0.0000,  0.0000,  0.0000)
+   4 Zn     2.436936    0.499052   15.876894    ( 0.0000,  0.0000,  0.0000)
+   5 Zn     0.745533    3.278833   14.847868    ( 0.0000,  0.0000,  0.0000)
+   6 O      0.601999    1.262802   15.056282    ( 0.0000,  0.0000,  0.0000)
+   7 O      2.366453    4.159710   14.405911    ( 0.0000,  0.0000,  0.0000)
+   8 O      1.119587    4.850206   16.754923    ( 0.0000,  0.0000,  0.0000)
+
+Unit cell:
+           periodic     x           y           z      points  spacing
+  1. axis:    yes    3.249000    0.000000    0.000000    18     0.1805
+  2. axis:    yes    0.000000    5.206000    0.000000    27     0.1928
+  3. axis:    no     0.000000    0.000000   22.813717   120     0.1901
+
+  Lengths:   3.249000   5.206000  22.813717
+  Angles:   90.000000  90.000000  90.000000
+
+Effective grid spacing dv^(1/3) = 0.1877
+
+     iter     time        total  log10-change:
+                         energy   eigst   dens
+iter:   1 22:47:32   315.043723   -1.13
+iter:   2 22:47:33   315.174165   -1.84  -1.83
+iter:   3 22:47:34   315.209394   -2.43  -2.20
+iter:   4 22:47:34   315.224944   -2.97  -2.36
+iter:   5 22:47:35   315.228495c  -3.43  -2.57
+iter:   6 22:47:36   315.204450c  -3.00  -2.51
+iter:   7 22:47:37   315.216467c  -3.80  -2.58
+iter:   8 22:47:37   315.165028   -3.43  -2.62
+iter:   9 22:47:38   315.230884   -4.27  -2.03
+iter:  10 22:47:39   315.232927   -4.75  -2.50
+iter:  11 22:47:40   315.214444c  -4.48  -3.04
+iter:  12 22:47:40   315.223193c  -3.97  -2.18
+iter:  13 22:47:41   315.228078c  -4.77  -2.70
+iter:  14 22:47:42   315.232738c  -5.03  -2.84
+iter:  15 22:47:43   315.231368c  -6.02  -3.52
+iter:  16 22:47:44   315.233266c  -5.53  -3.20
+iter:  17 22:47:44   315.232877c  -6.17  -3.01
+iter:  18 22:47:45   315.232413c  -6.07  -3.40
+iter:  19 22:47:46   315.232613c  -6.58  -4.19c
+iter:  20 22:47:46   315.232435c  -6.63  -3.84
+iter:  21 22:47:47   315.232427c  -7.34  -4.52c
+iter:  22 22:47:48   315.232447c  -7.66c -4.50c
+
+Converged after 22 iterations.
+
+Dipole moment: (-1.099071, 2.608565, -0.301859) |e|*Ang
+
+Energy contributions relative to reference atoms: (reference = -205649.568117)
+
+Kinetic:       +1073.221048
+Potential:     -690.057885
+External:        +0.000000
+XC:            -124.416285
+Entropy (-ST):   -0.071601
+Local:          +56.521370
+SIC:             +0.000000
+--------------------------
+Free energy:   +315.196647
+Extrapolated:  +315.232447
+
+Showing only first 2 kpts
+ Kpt  Band  Eigenvalues  Occupancy
+  0    37     -4.04892    2.00000
+  0    38     -3.51041    1.95545
+  0    39     -3.30799    0.86753
+  0    40      2.18285    0.00000
+
+  1    37     -3.53276    1.97128
+  1    38     -3.39415    1.62204
+  1    39     -3.24560    0.36059
+  1    40      1.80729    0.00000
+
+
+Fermi level: -3.32132
+
+No gap
+No difference between direct/indirect transitions
+
+Forces in eV/Ang:
+  0 Zn   -0.00078  435.13150    0.06047
+  1 Zn   -0.00106  435.15743    0.05356
+  2 O     0.00105 -435.11702    0.06711
+  3 O     0.00132 -435.11515    0.04646
+  4 Zn   -0.04825   -0.85806   -0.31474
+  5 Zn   -0.05842   -0.11667    0.11093
+  6 O     1.12404    2.05064   -0.27069
+  7 O     0.16239   -0.74806    0.37052
+  8 O    -1.17265   -0.35920    0.03698
+
+System changes: positions 
+
+Initializing position-dependent things.
+
+Density initialized from wave functions
+    .-------.  
+   /|       |  
+  / |       |  
+ *  |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  | O     |  
+ |  |       |  
+ |  |       |  
+ |  |ZnZnO  |  
+ | O|       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  O       |  
+ | Zn       |  
+ |O |       |  
+ Zn |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  .-------.  
+ | /       /   
+ |/       /    
+ *-------*     
+
+Atomic positions and initial magnetic moments
+
+Positions:
+   0 Zn     0.000000    0.000000   10.000000    ( 0.0000,  0.0000,  0.0000)
+   1 Zn     0.000000    2.603000   10.000000    ( 0.0000,  0.0000,  0.0000)
+   2 O      0.000000    1.991295   10.000000    ( 0.0000,  0.0000,  0.0000)
+   3 O     -0.000000    4.594295   10.000000    ( 0.0000,  0.0000,  0.0000)
+   4 Zn     2.442996    0.458565   15.851761    ( 0.0000,  0.0000,  0.0000)
+   5 Zn     0.751061    3.241665   14.841566    ( 0.0000,  0.0000,  0.0000)
+   6 O      0.673682    1.369652   15.039323    ( 0.0000,  0.0000,  0.0000)
+   7 O      2.372804    4.164263   14.457452    ( 0.0000,  0.0000,  0.0000)
+   8 O      1.030680    4.809299   16.749804    ( 0.0000,  0.0000,  0.0000)
+
+Unit cell:
+           periodic     x           y           z      points  spacing
+  1. axis:    yes    3.249000    0.000000    0.000000    18     0.1805
+  2. axis:    yes    0.000000    5.206000    0.000000    27     0.1928
+  3. axis:    no     0.000000    0.000000   22.813717   120     0.1901
+
+  Lengths:   3.249000   5.206000  22.813717
+  Angles:   90.000000  90.000000  90.000000
+
+Effective grid spacing dv^(1/3) = 0.1877
+
+     iter     time        total  log10-change:
+                         energy   eigst   dens
+iter:   1 22:47:49   314.609892   -0.92
+iter:   2 22:47:50   314.809912   -1.88  -1.78
+iter:   3 22:47:51   314.854896   -2.70  -2.10
+iter:   4 22:47:51   314.903883   -3.03  -2.18
+iter:   5 22:47:52   314.911137   -2.99  -2.13
+iter:   6 22:47:53   314.920605c  -2.98  -2.06
+iter:   7 22:47:54   314.926018c  -3.55  -2.40
+iter:   8 22:47:54   314.934982c  -3.31  -2.48
+iter:   9 22:47:55   314.944822c  -4.10  -2.59
+iter:  10 22:47:56   314.935303c  -3.58  -2.73
+iter:  11 22:47:57   314.912904c  -4.35  -2.18
+iter:  12 22:47:57   314.941949c  -3.94  -2.07
+iter:  13 22:47:58   314.947879c  -4.86  -2.63
+iter:  14 22:47:59   314.953611c  -5.26  -2.71
+iter:  15 22:48:00   314.954724c  -5.36  -3.10
+iter:  16 22:48:00   314.955130c  -5.10  -3.58
+iter:  17 22:48:01   314.954234c  -5.50  -2.95
+iter:  18 22:48:02   314.954580c  -6.08  -3.41
+iter:  19 22:48:03   314.954689c  -6.41  -3.72
+iter:  20 22:48:03   314.954630c  -6.11  -3.96
+iter:  21 22:48:04   314.954579c  -6.70  -4.11c
+iter:  22 22:48:05   314.954620c  -7.29  -4.15c
+iter:  23 22:48:06   314.954609c  -6.92  -4.26c
+iter:  24 22:48:06   314.954618c  -7.74c -4.62c
+
+Converged after 24 iterations.
+
+Dipole moment: (-0.750892, 1.842024, -0.329684) |e|*Ang
+
+Energy contributions relative to reference atoms: (reference = -205649.568117)
+
+Kinetic:       +1071.985520
+Potential:     -689.145526
+External:        +0.000000
+XC:            -124.364760
+Entropy (-ST):   -0.082405
+Local:          +56.520587
+SIC:             +0.000000
+--------------------------
+Free energy:   +314.913416
+Extrapolated:  +314.954618
+
+Showing only first 2 kpts
+ Kpt  Band  Eigenvalues  Occupancy
+  0    37     -4.01103    1.99999
+  0    38     -3.53082    1.87523
+  0    39     -3.39463    0.99309
+  0    40      2.35562    0.00000
+
+  1    37     -3.55166    1.91596
+  1    38     -3.46916    1.62819
+  1    39     -3.33187    0.43886
+  1    40      1.80342    0.00000
+
+
+Fermi level: -3.39532
+
+No gap
+No difference between direct/indirect transitions
+
+Forces in eV/Ang:
+  0 Zn   -0.00065  435.13362    0.05967
+  1 Zn   -0.00101  435.16165    0.05236
+  2 O     0.00098 -435.12446    0.07037
+  3 O     0.00141 -435.11678    0.05173
+  4 Zn    0.19821   -0.26153   -0.21642
+  5 Zn    0.01299    0.66974    0.21019
+  6 O     0.24296    0.27301    0.37776
+  7 O     0.11080   -0.77355   -0.06809
+  8 O    -0.56956    0.13786   -0.43286
+
+System changes: positions 
+
+Initializing position-dependent things.
+
+Density initialized from wave functions
+    .-------.  
+   /|       |  
+  / |       |  
+ *  |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  | O     |  
+ |  |       |  
+ |  |       |  
+ |  |ZnZnO  |  
+ | O|       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  O       |  
+ | Zn       |  
+ |O |       |  
+ Zn |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  .-------.  
+ | /       /   
+ |/       /    
+ *-------*     
+
+Atomic positions and initial magnetic moments
+
+Positions:
+   0 Zn     0.000000    0.000000   10.000000    ( 0.0000,  0.0000,  0.0000)
+   1 Zn     0.000000    2.603000   10.000000    ( 0.0000,  0.0000,  0.0000)
+   2 O      0.000000    1.991295   10.000000    ( 0.0000,  0.0000,  0.0000)
+   3 O     -0.000000    4.594295   10.000000    ( 0.0000,  0.0000,  0.0000)
+   4 Zn     2.447553    0.444608   15.852850    ( 0.0000,  0.0000,  0.0000)
+   5 Zn     0.753218    3.247952   14.846485    ( 0.0000,  0.0000,  0.0000)
+   6 O      0.688776    1.393462   15.038197    ( 0.0000,  0.0000,  0.0000)
+   7 O      2.376300    4.152594   14.464145    ( 0.0000,  0.0000,  0.0000)
+   8 O      1.005414    4.803519   16.735668    ( 0.0000,  0.0000,  0.0000)
+
+Unit cell:
+           periodic     x           y           z      points  spacing
+  1. axis:    yes    3.249000    0.000000    0.000000    18     0.1805
+  2. axis:    yes    0.000000    5.206000    0.000000    27     0.1928
+  3. axis:    no     0.000000    0.000000   22.813717   120     0.1901
+
+  Lengths:   3.249000   5.206000  22.813717
+  Angles:   90.000000  90.000000  90.000000
+
+Effective grid spacing dv^(1/3) = 0.1877
+
+     iter     time        total  log10-change:
+                         energy   eigst   dens
+iter:   1 22:48:08   314.883666   -2.04
+iter:   2 22:48:08   314.903602   -2.94  -2.32
+iter:   3 22:48:09   314.912497c  -3.68  -2.57
+iter:   4 22:48:10   314.912172c  -4.30  -2.68
+iter:   5 22:48:11   314.914977c  -3.90  -2.82
+iter:   6 22:48:11   314.904783c  -3.71  -2.67
+iter:   7 22:48:12   314.914896c  -4.25  -2.67
+iter:   8 22:48:13   314.900019c  -4.42  -3.28
+iter:   9 22:48:13   314.910192c  -4.49  -2.23
+iter:  10 22:48:14   314.914437c  -5.36  -2.78
+iter:  11 22:48:15   314.916099c  -5.26  -3.13
+iter:  12 22:48:16   314.916080c  -6.25  -3.08
+iter:  13 22:48:16   314.915217c  -5.93  -3.31
+iter:  14 22:48:17   314.915476c  -6.45  -3.38
+iter:  15 22:48:18   314.915742c  -6.57  -3.62
+iter:  16 22:48:19   314.915765c  -6.95  -4.29c
+iter:  17 22:48:19   314.915765c  -7.29  -4.45c
+iter:  18 22:48:20   314.915768c  -7.50c -4.56c
+
+Converged after 18 iterations.
+
+Dipole moment: (-0.682220, 1.705012, -0.328783) |e|*Ang
+
+Energy contributions relative to reference atoms: (reference = -205649.568117)
+
+Kinetic:       +1072.400022
+Potential:     -689.473924
+External:        +0.000000
+XC:            -124.487865
+Entropy (-ST):   -0.083998
+Local:          +56.519534
+SIC:             +0.000000
+--------------------------
+Free energy:   +314.873770
+Extrapolated:  +314.915768
+
+Showing only first 2 kpts
+ Kpt  Band  Eigenvalues  Occupancy
+  0    37     -3.99993    1.99999
+  0    38     -3.53021    1.86987
+  0    39     -3.39740    1.00447
+  0    40      2.39991    0.00000
+
+  1    37     -3.54758    1.90627
+  1    38     -3.47054    1.62665
+  1    39     -3.33343    0.43837
+  1    40      1.80229    0.00000
+
+
+Fermi level: -3.39695
+
+No gap
+No difference between direct/indirect transitions
+
+Forces in eV/Ang:
+  0 Zn   -0.00062  435.12820    0.05754
+  1 Zn   -0.00101  435.15837    0.05073
+  2 O     0.00098 -435.12418    0.06787
+  3 O     0.00133 -435.11231    0.04977
+  4 Zn    0.23134   -0.05474   -0.26835
+  5 Zn    0.02773    0.74274    0.24135
+  6 O     0.14984   -0.13070    0.48569
+  7 O     0.10534   -0.70078   -0.17398
+  8 O    -0.51636    0.15396   -0.40479
+
+System changes: positions 
+
+Initializing position-dependent things.
+
+Density initialized from wave functions
+    .-------.  
+   /|       |  
+  / |       |  
+ *  |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  | O     |  
+ |  |       |  
+ |  |       |  
+ |  |ZnZnO  |  
+ |  O       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  O       |  
+ | Zn       |  
+ |O |       |  
+ Zn |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  .-------.  
+ | /       /   
+ |/       /    
+ *-------*     
+
+Atomic positions and initial magnetic moments
+
+Positions:
+   0 Zn     0.000000    0.000000   10.000000    ( 0.0000,  0.0000,  0.0000)
+   1 Zn     0.000000    2.603000   10.000000    ( 0.0000,  0.0000,  0.0000)
+   2 O      0.000000    1.991295   10.000000    ( 0.0000,  0.0000,  0.0000)
+   3 O     -0.000000    4.594295   10.000000    ( 0.0000,  0.0000,  0.0000)
+   4 Zn     2.463994    0.412645   15.853589    ( 0.0000,  0.0000,  0.0000)
+   5 Zn     0.758985    3.287484   14.866548    ( 0.0000,  0.0000,  0.0000)
+   6 O      0.723753    1.436744   15.048540    ( 0.0000,  0.0000,  0.0000)
+   7 O      2.387591    4.105961   14.470370    ( 0.0000,  0.0000,  0.0000)
+   8 O      0.936945    4.796071   16.689135    ( 0.0000,  0.0000,  0.0000)
+
+Unit cell:
+           periodic     x           y           z      points  spacing
+  1. axis:    yes    3.249000    0.000000    0.000000    18     0.1805
+  2. axis:    yes    0.000000    5.206000    0.000000    27     0.1928
+  3. axis:    no     0.000000    0.000000   22.813717   120     0.1901
+
+  Lengths:   3.249000   5.206000  22.813717
+  Angles:   90.000000  90.000000  90.000000
+
+Effective grid spacing dv^(1/3) = 0.1877
+
+     iter     time        total  log10-change:
+                         energy   eigst   dens
+iter:   1 22:48:21   314.658354   -1.04
+iter:   2 22:48:22   314.732809   -1.97  -2.00
+iter:   3 22:48:23   314.759711   -2.72  -2.24
+iter:   4 22:48:24   314.737120c  -2.79  -2.28
+iter:   5 22:48:24   314.807258   -3.61  -1.98
+iter:   6 22:48:25   314.787451   -3.26  -2.21
+iter:   7 22:48:26   314.821542c  -3.56  -2.09
+iter:   8 22:48:27   314.823915c  -4.63  -2.87
+iter:   9 22:48:27   314.824369c  -4.54  -2.89
+iter:  10 22:48:28   314.824481c  -4.21  -3.11
+iter:  11 22:48:29   314.825075c  -5.03  -3.17
+iter:  12 22:48:30   314.825594c  -5.49  -3.46
+iter:  13 22:48:30   314.825333c  -5.57  -3.33
+iter:  14 22:48:31   314.825424c  -6.01  -3.83
+iter:  15 22:48:32   314.825419c  -6.42  -3.87
+iter:  16 22:48:33   314.825342c  -6.50  -3.98
+iter:  17 22:48:33   314.825339c  -7.16  -4.10c
+iter:  18 22:48:34   314.825360c  -7.06  -4.17c
+iter:  19 22:48:35   314.825387c  -6.96  -4.44c
+iter:  20 22:48:35   314.825370c  -8.02c -4.62c
+
+Converged after 20 iterations.
+
+Dipole moment: (-0.536456, 1.503565, -0.318384) |e|*Ang
+
+Energy contributions relative to reference atoms: (reference = -205649.568117)
+
+Kinetic:       +1073.966099
+Potential:     -690.679449
+External:        +0.000000
+XC:            -124.936241
+Entropy (-ST):   -0.085579
+Local:          +56.517750
+SIC:             +0.000000
+--------------------------
+Free energy:   +314.782581
+Extrapolated:  +314.825370
+
+Showing only first 2 kpts
+ Kpt  Band  Eigenvalues  Occupancy
+  0    37     -3.99068    1.99999
+  0    38     -3.52170    1.89131
+  0    39     -3.37951    1.00641
+  0    40      2.49372    0.00000
+
+  1    37     -3.52658    1.90091
+  1    38     -3.45182    1.62275
+  1    39     -3.31022    0.40424
+  1    40      1.82166    0.00000
+
+
+Fermi level: -3.37887
+
+No gap
+No difference between direct/indirect transitions
+
+Forces in eV/Ang:
+  0 Zn   -0.00052  435.11701    0.05682
+  1 Zn   -0.00110  435.15574    0.05126
+  2 O     0.00101 -435.12531    0.06397
+  3 O     0.00116 -435.10074    0.04783
+  4 Zn    0.05471    0.36314   -0.34603
+  5 Zn    0.09491    0.40181    0.39559
+  6 O     0.13497   -0.54821    0.57336
+  7 O     0.04973   -0.38903   -0.42210
+  8 O    -0.33075    0.12201   -0.28437
+
+System changes: positions 
+
+Initializing position-dependent things.
+
+Density initialized from wave functions
+    .-------.  
+   /|       |  
+  / |       |  
+ *  |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  | O     |  
+ |  |       |  
+ |  |       |  
+ |  |ZnZnO  |  
+ |  O       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  O       |  
+ | Zn       |  
+ |O |       |  
+ Zn |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  .-------.  
+ | /       /   
+ |/       /    
+ *-------*     
+
+Atomic positions and initial magnetic moments
+
+Positions:
+   0 Zn     0.000000    0.000000   10.000000    ( 0.0000,  0.0000,  0.0000)
+   1 Zn     0.000000    2.603000   10.000000    ( 0.0000,  0.0000,  0.0000)
+   2 O      0.000000    1.991295   10.000000    ( 0.0000,  0.0000,  0.0000)
+   3 O     -0.000000    4.594295   10.000000    ( 0.0000,  0.0000,  0.0000)
+   4 Zn     2.470418    0.393473   15.833077    ( 0.0000,  0.0000,  0.0000)
+   5 Zn     0.761780    3.326923   14.888635    ( 0.0000,  0.0000,  0.0000)
+   6 O      0.752267    1.461067   15.079097    ( 0.0000,  0.0000,  0.0000)
+   7 O      2.394341    4.052435   14.459480    ( 0.0000,  0.0000,  0.0000)
+   8 O      0.892372    4.803715   16.662621    ( 0.0000,  0.0000,  0.0000)
+
+Unit cell:
+           periodic     x           y           z      points  spacing
+  1. axis:    yes    3.249000    0.000000    0.000000    18     0.1805
+  2. axis:    yes    0.000000    5.206000    0.000000    27     0.1928
+  3. axis:    no     0.000000    0.000000   22.813717   120     0.1901
+
+  Lengths:   3.249000   5.206000  22.813717
+  Angles:   90.000000  90.000000  90.000000
+
+Effective grid spacing dv^(1/3) = 0.1877
+
+     iter     time        total  log10-change:
+                         energy   eigst   dens
+iter:   1 22:48:37   314.687217   -1.14
+iter:   2 22:48:37   314.703825   -1.99  -2.26
+iter:   3 22:48:38   314.734382   -2.72  -2.32
+iter:   4 22:48:39   314.577314   -2.74  -2.38
+iter:   5 22:48:40   314.671622   -3.55  -1.99
+iter:   6 22:48:40   314.732764   -3.17  -2.00
+iter:   7 22:48:41   314.769389   -3.15  -2.44
+iter:   8 22:48:42   314.752555c  -3.92  -2.84
+iter:   9 22:48:43   314.770429c  -4.06  -2.58
+iter:  10 22:48:43   314.768972c  -4.93  -2.87
+iter:  11 22:48:44   314.768269c  -4.78  -2.99
+iter:  12 22:48:45   314.767475c  -4.77  -2.52
+iter:  13 22:48:46   314.767931c  -5.33  -2.87
+iter:  14 22:48:46   314.770481c  -5.63  -2.93
+iter:  15 22:48:47   314.771212c  -5.34  -3.61
+iter:  16 22:48:48   314.770443c  -5.80  -3.10
+iter:  17 22:48:49   314.771057c  -5.81  -3.59
+iter:  18 22:48:49   314.770568c  -5.78  -2.89
+iter:  19 22:48:50   314.770866c  -6.38  -3.94
+iter:  20 22:48:51   314.770768c  -6.86  -3.82
+iter:  21 22:48:52   314.770670c  -7.29  -4.13c
+iter:  22 22:48:52   314.770706c  -7.02  -4.49c
+iter:  23 22:48:53   314.770693c  -8.07c -4.64c
+
+Converged after 23 iterations.
+
+Dipole moment: (-0.475207, 1.594338, -0.314212) |e|*Ang
+
+Energy contributions relative to reference atoms: (reference = -205649.568117)
+
+Kinetic:       +1075.420464
+Potential:     -691.775043
+External:        +0.000000
+XC:            -125.346046
+Entropy (-ST):   -0.080542
+Local:          +56.511590
+SIC:             +0.000000
+--------------------------
+Free energy:   +314.730422
+Extrapolated:  +314.770693
+
+Showing only first 2 kpts
+ Kpt  Band  Eigenvalues  Occupancy
+  0    37     -4.00879    1.99999
+  0    38     -3.54020    1.93954
+  0    39     -3.36797    1.01182
+  0    40      2.54356    0.00000
+
+  1    37     -3.54082    1.94026
+  1    38     -3.43951    1.62140
+  1    39     -3.28762    0.34066
+  1    40      1.83448    0.00000
+
+
+Fermi level: -3.36678
+
+No gap
+No difference between direct/indirect transitions
+
+Forces in eV/Ang:
+  0 Zn   -0.00044  435.11673    0.06049
+  1 Zn   -0.00116  435.16353    0.05654
+  2 O     0.00110 -435.13184    0.06525
+  3 O     0.00112 -435.09659    0.05021
+  4 Zn   -0.14615    0.64272   -0.25452
+  5 Zn    0.20263   -0.13119    0.54081
+  6 O     0.15887   -0.59229    0.50031
+  7 O    -0.03989    0.09495   -0.54938
+  8 O    -0.17417    0.02029   -0.30746
+
+System changes: positions 
+
+Initializing position-dependent things.
+
+Density initialized from wave functions
+    .-------.  
+   /|       |  
+  / |       |  
+ *  |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  | O     |  
+ |  |       |  
+ |  |       |  
+ |  |ZnZnO  |  
+ |  O       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  O       |  
+ | Zn       |  
+ |O |       |  
+ Zn |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  .-------.  
+ | /       /   
+ |/       /    
+ *-------*     
+
+Atomic positions and initial magnetic moments
+
+Positions:
+   0 Zn     0.000000    0.000000   10.000000    ( 0.0000,  0.0000,  0.0000)
+   1 Zn     0.000000    2.603000   10.000000    ( 0.0000,  0.0000,  0.0000)
+   2 O      0.000000    1.991295   10.000000    ( 0.0000,  0.0000,  0.0000)
+   3 O     -0.000000    4.594295   10.000000    ( 0.0000,  0.0000,  0.0000)
+   4 Zn     2.473320    0.398337   15.821019    ( 0.0000,  0.0000,  0.0000)
+   5 Zn     0.767052    3.346701   14.907904    ( 0.0000,  0.0000,  0.0000)
+   6 O      0.766396    1.455331   15.102973    ( 0.0000,  0.0000,  0.0000)
+   7 O      2.397939    4.031167   14.445971    ( 0.0000,  0.0000,  0.0000)
+   8 O      0.866390    4.806905   16.639502    ( 0.0000,  0.0000,  0.0000)
+
+Unit cell:
+           periodic     x           y           z      points  spacing
+  1. axis:    yes    3.249000    0.000000    0.000000    18     0.1805
+  2. axis:    yes    0.000000    5.206000    0.000000    27     0.1928
+  3. axis:    no     0.000000    0.000000   22.813717   120     0.1901
+
+  Lengths:   3.249000   5.206000  22.813717
+  Angles:   90.000000  90.000000  90.000000
+
+Effective grid spacing dv^(1/3) = 0.1877
+
+     iter     time        total  log10-change:
+                         energy   eigst   dens
+iter:   1 22:48:54   314.687412   -1.60
+iter:   2 22:48:55   314.715954   -2.34  -2.36
+iter:   3 22:48:56   314.725533c  -2.97  -2.53
+iter:   4 22:48:56   314.721630c  -3.54  -2.52
+iter:   5 22:48:57   314.669880   -3.30  -2.65
+iter:   6 22:48:58   314.728775   -3.67  -2.05
+iter:   7 22:48:59   314.727855   -4.45  -2.71
+iter:   8 22:48:59   314.728757c  -5.24  -3.12
+iter:   9 22:49:00   314.729272c  -4.98  -3.55
+iter:  10 22:49:01   314.728841c  -5.65  -3.21
+iter:  11 22:49:02   314.729001c  -6.36  -3.83
+iter:  12 22:49:02   314.728982c  -6.70  -3.82
+iter:  13 22:49:03   314.728923c  -6.84  -3.92
+iter:  14 22:49:04   314.728979c  -6.93  -4.17c
+iter:  15 22:49:05   314.728988c  -7.19  -4.34c
+iter:  16 22:49:05   314.728982c  -7.63c -4.52c
+
+Converged after 16 iterations.
+
+Dipole moment: (-0.441049, 1.625671, -0.302032) |e|*Ang
+
+Energy contributions relative to reference atoms: (reference = -205649.568117)
+
+Kinetic:       +1075.797495
+Potential:     -692.033291
+External:        +0.000000
+XC:            -125.508070
+Entropy (-ST):   -0.077779
+Local:          +56.511739
+SIC:             +0.000000
+--------------------------
+Free energy:   +314.690093
+Extrapolated:  +314.728982
+
+Showing only first 2 kpts
+ Kpt  Band  Eigenvalues  Occupancy
+  0    37     -4.02402    2.00000
+  0    38     -3.53082    1.96075
+  0    39     -3.33533    1.00068
+  0    40      2.57861    0.00000
+
+  1    37     -3.53148    1.96125
+  1    38     -3.40776    1.61995
+  1    39     -3.24842    0.29945
+  1    40      1.86641    0.00000
+
+
+Fermi level: -3.33526
+
+No gap
+No difference between direct/indirect transitions
+
+Forces in eV/Ang:
+  0 Zn   -0.00041  435.11470    0.05878
+  1 Zn   -0.00108  435.16435    0.05550
+  2 O     0.00115 -435.13192    0.06363
+  3 O     0.00103 -435.09327    0.04847
+  4 Zn   -0.34172    0.61173   -0.23693
+  5 Zn    0.18540   -0.42582    0.57036
+  6 O     0.20827   -0.30391    0.44592
+  7 O    -0.02636    0.25515   -0.52698
+  8 O    -0.02617   -0.05694   -0.27936
+
+System changes: positions 
+
+Initializing position-dependent things.
+
+Density initialized from wave functions
+    .-------.  
+   /|       |  
+  / |       |  
+ *  |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  | O     |  
+ |  |       |  
+ |  |       |  
+ |  |ZnZnO  |  
+ |  O       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  O       |  
+ | Zn       |  
+ |O |       |  
+ Zn |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  .-------.  
+ | /       /   
+ |/       /    
+ *-------*     
+
+Atomic positions and initial magnetic moments
+
+Positions:
+   0 Zn     0.000000    0.000000   10.000000    ( 0.0000,  0.0000,  0.0000)
+   1 Zn     0.000000    2.603000   10.000000    ( 0.0000,  0.0000,  0.0000)
+   2 O      0.000000    1.991295   10.000000    ( 0.0000,  0.0000,  0.0000)
+   3 O     -0.000000    4.594295   10.000000    ( 0.0000,  0.0000,  0.0000)
+   4 Zn     2.459876    0.427816   15.758499    ( 0.0000,  0.0000,  0.0000)
+   5 Zn     0.778584    3.375444   14.962164    ( 0.0000,  0.0000,  0.0000)
+   6 O      0.803608    1.434959   15.188661    ( 0.0000,  0.0000,  0.0000)
+   7 O      2.401118    3.982104   14.394474    ( 0.0000,  0.0000,  0.0000)
+   8 O      0.827517    4.825793   16.605816    ( 0.0000,  0.0000,  0.0000)
+
+Unit cell:
+           periodic     x           y           z      points  spacing
+  1. axis:    yes    3.249000    0.000000    0.000000    18     0.1805
+  2. axis:    yes    0.000000    5.206000    0.000000    27     0.1928
+  3. axis:    no     0.000000    0.000000   22.813717   120     0.1901
+
+  Lengths:   3.249000   5.206000  22.813717
+  Angles:   90.000000  90.000000  90.000000
+
+Effective grid spacing dv^(1/3) = 0.1877
+
+     iter     time        total  log10-change:
+                         energy   eigst   dens
+iter:   1 22:49:06   314.434003   -0.78
+iter:   2 22:49:07   314.597127   -1.73  -1.96
+iter:   3 22:49:08   314.611113   -2.28  -2.18
+iter:   4 22:49:09   314.632525c  -2.95  -2.02
+iter:   5 22:49:09   314.629578c  -3.56  -2.37
+iter:   6 22:49:10   314.632399c  -2.65  -2.35
+iter:   7 22:49:11   314.646758c  -3.46  -2.14
+iter:   8 22:49:12   314.652962c  -4.12  -2.66
+iter:   9 22:49:12   314.654351c  -4.74  -3.03
+iter:  10 22:49:13   314.653845c  -5.17  -3.15
+iter:  11 22:49:14   314.654934c  -4.29  -3.21
+iter:  12 22:49:15   314.654226c  -5.15  -3.27
+iter:  13 22:49:15   314.654293c  -5.68  -3.61
+iter:  14 22:49:16   314.654354c  -5.40  -3.66
+iter:  15 22:49:17   314.654334c  -6.09  -3.99
+iter:  16 22:49:18   314.654330c  -6.54  -4.06c
+iter:  17 22:49:18   314.654319c  -6.35  -4.18c
+iter:  18 22:49:19   314.654314c  -6.96  -4.39c
+iter:  19 22:49:20   314.654319c  -7.53c -4.52c
+
+Converged after 19 iterations.
+
+Dipole moment: (-0.422036, 1.897603, -0.283645) |e|*Ang
+
+Energy contributions relative to reference atoms: (reference = -205649.568117)
+
+Kinetic:       +1076.948633
+Potential:     -692.937643
+External:        +0.000000
+XC:            -125.833168
+Entropy (-ST):   -0.077364
+Local:          +56.515179
+SIC:             +0.000000
+--------------------------
+Free energy:   +314.615637
+Extrapolated:  +314.654319
+
+Showing only first 2 kpts
+ Kpt  Band  Eigenvalues  Occupancy
+  0    37     -4.06184    2.00000
+  0    38     -3.55406    1.99204
+  0    39     -3.27529    0.97338
+  0    40      2.63248    0.00000
+
+  1    37     -3.55531    1.99223
+  1    38     -3.34993    1.61677
+  1    39     -3.16708    0.19636
+  1    40      1.92465    0.00000
+
+
+Fermi level: -3.27796
+
+No gap
+No difference between direct/indirect transitions
+
+Forces in eV/Ang:
+  0 Zn   -0.00066  435.10797    0.06354
+  1 Zn   -0.00134  435.16488    0.06242
+  2 O     0.00067 -435.13363    0.06653
+  3 O     0.00087 -435.08846    0.05038
+  4 Zn   -0.34021    0.19105    0.12121
+  5 Zn    0.01570   -0.69748    0.48694
+  6 O     0.14549    0.44812   -0.00844
+  7 O     0.13721    0.37425   -0.26193
+  8 O     0.04133   -0.26288   -0.35060
+
+System changes: positions 
+
+Initializing position-dependent things.
+
+Density initialized from wave functions
+    .-------.  
+   /|       |  
+  / |       |  
+ *  |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  | O     |  
+ |  |       |  
+ |  |       |  
+ |  |ZnZnO  |  
+ |  O       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  O       |  
+ | Zn       |  
+ |O |       |  
+ Zn |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  .-------.  
+ | /       /   
+ |/       /    
+ *-------*     
+
+Atomic positions and initial magnetic moments
+
+Positions:
+   0 Zn     0.000000    0.000000   10.000000    ( 0.0000,  0.0000,  0.0000)
+   1 Zn     0.000000    2.603000   10.000000    ( 0.0000,  0.0000,  0.0000)
+   2 O      0.000000    1.991295   10.000000    ( 0.0000,  0.0000,  0.0000)
+   3 O     -0.000000    4.594295   10.000000    ( 0.0000,  0.0000,  0.0000)
+   4 Zn     2.462896    0.438350   15.766355    ( 0.0000,  0.0000,  0.0000)
+   5 Zn     0.786976    3.374877   14.985347    ( 0.0000,  0.0000,  0.0000)
+   6 O      0.818184    1.433500   15.195060    ( 0.0000,  0.0000,  0.0000)
+   7 O      2.409332    3.987945   14.388940    ( 0.0000,  0.0000,  0.0000)
+   8 O      0.793413    4.810820   16.565995    ( 0.0000,  0.0000,  0.0000)
+
+Unit cell:
+           periodic     x           y           z      points  spacing
+  1. axis:    yes    3.249000    0.000000    0.000000    18     0.1805
+  2. axis:    yes    0.000000    5.206000    0.000000    27     0.1928
+  3. axis:    no     0.000000    0.000000   22.813717   120     0.1901
+
+  Lengths:   3.249000   5.206000  22.813717
+  Angles:   90.000000  90.000000  90.000000
+
+Effective grid spacing dv^(1/3) = 0.1877
+
+     iter     time        total  log10-change:
+                         energy   eigst   dens
+iter:   1 22:49:21   314.591729   -1.63
+iter:   2 22:49:22   314.623510   -2.35  -2.34
+iter:   3 22:49:23   314.627020c  -3.03  -2.65
+iter:   4 22:49:23   314.624929c  -3.62  -2.58
+iter:   5 22:49:24   314.630687c  -3.45  -2.75
+iter:   6 22:49:25   314.627925c  -3.56  -2.81
+iter:   7 22:49:26   314.629466c  -4.23  -2.98
+iter:   8 22:49:26   314.630553c  -5.05  -3.25
+iter:   9 22:49:27   314.629965c  -5.60  -3.40
+iter:  10 22:49:28   314.630149c  -5.52  -3.61
+iter:  11 22:49:29   314.630119c  -6.04  -3.81
+iter:  12 22:49:29   314.630094c  -6.15  -3.89
+iter:  13 22:49:30   314.630085c  -6.21  -4.16c
+iter:  14 22:49:31   314.630099c  -6.69  -4.26c
+iter:  15 22:49:31   314.630117c  -7.42c -4.31c
+
+Converged after 15 iterations.
+
+Dipole moment: (-0.394735, 1.646079, -0.262348) |e|*Ang
+
+Energy contributions relative to reference atoms: (reference = -205649.568117)
+
+Kinetic:       +1077.116419
+Potential:     -693.008684
+External:        +0.000000
+XC:            -125.949056
+Entropy (-ST):   -0.077328
+Local:          +56.510102
+SIC:             +0.000000
+--------------------------
+Free energy:   +314.591452
+Extrapolated:  +314.630117
+
+Showing only first 2 kpts
+ Kpt  Band  Eigenvalues  Occupancy
+  0    37     -4.04796    2.00000
+  0    38     -3.49373    1.98942
+  0    39     -3.23249    1.00597
+  0    40      2.66891    0.00000
+
+  1    37     -3.49445    1.98957
+  1    38     -3.30280    1.61011
+  1    39     -3.11117    0.16416
+  1    40      1.97207    0.00000
+
+
+Fermi level: -3.23189
+
+No gap
+No difference between direct/indirect transitions
+
+Forces in eV/Ang:
+  0 Zn   -0.00069  435.10559    0.06923
+  1 Zn   -0.00142  435.16392    0.06785
+  2 O     0.00056 -435.12809    0.06554
+  3 O     0.00068 -435.08339    0.04884
+  4 Zn   -0.51667    0.13850   -0.07288
+  5 Zn    0.02724   -0.59663    0.34815
+  6 O     0.17055    0.61902   -0.05274
+  7 O     0.08539    0.27070   -0.18352
+  8 O     0.22689   -0.33610   -0.05398
+
+System changes: positions 
+
+Initializing position-dependent things.
+
+Density initialized from wave functions
+    .-------.  
+   /|       |  
+  / |       |  
+ *  |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  | O     |  
+ |  |       |  
+ |  |       |  
+ |  |ZnZnO  |  
+ |  O       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  O       |  
+ | Zn       |  
+ |O |       |  
+ Zn |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  .-------.  
+ | /       /   
+ |/       /    
+ *-------*     
+
+Atomic positions and initial magnetic moments
+
+Positions:
+   0 Zn     0.000000    0.000000   10.000000    ( 0.0000,  0.0000,  0.0000)
+   1 Zn     0.000000    2.603000   10.000000    ( 0.0000,  0.0000,  0.0000)
+   2 O      0.000000    1.991295   10.000000    ( 0.0000,  0.0000,  0.0000)
+   3 O     -0.000000    4.594295   10.000000    ( 0.0000,  0.0000,  0.0000)
+   4 Zn     2.451293    0.450217   15.762047    ( 0.0000,  0.0000,  0.0000)
+   5 Zn     0.793276    3.353503   15.009458    ( 0.0000,  0.0000,  0.0000)
+   6 O      0.835920    1.448765   15.202253    ( 0.0000,  0.0000,  0.0000)
+   7 O      2.416102    4.001987   14.381127    ( 0.0000,  0.0000,  0.0000)
+   8 O      0.774209    4.792177   16.542730    ( 0.0000,  0.0000,  0.0000)
+
+Unit cell:
+           periodic     x           y           z      points  spacing
+  1. axis:    yes    3.249000    0.000000    0.000000    18     0.1805
+  2. axis:    yes    0.000000    5.206000    0.000000    27     0.1928
+  3. axis:    no     0.000000    0.000000   22.813717   120     0.1901
+
+  Lengths:   3.249000   5.206000  22.813717
+  Angles:   90.000000  90.000000  90.000000
+
+Effective grid spacing dv^(1/3) = 0.1877
+
+     iter     time        total  log10-change:
+                         energy   eigst   dens
+iter:   1 22:49:33   314.582216   -1.71
+iter:   2 22:49:33   314.589472   -2.44  -2.56
+iter:   3 22:49:34   314.585343c  -3.14  -2.57
+iter:   4 22:49:35   314.590667c  -3.81  -2.63
+iter:   5 22:49:36   314.593597c  -3.92  -2.82
+iter:   6 22:49:36   314.576698c  -3.54  -2.62
+iter:   7 22:49:37   314.583651c  -4.27  -2.60
+iter:   8 22:49:38   314.593688c  -4.61  -2.66
+iter:   9 22:49:39   314.594698c  -5.29  -3.31
+iter:  10 22:49:39   314.590525c  -5.38  -3.38
+iter:  11 22:49:40   314.595209c  -5.30  -2.88
+iter:  12 22:49:41   314.593888c  -5.63  -3.06
+iter:  13 22:49:42   314.594469c  -6.60  -3.49
+iter:  14 22:49:42   314.592726c  -5.95  -3.79
+iter:  15 22:49:43   314.594086c  -6.36  -3.15
+iter:  16 22:49:44   314.594279c  -6.70  -3.79
+iter:  17 22:49:45   314.594345c  -7.04  -4.20c
+iter:  18 22:49:45   314.594421c  -7.17  -4.51c
+iter:  19 22:49:46   314.594326c  -7.40c -4.33c
+
+Converged after 19 iterations.
+
+Dipole moment: (-0.399079, 1.351302, -0.256960) |e|*Ang
+
+Energy contributions relative to reference atoms: (reference = -205649.568117)
+
+Kinetic:       +1076.597311
+Potential:     -692.577784
+External:        +0.000000
+XC:            -125.896182
+Entropy (-ST):   -0.076759
+Local:          +56.509360
+SIC:             +0.000000
+--------------------------
+Free energy:   +314.555947
+Extrapolated:  +314.594326
+
+Showing only first 2 kpts
+ Kpt  Band  Eigenvalues  Occupancy
+  0    37     -4.02626    2.00000
+  0    38     -3.45976    1.98171
+  0    39     -3.23152    1.06020
+  0    40      2.67561    0.00000
+
+  1    37     -3.45733    1.98081
+  1    38     -3.29561    1.60513
+  1    39     -3.10006    0.15051
+  1    40      1.98003    0.00000
+
+
+Fermi level: -3.22549
+
+No gap
+No difference between direct/indirect transitions
+
+Forces in eV/Ang:
+  0 Zn   -0.00070  435.09346    0.06404
+  1 Zn   -0.00139  435.15058    0.06365
+  2 O     0.00049 -435.12235    0.05846
+  3 O     0.00062 -435.07990    0.04053
+  4 Zn   -0.30632    0.00197   -0.10950
+  5 Zn    0.04418   -0.13705    0.19012
+  6 O     0.01666    0.47284   -0.06583
+  7 O     0.03663    0.10068   -0.04550
+  8 O     0.21244   -0.29953    0.06986
+
+System changes: positions 
+
+Initializing position-dependent things.
+
+Density initialized from wave functions
+    .-------.  
+   /|       |  
+  / |       |  
+ *  |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  | O     |  
+ |  |       |  
+ |  |       |  
+ |  OZnZnO  |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  O       |  
+ | Zn       |  
+ |O |       |  
+ Zn |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  .-------.  
+ | /       /   
+ |/       /    
+ *-------*     
+
+Atomic positions and initial magnetic moments
+
+Positions:
+   0 Zn     0.000000    0.000000   10.000000    ( 0.0000,  0.0000,  0.0000)
+   1 Zn     0.000000    2.603000   10.000000    ( 0.0000,  0.0000,  0.0000)
+   2 O      0.000000    1.991295   10.000000    ( 0.0000,  0.0000,  0.0000)
+   3 O     -0.000000    4.594295   10.000000    ( 0.0000,  0.0000,  0.0000)
+   4 Zn     2.438721    0.451786   15.757113    ( 0.0000,  0.0000,  0.0000)
+   5 Zn     0.796128    3.336963   15.023956    ( 0.0000,  0.0000,  0.0000)
+   6 O      0.845423    1.472112   15.202764    ( 0.0000,  0.0000,  0.0000)
+   7 O      2.419488    4.011081   14.377436    ( 0.0000,  0.0000,  0.0000)
+   8 O      0.771214    4.777572   16.537387    ( 0.0000,  0.0000,  0.0000)
+
+Unit cell:
+           periodic     x           y           z      points  spacing
+  1. axis:    yes    3.249000    0.000000    0.000000    18     0.1805
+  2. axis:    yes    0.000000    5.206000    0.000000    27     0.1928
+  3. axis:    no     0.000000    0.000000   22.813717   120     0.1901
+
+  Lengths:   3.249000   5.206000  22.813717
+  Angles:   90.000000  90.000000  90.000000
+
+Effective grid spacing dv^(1/3) = 0.1877
+
+     iter     time        total  log10-change:
+                         energy   eigst   dens
+iter:   1 22:49:47   314.567449   -2.13
+iter:   2 22:49:48   314.552853   -2.87  -2.30
+iter:   3 22:49:49   314.567130c  -3.59  -2.47
+iter:   4 22:49:49   314.577371c  -4.20  -2.57
+iter:   5 22:49:50   314.578521c  -4.15  -2.79
+iter:   6 22:49:51   314.535851   -3.23  -2.52
+iter:   7 22:49:52   314.536552   -3.72  -2.53
+iter:   8 22:49:52   314.579231   -3.69  -2.54
+iter:   9 22:49:53   314.581382   -4.33  -3.05
+iter:  10 22:49:54   314.572028c  -4.91  -3.30
+iter:  11 22:49:55   314.577755c  -5.33  -2.69
+iter:  12 22:49:55   314.574209c  -5.80  -2.91
+iter:  13 22:49:56   314.572516c  -5.44  -2.74
+iter:  14 22:49:57   314.580498c  -5.02  -2.71
+iter:  15 22:49:58   314.580907c  -6.17  -3.42
+iter:  16 22:49:58   314.580945c  -6.60  -3.79
+iter:  17 22:49:59   314.581545c  -6.36  -3.93
+iter:  18 22:50:00   314.579865c  -6.00  -3.35
+iter:  19 22:50:01   314.580956c  -6.64  -3.23
+iter:  20 22:50:01   314.581065c  -7.09  -4.16c
+iter:  21 22:50:02   314.581037c  -7.83c -4.46c
+
+Converged after 21 iterations.
+
+Dipole moment: (-0.409766, 1.123540, -0.261341) |e|*Ang
+
+Energy contributions relative to reference atoms: (reference = -205649.568117)
+
+Kinetic:       +1076.211114
+Potential:     -692.278494
+External:        +0.000000
+XC:            -125.821907
+Entropy (-ST):   -0.076665
+Local:          +56.508657
+SIC:             +0.000000
+--------------------------
+Free energy:   +314.542705
+Extrapolated:  +314.581037
+
+Showing only first 2 kpts
+ Kpt  Band  Eigenvalues  Occupancy
+  0    37     -4.00739    2.00000
+  0    38     -3.46094    1.97541
+  0    39     -3.25001    1.08371
+  0    40      2.67391    0.00000
+
+  1    37     -3.45255    1.97098
+  1    38     -3.31009    1.59457
+  1    39     -3.11616    0.15043
+  1    40      1.96617    0.00000
+
+
+Fermi level: -3.24162
+
+No gap
+No difference between direct/indirect transitions
+
+Forces in eV/Ang:
+  0 Zn   -0.00070  435.09052    0.07161
+  1 Zn   -0.00140  435.14735    0.07125
+  2 O     0.00045 -435.11384    0.06099
+  3 O     0.00055 -435.07278    0.04300
+  4 Zn   -0.05296   -0.02426   -0.10016
+  5 Zn    0.04487    0.33041    0.11907
+  6 O    -0.12194    0.06872   -0.01679
+  7 O     0.01928    0.01806    0.03619
+  8 O     0.11821   -0.23251    0.01079
+
+System changes: positions 
+
+Initializing position-dependent things.
+
+Density initialized from wave functions
+    .-------.  
+   /|       |  
+  / |       |  
+ *  |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  | O     |  
+ |  |       |  
+ |  |       |  
+ |  OZnZnO  |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  O       |  
+ | Zn       |  
+ |O |       |  
+ Zn |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  .-------.  
+ | /       /   
+ |/       /    
+ *-------*     
+
+Atomic positions and initial magnetic moments
+
+Positions:
+   0 Zn     0.000000    0.000000   10.000000    ( 0.0000,  0.0000,  0.0000)
+   1 Zn     0.000000    2.603000   10.000000    ( 0.0000,  0.0000,  0.0000)
+   2 O      0.000000    1.991295   10.000000    ( 0.0000,  0.0000,  0.0000)
+   3 O     -0.000000    4.594295   10.000000    ( 0.0000,  0.0000,  0.0000)
+   4 Zn     2.435349    0.451055   15.754052    ( 0.0000,  0.0000,  0.0000)
+   5 Zn     0.797697    3.342646   15.031740    ( 0.0000,  0.0000,  0.0000)
+   6 O      0.846985    1.477655   15.206073    ( 0.0000,  0.0000,  0.0000)
+   7 O      2.420755    4.007641   14.373865    ( 0.0000,  0.0000,  0.0000)
+   8 O      0.770286    4.773532   16.533365    ( 0.0000,  0.0000,  0.0000)
+
+Unit cell:
+           periodic     x           y           z      points  spacing
+  1. axis:    yes    3.249000    0.000000    0.000000    18     0.1805
+  2. axis:    yes    0.000000    5.206000    0.000000    27     0.1928
+  3. axis:    no     0.000000    0.000000   22.813717   120     0.1901
+
+  Lengths:   3.249000   5.206000  22.813717
+  Angles:   90.000000  90.000000  90.000000
+
+Effective grid spacing dv^(1/3) = 0.1877
+
+     iter     time        total  log10-change:
+                         energy   eigst   dens
+iter:   1 22:50:03   314.575062   -2.81
+iter:   2 22:50:04   314.577866   -3.64  -2.94
+iter:   3 22:50:05   314.576632c  -4.33  -2.87
+iter:   4 22:50:05   314.577177c  -5.17  -3.27
+iter:   5 22:50:06   314.577326c  -5.08  -3.37
+iter:   6 22:50:07   314.577269c  -4.98  -3.58
+iter:   7 22:50:08   314.577339c  -5.78  -3.94
+iter:   8 22:50:08   314.577330c  -6.63  -4.05c
+iter:   9 22:50:09   314.577400c  -5.87  -4.05c
+iter:  10 22:50:10   314.577329c  -6.81  -4.10c
+iter:  11 22:50:11   314.577343c  -7.13  -4.29c
+iter:  12 22:50:11   314.577340c  -7.76c -4.39c
+
+Converged after 12 iterations.
+
+Dipole moment: (-0.411824, 1.062593, -0.260540) |e|*Ang
+
+Energy contributions relative to reference atoms: (reference = -205649.568117)
+
+Kinetic:       +1076.259958
+Potential:     -692.310017
+External:        +0.000000
+XC:            -125.840668
+Entropy (-ST):   -0.076339
+Local:          +56.506237
+SIC:             +0.000000
+--------------------------
+Free energy:   +314.539170
+Extrapolated:  +314.577340
+
+Showing only first 2 kpts
+ Kpt  Band  Eigenvalues  Occupancy
+  0    37     -4.00592    2.00000
+  0    38     -3.46667    1.97806
+  0    39     -3.25078    1.09167
+  0    40      2.67911    0.00000
+
+  1    37     -3.45619    1.97301
+  1    38     -3.30973    1.59241
+  1    39     -3.11231    0.14015
+  1    40      1.96678    0.00000
+
+
+Fermi level: -3.24159
+
+No gap
+No difference between direct/indirect transitions
+
+Forces in eV/Ang:
+  0 Zn   -0.00070  435.08856    0.06646
+  1 Zn   -0.00140  435.14583    0.06601
+  2 O     0.00041 -435.11346    0.05742
+  3 O     0.00054 -435.07074    0.03946
+  4 Zn    0.00629    0.00906   -0.09443
+  5 Zn    0.03699    0.27411    0.09070
+  6 O    -0.16082    0.03419   -0.02233
+  7 O     0.02069    0.04421    0.03294
+  8 O     0.09371   -0.19413    0.02455
+
+System changes: positions 
+
+Initializing position-dependent things.
+
+Density initialized from wave functions
+    .-------.  
+   /|       |  
+  / |       |  
+ *  |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  | O     |  
+ |  |       |  
+ |  |       |  
+ |  OZnZnO  |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  O       |  
+ | Zn       |  
+ |O |       |  
+ Zn |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  .-------.  
+ | /       /   
+ |/       /    
+ *-------*     
+
+Atomic positions and initial magnetic moments
+
+Positions:
+   0 Zn     0.000000    0.000000   10.000000    ( 0.0000,  0.0000,  0.0000)
+   1 Zn     0.000000    2.603000   10.000000    ( 0.0000,  0.0000,  0.0000)
+   2 O      0.000000    1.991295   10.000000    ( 0.0000,  0.0000,  0.0000)
+   3 O     -0.000000    4.594295   10.000000    ( 0.0000,  0.0000,  0.0000)
+   4 Zn     2.427711    0.449973   15.752749    ( 0.0000,  0.0000,  0.0000)
+   5 Zn     0.800875    3.361068   15.046941    ( 0.0000,  0.0000,  0.0000)
+   6 O      0.836272    1.487584   15.203789    ( 0.0000,  0.0000,  0.0000)
+   7 O      2.423210    4.008099   14.368526    ( 0.0000,  0.0000,  0.0000)
+   8 O      0.783008    4.758477   16.530287    ( 0.0000,  0.0000,  0.0000)
+
+Unit cell:
+           periodic     x           y           z      points  spacing
+  1. axis:    yes    3.249000    0.000000    0.000000    18     0.1805
+  2. axis:    yes    0.000000    5.206000    0.000000    27     0.1928
+  3. axis:    no     0.000000    0.000000   22.813717   120     0.1901
+
+  Lengths:   3.249000   5.206000  22.813717
+  Angles:   90.000000  90.000000  90.000000
+
+Effective grid spacing dv^(1/3) = 0.1877
+
+     iter     time        total  log10-change:
+                         energy   eigst   dens
+iter:   1 22:50:13   314.556827   -2.14
+iter:   2 22:50:13   314.545273   -2.94  -2.27
+iter:   3 22:50:14   314.560058c  -3.66  -2.51
+iter:   4 22:50:15   314.557917c  -3.93  -2.65
+iter:   5 22:50:16   314.565718c  -4.54  -2.28
+iter:   6 22:50:16   314.547286c  -3.57  -2.50
+iter:   7 22:50:17   314.549430c  -4.04  -2.58
+iter:   8 22:50:18   314.551536c  -4.59  -2.60
+iter:   9 22:50:18   314.566309c  -3.70  -2.61
+iter:  10 22:50:19   314.565080c  -4.58  -2.51
+iter:  11 22:50:20   314.567003c  -5.32  -2.92
+iter:  12 22:50:21   314.566191c  -6.06  -3.19
+iter:  13 22:50:21   314.567882c  -5.98  -3.04
+iter:  14 22:50:22   314.568628c  -6.12  -3.61
+iter:  15 22:50:23   314.567777c  -6.49  -3.43
+iter:  16 22:50:24   314.568290c  -6.93  -3.56
+iter:  17 22:50:24   314.568207c  -6.92  -4.06c
+iter:  18 22:50:25   314.568178c  -7.25  -4.52c
+iter:  19 22:50:26   314.568203c  -8.13c -4.53c
+
+Converged after 19 iterations.
+
+Dipole moment: (-0.407961, 0.852588, -0.259624) |e|*Ang
+
+Energy contributions relative to reference atoms: (reference = -205649.568117)
+
+Kinetic:       +1076.068201
+Potential:     -692.157648
+External:        +0.000000
+XC:            -125.812120
+Entropy (-ST):   -0.075889
+Local:          +56.507714
+SIC:             +0.000000
+--------------------------
+Free energy:   +314.530258
+Extrapolated:  +314.568203
+
+Showing only first 2 kpts
+ Kpt  Band  Eigenvalues  Occupancy
+  0    37     -4.00003    2.00000
+  0    38     -3.48264    1.98307
+  0    39     -3.25403    1.09526
+  0    40      2.68569    0.00000
+
+  1    37     -3.46204    1.97455
+  1    38     -3.31142    1.58464
+  1    39     -3.10988    0.12690
+  1    40      1.96569    0.00000
+
+
+Fermi level: -3.24447
+
+No gap
+No difference between direct/indirect transitions
+
+Forces in eV/Ang:
+  0 Zn   -0.00073  435.08217    0.07246
+  1 Zn   -0.00138  435.14205    0.07212
+  2 O     0.00036 -435.10944    0.05810
+  3 O     0.00045 -435.06383    0.04118
+  4 Zn    0.11224    0.07893   -0.10738
+  5 Zn    0.00856    0.05065    0.04882
+  6 O    -0.16466    0.05004    0.01462
+  7 O     0.03456    0.07378    0.04037
+  8 O     0.01037   -0.09366    0.03756
+
+System changes: positions 
+
+Initializing position-dependent things.
+
+Density initialized from wave functions
+    .-------.  
+   /|       |  
+  / |       |  
+ *  |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  | O     |  
+ |  |       |  
+ |  |       |  
+ |  OZnZnO  |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  O       |  
+ | Zn       |  
+ |O |       |  
+ Zn |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  .-------.  
+ | /       /   
+ |/       /    
+ *-------*     
+
+Atomic positions and initial magnetic moments
+
+Positions:
+   0 Zn     0.000000    0.000000   10.000000    ( 0.0000,  0.0000,  0.0000)
+   1 Zn     0.000000    2.603000   10.000000    ( 0.0000,  0.0000,  0.0000)
+   2 O      0.000000    1.991295   10.000000    ( 0.0000,  0.0000,  0.0000)
+   3 O     -0.000000    4.594295   10.000000    ( 0.0000,  0.0000,  0.0000)
+   4 Zn     2.424366    0.452500   15.749327    ( 0.0000,  0.0000,  0.0000)
+   5 Zn     0.803179    3.369990   15.056385    ( 0.0000,  0.0000,  0.0000)
+   6 O      0.826494    1.495098   15.201164    ( 0.0000,  0.0000,  0.0000)
+   7 O      2.425657    4.015049   14.368460    ( 0.0000,  0.0000,  0.0000)
+   8 O      0.791544    4.744051   16.529809    ( 0.0000,  0.0000,  0.0000)
+
+Unit cell:
+           periodic     x           y           z      points  spacing
+  1. axis:    yes    3.249000    0.000000    0.000000    18     0.1805
+  2. axis:    yes    0.000000    5.206000    0.000000    27     0.1928
+  3. axis:    no     0.000000    0.000000   22.813717   120     0.1901
+
+  Lengths:   3.249000   5.206000  22.813717
+  Angles:   90.000000  90.000000  90.000000
+
+Effective grid spacing dv^(1/3) = 0.1877
+
+     iter     time        total  log10-change:
+                         energy   eigst   dens
+iter:   1 22:50:27   314.561050   -2.61
+iter:   2 22:50:28   314.552431   -3.41  -2.47
+iter:   3 22:50:29   314.562624c  -4.10  -2.60
+iter:   4 22:50:29   314.564690c  -4.58  -2.94
+iter:   5 22:50:30   314.564183c  -5.23  -2.79
+iter:   6 22:50:31   314.549654c  -4.01  -3.14
+iter:   7 22:50:31   314.552397c  -4.43  -2.62
+iter:   8 22:50:32   314.555054c  -5.00  -2.65
+iter:   9 22:50:33   314.565326c  -4.71  -2.68
+iter:  10 22:50:34   314.565047c  -5.55  -3.29
+iter:  11 22:50:34   314.564403c  -6.18  -3.67
+iter:  12 22:50:35   314.565363c  -5.98  -3.50
+iter:  13 22:50:36   314.563548c  -5.93  -3.35
+iter:  14 22:50:37   314.564786c  -6.36  -3.20
+iter:  15 22:50:37   314.564868c  -6.78  -4.06c
+iter:  16 22:50:38   314.564748c  -6.84  -4.27c
+iter:  17 22:50:39   314.564829c  -7.42c -4.08c
+
+Converged after 17 iterations.
+
+Dipole moment: (-0.403025, 0.664720, -0.261122) |e|*Ang
+
+Energy contributions relative to reference atoms: (reference = -205649.568117)
+
+Kinetic:       +1075.955055
+Potential:     -692.073676
+External:        +0.000000
+XC:            -125.787280
+Entropy (-ST):   -0.075724
+Local:          +56.508591
+SIC:             +0.000000
+--------------------------
+Free energy:   +314.526967
+Extrapolated:  +314.564829
+
+Showing only first 2 kpts
+ Kpt  Band  Eigenvalues  Occupancy
+  0    37     -3.99249    2.00000
+  0    38     -3.49473    1.98480
+  0    39     -3.26027    1.09117
+  0    40      2.68430    0.00000
+
+  1    37     -3.46519    1.97272
+  1    38     -3.31794    1.58374
+  1    39     -3.11457    0.12232
+  1    40      1.95946    0.00000
+
+
+Fermi level: -3.25113
+
+No gap
+No difference between direct/indirect transitions
+
+Forces in eV/Ang:
+  0 Zn   -0.00070  435.07454    0.06955
+  1 Zn   -0.00133  435.13492    0.06944
+  2 O     0.00035 -435.10671    0.05515
+  3 O     0.00043 -435.06001    0.03856
+  4 Zn    0.14235    0.08671   -0.08626
+  5 Zn   -0.00600   -0.04141    0.00853
+  6 O    -0.14181    0.01718    0.04124
+  7 O     0.03283    0.06228    0.03633
+  8 O    -0.02496    0.00895    0.02972
+
+System changes: positions 
+
+Initializing position-dependent things.
+
+Density initialized from wave functions
+    .-------.  
+   /|       |  
+  / |       |  
+ *  |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  | O     |  
+ |  |       |  
+ |  |       |  
+ |  OZnZnO  |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  O       |  
+ | Zn       |  
+ |O |       |  
+ Zn |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  .-------.  
+ | /       /   
+ |/       /    
+ *-------*     
+
+Atomic positions and initial magnetic moments
+
+Positions:
+   0 Zn     0.000000    0.000000   10.000000    ( 0.0000,  0.0000,  0.0000)
+   1 Zn     0.000000    2.603000   10.000000    ( 0.0000,  0.0000,  0.0000)
+   2 O      0.000000    1.991295   10.000000    ( 0.0000,  0.0000,  0.0000)
+   3 O     -0.000000    4.594295   10.000000    ( 0.0000,  0.0000,  0.0000)
+   4 Zn     2.425587    0.456181   15.745324    ( 0.0000,  0.0000,  0.0000)
+   5 Zn     0.803404    3.371334   15.056954    ( 0.0000,  0.0000,  0.0000)
+   6 O      0.818807    1.495761   15.200045    ( 0.0000,  0.0000,  0.0000)
+   7 O      2.426525    4.021988   14.371335    ( 0.0000,  0.0000,  0.0000)
+   8 O      0.797106    4.738379   16.533572    ( 0.0000,  0.0000,  0.0000)
+
+Unit cell:
+           periodic     x           y           z      points  spacing
+  1. axis:    yes    3.249000    0.000000    0.000000    18     0.1805
+  2. axis:    yes    0.000000    5.206000    0.000000    27     0.1928
+  3. axis:    no     0.000000    0.000000   22.813717   120     0.1901
+
+  Lengths:   3.249000   5.206000  22.813717
+  Angles:   90.000000  90.000000  90.000000
+
+Effective grid spacing dv^(1/3) = 0.1877
+
+     iter     time        total  log10-change:
+                         energy   eigst   dens
+iter:   1 22:50:40   314.562205   -2.85
+iter:   2 22:50:41   314.550033   -3.62  -2.55
+iter:   3 22:50:42   314.559876c  -4.21  -2.63
+iter:   4 22:50:42   314.559883c  -4.65  -2.89
+iter:   5 22:50:43   314.559534c  -5.24  -2.89
+iter:   6 22:50:44   314.559679c  -5.61  -2.87
+iter:   7 22:50:45   314.561912c  -5.74  -2.88
+iter:   8 22:50:45   314.563006c  -5.91  -3.14
+iter:   9 22:50:46   314.561126c  -4.58  -3.45
+iter:  10 22:50:47   314.563165c  -5.13  -3.07
+iter:  11 22:50:48   314.563043c  -6.17  -3.92
+iter:  12 22:50:48   314.563255c  -6.03  -3.91
+iter:  13 22:50:49   314.563180c  -6.77  -4.19c
+iter:  14 22:50:50   314.563197c  -7.34  -4.34c
+iter:  15 22:50:51   314.563182c  -7.34  -4.41c
+iter:  16 22:50:51   314.563182c  -7.48c -4.64c
+
+Converged after 16 iterations.
+
+Dipole moment: (-0.398776, 0.601535, -0.264130) |e|*Ang
+
+Energy contributions relative to reference atoms: (reference = -205649.568117)
+
+Kinetic:       +1075.861619
+Potential:     -692.007543
+External:        +0.000000
+XC:            -125.762078
+Entropy (-ST):   -0.075866
+Local:          +56.509117
+SIC:             +0.000000
+--------------------------
+Free energy:   +314.525249
+Extrapolated:  +314.563182
+
+Showing only first 2 kpts
+ Kpt  Band  Eigenvalues  Occupancy
+  0    37     -3.99077    2.00000
+  0    38     -3.50246    1.98462
+  0    39     -3.26827    1.08804
+  0    40      2.67840    0.00000
+
+  1    37     -3.46952    1.97050
+  1    38     -3.32587    1.58117
+  1    39     -3.12379    0.12441
+  1    40      1.95164    0.00000
+
+
+Fermi level: -3.25944
+
+No gap
+No difference between direct/indirect transitions
+
+Forces in eV/Ang:
+  0 Zn   -0.00061  435.08020    0.06641
+  1 Zn   -0.00140  435.13977    0.06632
+  2 O     0.00032 -435.10711    0.05300
+  3 O     0.00046 -435.06054    0.03615
+  4 Zn    0.10448    0.04133   -0.04023
+  5 Zn   -0.00415   -0.04092    0.02174
+  6 O    -0.10073    0.02393    0.03744
+  7 O     0.02341    0.03713    0.02520
+  8 O    -0.02046    0.04765   -0.01479
+
+System changes: positions 
+
+Initializing position-dependent things.
+
+Density initialized from wave functions
+    .-------.  
+   /|       |  
+  / |       |  
+ *  |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  | O     |  
+ |  |       |  
+ |  |       |  
+ |  OZnZnO  |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  O       |  
+ | Zn       |  
+ |O |       |  
+ Zn |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  .-------.  
+ | /       /   
+ |/       /    
+ *-------*     
+
+Atomic positions and initial magnetic moments
+
+Positions:
+   0 Zn     0.000000    0.000000   10.000000    ( 0.0000,  0.0000,  0.0000)
+   1 Zn     0.000000    2.603000   10.000000    ( 0.0000,  0.0000,  0.0000)
+   2 O      0.000000    1.991295   10.000000    ( 0.0000,  0.0000,  0.0000)
+   3 O     -0.000000    4.594295   10.000000    ( 0.0000,  0.0000,  0.0000)
+   4 Zn     2.428212    0.460005   15.741345    ( 0.0000,  0.0000,  0.0000)
+   5 Zn     0.803788    3.371612   15.058275    ( 0.0000,  0.0000,  0.0000)
+   6 O      0.812491    1.496227   15.200697    ( 0.0000,  0.0000,  0.0000)
+   7 O      2.427709    4.027768   14.373892    ( 0.0000,  0.0000,  0.0000)
+   8 O      0.799423    4.734956   16.534750    ( 0.0000,  0.0000,  0.0000)
+
+Unit cell:
+           periodic     x           y           z      points  spacing
+  1. axis:    yes    3.249000    0.000000    0.000000    18     0.1805
+  2. axis:    yes    0.000000    5.206000    0.000000    27     0.1928
+  3. axis:    no     0.000000    0.000000   22.813717   120     0.1901
+
+  Lengths:   3.249000   5.206000  22.813717
+  Angles:   90.000000  90.000000  90.000000
+
+Effective grid spacing dv^(1/3) = 0.1877
+
+     iter     time        total  log10-change:
+                         energy   eigst   dens
+iter:   1 22:50:52   314.562221   -3.19
+iter:   2 22:50:53   314.562350   -3.74  -3.42
+iter:   3 22:50:54   314.562154c  -4.45  -3.42
+iter:   4 22:50:55   314.562512c  -4.67  -3.46
+iter:   5 22:50:55   314.562416c  -4.84  -3.83
+iter:   6 22:50:56   314.562409c  -5.46  -4.19c
+iter:   7 22:50:57   314.562410c  -6.03  -4.23c
+iter:   8 22:50:58   314.562415c  -6.47  -4.38c
+iter:   9 22:50:58   314.562409c  -7.25  -4.49c
+iter:  10 22:50:59   314.562428c  -7.79c -4.53c
+
+Converged after 10 iterations.
+
+Dipole moment: (-0.393370, 0.568533, -0.265861) |e|*Ang
+
+Energy contributions relative to reference atoms: (reference = -205649.568117)
+
+Kinetic:       +1075.899853
+Potential:     -692.045412
+External:        +0.000000
+XC:            -125.762942
+Entropy (-ST):   -0.076026
+Local:          +56.508941
+SIC:             +0.000000
+--------------------------
+Free energy:   +314.524415
+Extrapolated:  +314.562428
+
+Showing only first 2 kpts
+ Kpt  Band  Eigenvalues  Occupancy
+  0    37     -3.98758    2.00000
+  0    38     -3.50511    1.98428
+  0    39     -3.27193    1.08697
+  0    40      2.67524    0.00000
+
+  1    37     -3.46988    1.96845
+  1    38     -3.32954    1.58053
+  1    39     -3.12798    0.12539
+  1    40      1.94786    0.00000
+
+
+Fermi level: -3.26321
+
+No gap
+No difference between direct/indirect transitions
+
+Forces in eV/Ang:
+  0 Zn   -0.00069  435.08167    0.07019
+  1 Zn   -0.00134  435.14120    0.07023
+  2 O     0.00035 -435.10595    0.05556
+  3 O     0.00046 -435.06023    0.03875
+  4 Zn    0.03570    0.00224    0.00077
+  5 Zn    0.00485   -0.03177    0.02020
+  6 O    -0.03706    0.04442    0.02548
+  7 O     0.00837    0.00106    0.02471
+  8 O     0.00146    0.08274   -0.03609
+
+System changes: positions 
+
+Initializing position-dependent things.
+
+Density initialized from wave functions
+    .-------.  
+   /|       |  
+  / |       |  
+ *  |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  | O     |  
+ |  |       |  
+ |  |       |  
+ |  OZnZnO  |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  O       |  
+ | Zn       |  
+ |O |       |  
+ Zn |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  .-------.  
+ | /       /   
+ |/       /    
+ *-------*     
+
+Atomic positions and initial magnetic moments
+
+Positions:
+   0 Zn     0.000000    0.000000   10.000000    ( 0.0000,  0.0000,  0.0000)
+   1 Zn     0.000000    2.603000   10.000000    ( 0.0000,  0.0000,  0.0000)
+   2 O      0.000000    1.991295   10.000000    ( 0.0000,  0.0000,  0.0000)
+   3 O     -0.000000    4.594295   10.000000    ( 0.0000,  0.0000,  0.0000)
+   4 Zn     2.429711    0.460555   15.739894    ( 0.0000,  0.0000,  0.0000)
+   5 Zn     0.803699    3.370594   15.058304    ( 0.0000,  0.0000,  0.0000)
+   6 O      0.812077    1.496575   15.202535    ( 0.0000,  0.0000,  0.0000)
+   7 O      2.427858    4.027310   14.374370    ( 0.0000,  0.0000,  0.0000)
+   8 O      0.798503    4.737488   16.534490    ( 0.0000,  0.0000,  0.0000)
+
+Unit cell:
+           periodic     x           y           z      points  spacing
+  1. axis:    yes    3.249000    0.000000    0.000000    18     0.1805
+  2. axis:    yes    0.000000    5.206000    0.000000    27     0.1928
+  3. axis:    no     0.000000    0.000000   22.813717   120     0.1901
+
+  Lengths:   3.249000   5.206000  22.813717
+  Angles:   90.000000  90.000000  90.000000
+
+Effective grid spacing dv^(1/3) = 0.1877
+
+     iter     time        total  log10-change:
+                         energy   eigst   dens
+iter:   1 22:51:00   314.558209   -3.89
+iter:   2 22:51:01   314.562561   -4.41  -2.89
+iter:   3 22:51:02   314.561495c  -5.15  -2.77
+iter:   4 22:51:03   314.562078c  -5.68  -3.45
+iter:   5 22:51:03   314.562184c  -5.97  -3.88
+iter:   6 22:51:04   314.561749c  -5.51  -3.87
+iter:   7 22:51:05   314.561983c  -5.97  -3.67
+iter:   8 22:51:05   314.562088c  -6.81  -4.07c
+iter:   9 22:51:06   314.562086c  -7.32  -4.58c
+iter:  10 22:51:07   314.562105c  -7.62c -4.72c
+
+Converged after 10 iterations.
+
+Dipole moment: (-0.391290, 0.602883, -0.266108) |e|*Ang
+
+Energy contributions relative to reference atoms: (reference = -205649.568117)
+
+Kinetic:       +1075.958575
+Potential:     -692.090451
+External:        +0.000000
+XC:            -125.776112
+Entropy (-ST):   -0.076006
+Local:          +56.508096
+SIC:             +0.000000
+--------------------------
+Free energy:   +314.524102
+Extrapolated:  +314.562105
+
+Showing only first 2 kpts
+ Kpt  Band  Eigenvalues  Occupancy
+  0    37     -3.98733    2.00000
+  0    38     -3.50454    1.98415
+  0    39     -3.27185    1.08774
+  0    40      2.67542    0.00000
+
+  1    37     -3.47002    1.96863
+  1    38     -3.32964    1.58222
+  1    39     -3.12755    0.12476
+  1    40      1.94768    0.00000
+
+
+Fermi level: -3.26306
+
+No gap
+No difference between direct/indirect transitions
+
+Forces in eV/Ang:
+  0 Zn   -0.00069  435.08209    0.06994
+  1 Zn   -0.00134  435.14116    0.06968
+  2 O     0.00034 -435.10713    0.05522
+  3 O     0.00047 -435.06146    0.03841
+  4 Zn    0.01161   -0.00551    0.00565
+  5 Zn    0.00731   -0.00108    0.02954
+  6 O    -0.03065    0.03939    0.01120
+  7 O     0.00331    0.00498    0.02502
+  8 O     0.01027    0.06348   -0.03589
+
+System changes: positions 
+
+Initializing position-dependent things.
+
+Density initialized from wave functions
+    .-------.  
+   /|       |  
+  / |       |  
+ *  |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  | O     |  
+ |  |       |  
+ |  |       |  
+ |  OZnZnO  |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  O       |  
+ | Zn       |  
+ |O |       |  
+ Zn |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  .-------.  
+ | /       /   
+ |/       /    
+ *-------*     
+
+Atomic positions and initial magnetic moments
+
+Positions:
+   0 Zn     0.000000    0.000000   10.000000    ( 0.0000,  0.0000,  0.0000)
+   1 Zn     0.000000    2.603000   10.000000    ( 0.0000,  0.0000,  0.0000)
+   2 O      0.000000    1.991295   10.000000    ( 0.0000,  0.0000,  0.0000)
+   3 O     -0.000000    4.594295   10.000000    ( 0.0000,  0.0000,  0.0000)
+   4 Zn     2.432413    0.462013   15.736321    ( 0.0000,  0.0000,  0.0000)
+   5 Zn     0.804209    3.371161   15.061914    ( 0.0000,  0.0000,  0.0000)
+   6 O      0.808195    1.500013   15.206511    ( 0.0000,  0.0000,  0.0000)
+   7 O      2.428869    4.027022   14.375141    ( 0.0000,  0.0000,  0.0000)
+   8 O      0.798574    4.741594   16.532521    ( 0.0000,  0.0000,  0.0000)
+
+Unit cell:
+           periodic     x           y           z      points  spacing
+  1. axis:    yes    3.249000    0.000000    0.000000    18     0.1805
+  2. axis:    yes    0.000000    5.206000    0.000000    27     0.1928
+  3. axis:    no     0.000000    0.000000   22.813717   120     0.1901
+
+  Lengths:   3.249000   5.206000  22.813717
+  Angles:   90.000000  90.000000  90.000000
+
+Effective grid spacing dv^(1/3) = 0.1877
+
+     iter     time        total  log10-change:
+                         energy   eigst   dens
+iter:   1 22:51:08   314.552862   -3.11
+iter:   2 22:51:09   314.561730   -3.73  -2.69
+iter:   3 22:51:10   314.560110c  -4.28  -2.68
+iter:   4 22:51:10   314.561400c  -5.01  -3.15
+iter:   5 22:51:11   314.562086c  -5.47  -3.60
+iter:   6 22:51:12   314.559968c  -5.06  -3.31
+iter:   7 22:51:13   314.560518c  -5.56  -3.12
+iter:   8 22:51:13   314.561650c  -5.80  -3.24
+iter:   9 22:51:14   314.561580c  -6.36  -4.23c
+iter:  10 22:51:15   314.561630c  -6.73  -4.21c
+iter:  11 22:51:16   314.561647c  -7.27  -4.67c
+iter:  12 22:51:16   314.561644c  -7.16  -4.60c
+iter:  13 22:51:17   314.561641c  -7.93c -5.00c
+
+Converged after 13 iterations.
+
+Dipole moment: (-0.385842, 0.662293, -0.266057) |e|*Ang
+
+Energy contributions relative to reference atoms: (reference = -205649.568117)
+
+Kinetic:       +1076.100821
+Potential:     -692.196896
+External:        +0.000000
+XC:            -125.811627
+Entropy (-ST):   -0.075984
+Local:          +56.507336
+SIC:             +0.000000
+--------------------------
+Free energy:   +314.523649
+Extrapolated:  +314.561641
+
+Showing only first 2 kpts
+ Kpt  Band  Eigenvalues  Occupancy
+  0    37     -3.98513    2.00000
+  0    38     -3.50616    1.98489
+  0    39     -3.27075    1.08483
+  0    40      2.67749    0.00000
+
+  1    37     -3.47083    1.96961
+  1    38     -3.32907    1.58380
+  1    39     -3.12525    0.12130
+  1    40      1.94818    0.00000
+
+
+Fermi level: -3.26225
+
+No gap
+No difference between direct/indirect transitions
+
+Forces in eV/Ang:
+  0 Zn   -0.00067  435.08213    0.06802
+  1 Zn   -0.00134  435.14131    0.06783
+  2 O     0.00031 -435.10791    0.05477
+  3 O     0.00048 -435.06220    0.03809
+  4 Zn   -0.05077    0.00332    0.02463
+  5 Zn    0.01207    0.02519    0.02075
+  6 O     0.01510    0.01848   -0.01238
+  7 O    -0.00757    0.00375    0.02686
+  8 O     0.03407    0.05842   -0.02025
+
+System changes: positions 
+
+Initializing position-dependent things.
+
+Density initialized from wave functions
+    .-------.  
+   /|       |  
+  / |       |  
+ *  |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  | O     |  
+ |  |       |  
+ |  |       |  
+ |  OZnZnO  |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  O       |  
+ | Zn       |  
+ |O |       |  
+ Zn |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  .-------.  
+ | /       /   
+ |/       /    
+ *-------*     
+
+Atomic positions and initial magnetic moments
+
+Positions:
+   0 Zn     0.000000    0.000000   10.000000    ( 0.0000,  0.0000,  0.0000)
+   1 Zn     0.000000    2.603000   10.000000    ( 0.0000,  0.0000,  0.0000)
+   2 O      0.000000    1.991295   10.000000    ( 0.0000,  0.0000,  0.0000)
+   3 O     -0.000000    4.594295   10.000000    ( 0.0000,  0.0000,  0.0000)
+   4 Zn     2.432466    0.461949   15.736431    ( 0.0000,  0.0000,  0.0000)
+   5 Zn     0.804217    3.371856   15.063457    ( 0.0000,  0.0000,  0.0000)
+   6 O      0.805892    1.501551   15.207588    ( 0.0000,  0.0000,  0.0000)
+   7 O      2.428792    4.025733   14.374936    ( 0.0000,  0.0000,  0.0000)
+   8 O      0.801140    4.746221   16.532225    ( 0.0000,  0.0000,  0.0000)
+
+Unit cell:
+           periodic     x           y           z      points  spacing
+  1. axis:    yes    3.249000    0.000000    0.000000    18     0.1805
+  2. axis:    yes    0.000000    5.206000    0.000000    27     0.1928
+  3. axis:    no     0.000000    0.000000   22.813717   120     0.1901
+
+  Lengths:   3.249000   5.206000  22.813717
+  Angles:   90.000000  90.000000  90.000000
+
+Effective grid spacing dv^(1/3) = 0.1877
+
+     iter     time        total  log10-change:
+                         energy   eigst   dens
+iter:   1 22:51:18   314.559458   -3.81
+iter:   2 22:51:19   314.562041   -4.47  -3.10
+iter:   3 22:51:20   314.561013c  -5.05  -2.98
+iter:   4 22:51:21   314.561300c  -5.69  -3.64
+iter:   5 22:51:21   314.561338c  -5.85  -3.87
+iter:   6 22:51:22   314.561209c  -5.55  -4.01c
+iter:   7 22:51:23   314.561279c  -6.06  -4.05c
+iter:   8 22:51:24   314.561302c  -6.75  -4.35c
+iter:   9 22:51:24   314.561316c  -7.20  -4.57c
+iter:  10 22:51:25   314.561316c  -7.74c -4.87c
+
+Converged after 10 iterations.
+
+Dipole moment: (-0.385106, 0.725950, -0.265366) |e|*Ang
+
+Energy contributions relative to reference atoms: (reference = -205649.568117)
+
+Kinetic:       +1076.175260
+Potential:     -692.256822
+External:        +0.000000
+XC:            -125.826166
+Entropy (-ST):   -0.075955
+Local:          +56.507022
+SIC:             +0.000000
+--------------------------
+Free energy:   +314.523339
+Extrapolated:  +314.561316
+
+Showing only first 2 kpts
+ Kpt  Band  Eigenvalues  Occupancy
+  0    37     -3.98507    2.00000
+  0    38     -3.50673    1.98564
+  0    39     -3.26818    1.07890
+  0    40      2.67990    0.00000
+
+  1    37     -3.47116    1.97096
+  1    38     -3.32701    1.58325
+  1    39     -3.12275    0.12012
+  1    40      1.95022    0.00000
+
+
+Fermi level: -3.26028
+
+No gap
+No difference between direct/indirect transitions
+
+Forces in eV/Ang:
+  0 Zn   -0.00067  435.08199    0.06890
+  1 Zn   -0.00133  435.14143    0.06867
+  2 O     0.00031 -435.10813    0.05532
+  3 O     0.00048 -435.06214    0.03878
+  4 Zn   -0.05336    0.02053    0.01488
+  5 Zn    0.00724    0.03684    0.01803
+  6 O     0.02636    0.00962   -0.02108
+  7 O    -0.00396    0.01179    0.03381
+  8 O     0.02765    0.03845   -0.01116
+
+System changes: positions 
+
+Initializing position-dependent things.
+
+Density initialized from wave functions
+    .-------.  
+   /|       |  
+  / |       |  
+ *  |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  | O     |  
+ |  |       |  
+ |  |       |  
+ |  OZnZnO  |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  O       |  
+ | Zn       |  
+ |O |       |  
+ Zn |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  .-------.  
+ | /       /   
+ |/       /    
+ *-------*     
+
+Atomic positions and initial magnetic moments
+
+Positions:
+   0 Zn     0.000000    0.000000   10.000000    ( 0.0000,  0.0000,  0.0000)
+   1 Zn     0.000000    2.603000   10.000000    ( 0.0000,  0.0000,  0.0000)
+   2 O      0.000000    1.991295   10.000000    ( 0.0000,  0.0000,  0.0000)
+   3 O     -0.000000    4.594295   10.000000    ( 0.0000,  0.0000,  0.0000)
+   4 Zn     2.431296    0.462643   15.737389    ( 0.0000,  0.0000,  0.0000)
+   5 Zn     0.804398    3.373838   15.066412    ( 0.0000,  0.0000,  0.0000)
+   6 O      0.802062    1.504116   15.207781    ( 0.0000,  0.0000,  0.0000)
+   7 O      2.428791    4.025048   14.375285    ( 0.0000,  0.0000,  0.0000)
+   8 O      0.806480    4.752394   16.531754    ( 0.0000,  0.0000,  0.0000)
+
+Unit cell:
+           periodic     x           y           z      points  spacing
+  1. axis:    yes    3.249000    0.000000    0.000000    18     0.1805
+  2. axis:    yes    0.000000    5.206000    0.000000    27     0.1928
+  3. axis:    no     0.000000    0.000000   22.813717   120     0.1901
+
+  Lengths:   3.249000   5.206000  22.813717
+  Angles:   90.000000  90.000000  90.000000
+
+Effective grid spacing dv^(1/3) = 0.1877
+
+     iter     time        total  log10-change:
+                         energy   eigst   dens
+iter:   1 22:51:26   314.558587   -3.32
+iter:   2 22:51:27   314.561607   -4.04  -3.03
+iter:   3 22:51:28   314.560542c  -4.62  -2.89
+iter:   4 22:51:28   314.560872c  -5.22  -3.53
+iter:   5 22:51:29   314.561009c  -5.23  -3.69
+iter:   6 22:51:30   314.560724c  -5.31  -3.87
+iter:   7 22:51:31   314.560811c  -5.94  -3.90
+iter:   8 22:51:31   314.560877c  -6.68  -4.13c
+iter:   9 22:51:32   314.560889c  -7.32  -4.48c
+iter:  10 22:51:33   314.560891c  -7.90c -4.73c
+
+Converged after 10 iterations.
+
+Dipole moment: (-0.385382, 0.816152, -0.264038) |e|*Ang
+
+Energy contributions relative to reference atoms: (reference = -205649.568117)
+
+Kinetic:       +1076.230964
+Potential:     -692.297813
+External:        +0.000000
+XC:            -125.840480
+Entropy (-ST):   -0.075956
+Local:          +56.506198
+SIC:             +0.000000
+--------------------------
+Free energy:   +314.522913
+Extrapolated:  +314.560891
+
+Showing only first 2 kpts
+ Kpt  Band  Eigenvalues  Occupancy
+  0    37     -3.98527    2.00000
+  0    38     -3.50752    1.98673
+  0    39     -3.26371    1.06609
+  0    40      2.68350    0.00000
+
+  1    37     -3.47088    1.97258
+  1    38     -3.32372    1.58255
+  1    39     -3.11913    0.11914
+  1    40      1.95354    0.00000
+
+
+Fermi level: -3.25709
+
+No gap
+No difference between direct/indirect transitions
+
+Forces in eV/Ang:
+  0 Zn   -0.00068  435.08207    0.06924
+  1 Zn   -0.00133  435.14181    0.06908
+  2 O     0.00029 -435.10799    0.05535
+  3 O     0.00049 -435.06166    0.03904
+  4 Zn   -0.03501    0.04775   -0.00062
+  5 Zn   -0.00290    0.03990    0.00840
+  6 O     0.02956    0.00006   -0.01928
+  7 O     0.00497    0.01898    0.04295
+  8 O     0.00666    0.02401    0.00716
+
+System changes: positions 
+
+Initializing position-dependent things.
+
+Density initialized from wave functions
+    .-------.  
+   /|       |  
+  / |       |  
+ *  |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  | O     |  
+ |  |       |  
+ |  |       |  
+ |  OZnZnO  |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  O       |  
+ | Zn       |  
+ |O |       |  
+ Zn |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  .-------.  
+ | /       /   
+ |/       /    
+ *-------*     
+
+Atomic positions and initial magnetic moments
+
+Positions:
+   0 Zn     0.000000    0.000000   10.000000    ( 0.0000,  0.0000,  0.0000)
+   1 Zn     0.000000    2.603000   10.000000    ( 0.0000,  0.0000,  0.0000)
+   2 O      0.000000    1.991295   10.000000    ( 0.0000,  0.0000,  0.0000)
+   3 O     -0.000000    4.594295   10.000000    ( 0.0000,  0.0000,  0.0000)
+   4 Zn     2.430106    0.465176   15.737657    ( 0.0000,  0.0000,  0.0000)
+   5 Zn     0.804596    3.376683   15.069881    ( 0.0000,  0.0000,  0.0000)
+   6 O      0.797086    1.507005   15.207857    ( 0.0000,  0.0000,  0.0000)
+   7 O      2.429098    4.025777   14.377367    ( 0.0000,  0.0000,  0.0000)
+   8 O      0.812875    4.759689   16.531608    ( 0.0000,  0.0000,  0.0000)
+
+Unit cell:
+           periodic     x           y           z      points  spacing
+  1. axis:    yes    3.249000    0.000000    0.000000    18     0.1805
+  2. axis:    yes    0.000000    5.206000    0.000000    27     0.1928
+  3. axis:    no     0.000000    0.000000   22.813717   120     0.1901
+
+  Lengths:   3.249000   5.206000  22.813717
+  Angles:   90.000000  90.000000  90.000000
+
+Effective grid spacing dv^(1/3) = 0.1877
+
+     iter     time        total  log10-change:
+                         energy   eigst   dens
+iter:   1 22:51:34   314.556390   -3.09
+iter:   2 22:51:35   314.561028   -3.84  -2.87
+iter:   3 22:51:36   314.559909c  -4.40  -2.75
+iter:   4 22:51:36   314.560446c  -4.97  -3.37
+iter:   5 22:51:37   314.561114c  -5.10  -3.65
+iter:   6 22:51:38   314.559958c  -5.37  -3.29
+iter:   7 22:51:39   314.560276c  -6.05  -3.47
+iter:   8 22:51:39   314.560529c  -6.86  -3.74
+iter:   9 22:51:40   314.560518c  -7.24  -4.44c
+iter:  10 22:51:41   314.560535c  -7.21  -4.47c
+iter:  11 22:51:42   314.560538c  -8.05c -4.69c
+
+Converged after 11 iterations.
+
+Dipole moment: (-0.386078, 0.930766, -0.262732) |e|*Ang
+
+Energy contributions relative to reference atoms: (reference = -205649.568117)
+
+Kinetic:       +1076.332699
+Potential:     -692.376081
+External:        +0.000000
+XC:            -125.863285
+Entropy (-ST):   -0.075997
+Local:          +56.505204
+SIC:             +0.000000
+--------------------------
+Free energy:   +314.522539
+Extrapolated:  +314.560538
+
+Showing only first 2 kpts
+ Kpt  Band  Eigenvalues  Occupancy
+  0    37     -3.98548    2.00000
+  0    38     -3.50798    1.98774
+  0    39     -3.25859    1.05018
+  0    40      2.68687    0.00000
+
+  1    37     -3.47014    1.97404
+  1    38     -3.32026    1.58295
+  1    39     -3.11529    0.11843
+  1    40      1.95694    0.00000
+
+
+Fermi level: -3.25357
+
+No gap
+No difference between direct/indirect transitions
+
+Forces in eV/Ang:
+  0 Zn   -0.00066  435.08221    0.06957
+  1 Zn   -0.00133  435.14211    0.06946
+  2 O     0.00028 -435.10834    0.05498
+  3 O     0.00053 -435.06162    0.03897
+  4 Zn   -0.02013    0.06438   -0.00795
+  5 Zn   -0.00935    0.03951    0.00206
+  6 O     0.03591    0.00437   -0.02305
+  7 O     0.00872    0.02172    0.04654
+  8 O    -0.01063    0.01151    0.02363
+
+System changes: positions 
+
+Initializing position-dependent things.
+
+Density initialized from wave functions
+    .-------.  
+   /|       |  
+  / |       |  
+ *  |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  | O     |  
+ |  |       |  
+ |  |       |  
+ |  OZnZnO  |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  O       |  
+ | Zn       |  
+ |O |       |  
+ Zn |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  .-------.  
+ | /       /   
+ |/       /    
+ *-------*     
+
+Atomic positions and initial magnetic moments
+
+Positions:
+   0 Zn     0.000000    0.000000   10.000000    ( 0.0000,  0.0000,  0.0000)
+   1 Zn     0.000000    2.603000   10.000000    ( 0.0000,  0.0000,  0.0000)
+   2 O      0.000000    1.991295   10.000000    ( 0.0000,  0.0000,  0.0000)
+   3 O     -0.000000    4.594295   10.000000    ( 0.0000,  0.0000,  0.0000)
+   4 Zn     2.428197    0.471017   15.737784    ( 0.0000,  0.0000,  0.0000)
+   5 Zn     0.804932    3.381780   15.075229    ( 0.0000,  0.0000,  0.0000)
+   6 O      0.789431    1.512348   15.206773    ( 0.0000,  0.0000,  0.0000)
+   7 O      2.429957    4.029077   14.383305    ( 0.0000,  0.0000,  0.0000)
+   8 O      0.822631    4.770827   16.531812    ( 0.0000,  0.0000,  0.0000)
+
+Unit cell:
+           periodic     x           y           z      points  spacing
+  1. axis:    yes    3.249000    0.000000    0.000000    18     0.1805
+  2. axis:    yes    0.000000    5.206000    0.000000    27     0.1928
+  3. axis:    no     0.000000    0.000000   22.813717   120     0.1901
+
+  Lengths:   3.249000   5.206000  22.813717
+  Angles:   90.000000  90.000000  90.000000
+
+Effective grid spacing dv^(1/3) = 0.1877
+
+     iter     time        total  log10-change:
+                         energy   eigst   dens
+iter:   1 22:51:43   314.551589   -2.62
+iter:   2 22:51:43   314.560627   -3.40  -2.70
+iter:   3 22:51:44   314.558740c  -3.93  -2.73
+iter:   4 22:51:45   314.555784c  -4.48  -3.12
+iter:   5 22:51:46   314.556411c  -4.90  -2.40
+iter:   6 22:51:46   314.559744c  -4.68  -2.42
+iter:   7 22:51:47   314.559922c  -5.48  -3.50
+iter:   8 22:51:48   314.560092c  -6.14  -3.68
+iter:   9 22:51:49   314.560257c  -6.32  -3.97
+iter:  10 22:51:49   314.560204c  -6.97  -4.10c
+iter:  11 22:51:50   314.560192c  -7.44c -4.35c
+
+Converged after 11 iterations.
+
+Dipole moment: (-0.388245, 1.118031, -0.260951) |e|*Ang
+
+Energy contributions relative to reference atoms: (reference = -205649.568117)
+
+Kinetic:       +1076.541202
+Potential:     -692.539572
+External:        +0.000000
+XC:            -125.906672
+Entropy (-ST):   -0.076088
+Local:          +56.503278
+SIC:             +0.000000
+--------------------------
+Free energy:   +314.522148
+Extrapolated:  +314.560192
+
+Showing only first 2 kpts
+ Kpt  Band  Eigenvalues  Occupancy
+  0    37     -3.98623    2.00000
+  0    38     -3.50845    1.98899
+  0    39     -3.25097    1.02352
+  0    40      2.69088    0.00000
+
+  1    37     -3.46878    1.97582
+  1    38     -3.31542    1.58368
+  1    39     -3.11033    0.11841
+  1    40      1.96163    0.00000
+
+
+Fermi level: -3.24861
+
+No gap
+No difference between direct/indirect transitions
+
+Forces in eV/Ang:
+  0 Zn   -0.00072  435.08460    0.07217
+  1 Zn   -0.00132  435.14447    0.07206
+  2 O     0.00025 -435.10980    0.05623
+  3 O     0.00060 -435.06260    0.04067
+  4 Zn    0.00700    0.08336   -0.01396
+  5 Zn   -0.01441    0.04135    0.00315
+  6 O     0.05463    0.00964   -0.02433
+  7 O     0.00893    0.02000    0.03394
+  8 O    -0.05508   -0.01178    0.04946
+
+System changes: positions 
+
+Initializing position-dependent things.
+
+Density initialized from wave functions
+    .-------.  
+   /|       |  
+  / |       |  
+ *  |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  | O     |  
+ |  |       |  
+ |  |       |  
+ |  OZnZnO  |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  O       |  
+ | Zn       |  
+ |O |       |  
+ Zn |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  .-------.  
+ | /       /   
+ |/       /    
+ *-------*     
+
+Atomic positions and initial magnetic moments
+
+Positions:
+   0 Zn     0.000000    0.000000   10.000000    ( 0.0000,  0.0000,  0.0000)
+   1 Zn     0.000000    2.603000   10.000000    ( 0.0000,  0.0000,  0.0000)
+   2 O      0.000000    1.991295   10.000000    ( 0.0000,  0.0000,  0.0000)
+   3 O     -0.000000    4.594295   10.000000    ( 0.0000,  0.0000,  0.0000)
+   4 Zn     2.427263    0.474413   15.737174    ( 0.0000,  0.0000,  0.0000)
+   5 Zn     0.805410    3.383954   15.077242    ( 0.0000,  0.0000,  0.0000)
+   6 O      0.790597    1.514311   15.206140    ( 0.0000,  0.0000,  0.0000)
+   7 O      2.430698    4.031133   14.386633    ( 0.0000,  0.0000,  0.0000)
+   8 O      0.821561    4.772028   16.530851    ( 0.0000,  0.0000,  0.0000)
+
+Unit cell:
+           periodic     x           y           z      points  spacing
+  1. axis:    yes    3.249000    0.000000    0.000000    18     0.1805
+  2. axis:    yes    0.000000    5.206000    0.000000    27     0.1928
+  3. axis:    no     0.000000    0.000000   22.813717   120     0.1901
+
+  Lengths:   3.249000   5.206000  22.813717
+  Angles:   90.000000  90.000000  90.000000
+
+Effective grid spacing dv^(1/3) = 0.1877
+
+     iter     time        total  log10-change:
+                         energy   eigst   dens
+iter:   1 22:51:51   314.554971   -3.49
+iter:   2 22:51:52   314.560342   -4.22  -2.83
+iter:   3 22:51:53   314.559043c  -4.91  -2.76
+iter:   4 22:51:54   314.559919c  -5.60  -3.42
+iter:   5 22:51:54   314.558531c  -5.80  -3.55
+iter:   6 22:51:55   314.559117c  -6.01  -3.25
+iter:   7 22:51:56   314.559896c  -5.88  -3.50
+iter:   8 22:51:57   314.559647c  -6.61  -3.80
+iter:   9 22:51:57   314.559721c  -7.42c -4.38c
+
+Converged after 9 iterations.
+
+Dipole moment: (-0.387749, 1.149104, -0.260052) |e|*Ang
+
+Energy contributions relative to reference atoms: (reference = -205649.568117)
+
+Kinetic:       +1076.616422
+Potential:     -692.593799
+External:        +0.000000
+XC:            -125.926946
+Entropy (-ST):   -0.076236
+Local:          +56.502162
+SIC:             +0.000000
+--------------------------
+Free energy:   +314.521603
+Extrapolated:  +314.559721
+
+Showing only first 2 kpts
+ Kpt  Band  Eigenvalues  Occupancy
+  0    37     -3.98675    2.00000
+  0    38     -3.50673    1.98905
+  0    39     -3.24854    1.01914
+  0    40      2.69182    0.00000
+
+  1    37     -3.46686    1.97586
+  1    38     -3.31309    1.58144
+  1    39     -3.10833    0.11839
+  1    40      1.96379    0.00000
+
+
+Fermi level: -3.24662
+
+No gap
+No difference between direct/indirect transitions
+
+Forces in eV/Ang:
+  0 Zn   -0.00066  435.08782    0.07120
+  1 Zn   -0.00139  435.14831    0.07113
+  2 O     0.00027 -435.10871    0.05531
+  3 O     0.00059 -435.06131    0.03977
+  4 Zn    0.01787    0.07157   -0.00913
+  5 Zn   -0.01090    0.02991    0.00082
+  6 O     0.04877    0.01511   -0.02475
+  7 O     0.00276    0.01851    0.02399
+  8 O    -0.04986   -0.00005    0.05919
+
+System changes: positions 
+
+Initializing position-dependent things.
+
+Density initialized from wave functions
+    .-------.  
+   /|       |  
+  / |       |  
+ *  |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  | O     |  
+ |  |       |  
+ |  |       |  
+ |  OZnZnO  |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  O       |  
+ | Zn       |  
+ |O |       |  
+ Zn |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  .-------.  
+ | /       /   
+ |/       /    
+ *-------*     
+
+Atomic positions and initial magnetic moments
+
+Positions:
+   0 Zn     0.000000    0.000000   10.000000    ( 0.0000,  0.0000,  0.0000)
+   1 Zn     0.000000    2.603000   10.000000    ( 0.0000,  0.0000,  0.0000)
+   2 O      0.000000    1.991295   10.000000    ( 0.0000,  0.0000,  0.0000)
+   3 O     -0.000000    4.594295   10.000000    ( 0.0000,  0.0000,  0.0000)
+   4 Zn     2.423644    0.493135   15.734867    ( 0.0000,  0.0000,  0.0000)
+   5 Zn     0.806980    3.395321   15.084791    ( 0.0000,  0.0000,  0.0000)
+   6 O      0.796267    1.525780   15.200280    ( 0.0000,  0.0000,  0.0000)
+   7 O      2.433605    4.043381   14.408434    ( 0.0000,  0.0000,  0.0000)
+   8 O      0.817903    4.784393   16.530501    ( 0.0000,  0.0000,  0.0000)
+
+Unit cell:
+           periodic     x           y           z      points  spacing
+  1. axis:    yes    3.249000    0.000000    0.000000    18     0.1805
+  2. axis:    yes    0.000000    5.206000    0.000000    27     0.1928
+  3. axis:    no     0.000000    0.000000   22.813717   120     0.1901
+
+  Lengths:   3.249000   5.206000  22.813717
+  Angles:   90.000000  90.000000  90.000000
+
+Effective grid spacing dv^(1/3) = 0.1877
+
+     iter     time        total  log10-change:
+                         energy   eigst   dens
+iter:   1 22:51:58   314.528030   -2.03
+iter:   2 22:51:59   314.545895   -2.82  -2.54
+iter:   3 22:52:00   314.496061   -3.26  -2.63
+iter:   4 22:52:01   314.552710   -3.97  -2.04
+iter:   5 22:52:01   314.552767   -4.13  -2.35
+iter:   6 22:52:02   314.558039c  -4.55  -2.78
+iter:   7 22:52:03   314.559300c  -4.44  -3.33
+iter:   8 22:52:04   314.552389c  -4.93  -3.19
+iter:   9 22:52:04   314.555914c  -5.63  -2.78
+iter:  10 22:52:05   314.558587c  -5.55  -2.99
+iter:  11 22:52:06   314.558473c  -6.18  -3.95
+iter:  12 22:52:07   314.558709c  -6.47  -3.99
+iter:  13 22:52:07   314.558593c  -6.93  -3.83
+iter:  14 22:52:08   314.558634c  -7.31  -4.11c
+iter:  15 22:52:09   314.558570c  -6.87  -4.04c
+iter:  16 22:52:10   314.558571c  -7.36  -4.58c
+iter:  17 22:52:10   314.558570c  -8.17c -4.83c
+
+Converged after 17 iterations.
+
+Dipole moment: (-0.385726, 1.419430, -0.257942) |e|*Ang
+
+Energy contributions relative to reference atoms: (reference = -205649.568117)
+
+Kinetic:       +1077.039306
+Potential:     -692.916243
+External:        +0.000000
+XC:            -126.027675
+Entropy (-ST):   -0.076426
+Local:          +56.501395
+SIC:             +0.000000
+--------------------------
+Free energy:   +314.520357
+Extrapolated:  +314.558570
+
+Showing only first 2 kpts
+ Kpt  Band  Eigenvalues  Occupancy
+  0    37     -3.99227    2.00000
+  0    38     -3.49845    1.98892
+  0    39     -3.23745    0.98485
+  0    40      2.69109    0.00000
+
+  1    37     -3.45939    1.97595
+  1    38     -3.30739    1.59430
+  1    39     -3.10200    0.12139
+  1    40      1.96885    0.00000
+
+
+Fermi level: -3.23896
+
+No gap
+No difference between direct/indirect transitions
+
+Forces in eV/Ang:
+  0 Zn   -0.00047  435.08829    0.06569
+  1 Zn   -0.00128  435.14809    0.06556
+  2 O     0.00027 -435.11695    0.05453
+  3 O     0.00070 -435.06778    0.03912
+  4 Zn    0.08613    0.02697    0.02121
+  5 Zn    0.01137    0.00884    0.04591
+  6 O    -0.01319    0.02469   -0.01827
+  7 O    -0.02860   -0.00541   -0.09414
+  8 O    -0.05812    0.03373    0.08257
+
+System changes: positions 
+
+Initializing position-dependent things.
+
+Density initialized from wave functions
+    .-------.  
+   /|       |  
+  / |       |  
+ *  |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  | O     |  
+ |  |       |  
+ |  |       |  
+ |  OZnZnO  |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  O       |  
+ | Zn       |  
+ |O |       |  
+ Zn |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  .-------.  
+ | /       /   
+ |/       /    
+ *-------*     
+
+Atomic positions and initial magnetic moments
+
+Positions:
+   0 Zn     0.000000    0.000000   10.000000    ( 0.0000,  0.0000,  0.0000)
+   1 Zn     0.000000    2.603000   10.000000    ( 0.0000,  0.0000,  0.0000)
+   2 O      0.000000    1.991295   10.000000    ( 0.0000,  0.0000,  0.0000)
+   3 O     -0.000000    4.594295   10.000000    ( 0.0000,  0.0000,  0.0000)
+   4 Zn     2.425237    0.491871   15.733292    ( 0.0000,  0.0000,  0.0000)
+   5 Zn     0.807003    3.395155   15.085430    ( 0.0000,  0.0000,  0.0000)
+   6 O      0.797206    1.525259   15.203104    ( 0.0000,  0.0000,  0.0000)
+   7 O      2.433126    4.040462   14.404693    ( 0.0000,  0.0000,  0.0000)
+   8 O      0.815505    4.784827   16.530915    ( 0.0000,  0.0000,  0.0000)
+
+Unit cell:
+           periodic     x           y           z      points  spacing
+  1. axis:    yes    3.249000    0.000000    0.000000    18     0.1805
+  2. axis:    yes    0.000000    5.206000    0.000000    27     0.1928
+  3. axis:    no     0.000000    0.000000   22.813717   120     0.1901
+
+  Lengths:   3.249000   5.206000  22.813717
+  Angles:   90.000000  90.000000  90.000000
+
+Effective grid spacing dv^(1/3) = 0.1877
+
+     iter     time        total  log10-change:
+                         energy   eigst   dens
+iter:   1 22:52:12   314.558446   -3.61
+iter:   2 22:52:12   314.554406   -4.35  -2.93
+iter:   3 22:52:13   314.557876c  -4.99  -2.91
+iter:   4 22:52:14   314.558105c  -5.49  -3.60
+iter:   5 22:52:15   314.557901c  -5.81  -3.81
+iter:   6 22:52:15   314.558637c  -5.49  -3.71
+iter:   7 22:52:16   314.558540c  -5.95  -3.37
+iter:   8 22:52:17   314.558145c  -6.61  -3.48
+iter:   9 22:52:18   314.558080c  -6.84  -4.36c
+iter:  10 22:52:18   314.558094c  -7.36  -4.51c
+iter:  11 22:52:19   314.558108c  -7.44c -4.66c
+
+Converged after 11 iterations.
+
+Dipole moment: (-0.383650, 1.418777, -0.258535) |e|*Ang
+
+Energy contributions relative to reference atoms: (reference = -205649.568117)
+
+Kinetic:       +1077.021536
+Potential:     -692.905317
+External:        +0.000000
+XC:            -126.021428
+Entropy (-ST):   -0.076409
+Local:          +56.501522
+SIC:             +0.000000
+--------------------------
+Free energy:   +314.519903
+Extrapolated:  +314.558108
+
+Showing only first 2 kpts
+ Kpt  Band  Eigenvalues  Occupancy
+  0    37     -3.99271    2.00000
+  0    38     -3.50042    1.98909
+  0    39     -3.23961    0.99502
+  0    40      2.69147    0.00000
+
+  1    37     -3.46240    1.97682
+  1    38     -3.30839    1.59332
+  1    39     -3.10210    0.11902
+  1    40      1.96792    0.00000
+
+
+Fermi level: -3.24011
+
+No gap
+No difference between direct/indirect transitions
+
+Forces in eV/Ang:
+  0 Zn   -0.00048  435.08699    0.06698
+  1 Zn   -0.00130  435.14761    0.06695
+  2 O     0.00025 -435.11737    0.05583
+  3 O     0.00069 -435.06872    0.04036
+  4 Zn    0.05574    0.02404    0.02868
+  5 Zn    0.00652    0.00706    0.03668
+  6 O     0.00351    0.03025   -0.03191
+  7 O    -0.02253    0.00621   -0.06858
+  8 O    -0.04432    0.02479    0.07501
+
+System changes: positions 
+
+Initializing position-dependent things.
+
+Density initialized from wave functions
+    .-------.  
+   /|       |  
+  / |       |  
+ *  |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  | O     |  
+ |  |       |  
+ |  |       |  
+ |  OZnZnO  |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  O       |  
+ | Zn       |  
+ |O |       |  
+ Zn |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  .-------.  
+ | /       /   
+ |/       /    
+ *-------*     
+
+Atomic positions and initial magnetic moments
+
+Positions:
+   0 Zn     0.000000    0.000000   10.000000    ( 0.0000,  0.0000,  0.0000)
+   1 Zn     0.000000    2.603000   10.000000    ( 0.0000,  0.0000,  0.0000)
+   2 O      0.000000    1.991295   10.000000    ( 0.0000,  0.0000,  0.0000)
+   3 O     -0.000000    4.594295   10.000000    ( 0.0000,  0.0000,  0.0000)
+   4 Zn     2.427866    0.493511   15.731778    ( 0.0000,  0.0000,  0.0000)
+   5 Zn     0.807332    3.397666   15.088555    ( 0.0000,  0.0000,  0.0000)
+   6 O      0.801658    1.527900   15.205358    ( 0.0000,  0.0000,  0.0000)
+   7 O      2.432352    4.037895   14.401763    ( 0.0000,  0.0000,  0.0000)
+   8 O      0.808828    4.789278   16.533076    ( 0.0000,  0.0000,  0.0000)
+
+Unit cell:
+           periodic     x           y           z      points  spacing
+  1. axis:    yes    3.249000    0.000000    0.000000    18     0.1805
+  2. axis:    yes    0.000000    5.206000    0.000000    27     0.1928
+  3. axis:    no     0.000000    0.000000   22.813717   120     0.1901
+
+  Lengths:   3.249000   5.206000  22.813717
+  Angles:   90.000000  90.000000  90.000000
+
+Effective grid spacing dv^(1/3) = 0.1877
+
+     iter     time        total  log10-change:
+                         energy   eigst   dens
+iter:   1 22:52:20   314.557850   -3.12
+iter:   2 22:52:21   314.552163   -3.79  -2.84
+iter:   3 22:52:22   314.556643c  -4.43  -2.81
+iter:   4 22:52:22   314.557426c  -4.95  -3.29
+iter:   5 22:52:23   314.556905c  -5.26  -3.50
+iter:   6 22:52:24   314.558067c  -4.96  -3.44
+iter:   7 22:52:25   314.557442c  -5.37  -3.16
+iter:   8 22:52:25   314.557356c  -6.25  -4.02c
+iter:   9 22:52:26   314.557344c  -6.87  -4.32c
+iter:  10 22:52:27   314.557377c  -7.07  -4.43c
+iter:  11 22:52:28   314.557370c  -7.63c -4.58c
+
+Converged after 11 iterations.
+
+Dipole moment: (-0.379079, 1.494157, -0.259136) |e|*Ang
+
+Energy contributions relative to reference atoms: (reference = -205649.568117)
+
+Kinetic:       +1076.954936
+Potential:     -692.853716
+External:        +0.000000
+XC:            -126.006826
+Entropy (-ST):   -0.076440
+Local:          +56.501197
+SIC:             +0.000000
+--------------------------
+Free energy:   +314.519150
+Extrapolated:  +314.557370
+
+Showing only first 2 kpts
+ Kpt  Band  Eigenvalues  Occupancy
+  0    37     -3.99733    2.00000
+  0    38     -3.50286    1.98929
+  0    39     -3.24241    1.00763
+  0    40      2.69121    0.00000
+
+  1    37     -3.46777    1.97851
+  1    38     -3.30946    1.59035
+  1    39     -3.10260    0.11672
+  1    40      1.96698    0.00000
+
+
+Fermi level: -3.24164
+
+No gap
+No difference between direct/indirect transitions
+
+Forces in eV/Ang:
+  0 Zn   -0.00050  435.08743    0.06728
+  1 Zn   -0.00129  435.14836    0.06731
+  2 O     0.00024 -435.11567    0.05552
+  3 O     0.00069 -435.06653    0.03999
+  4 Zn    0.01531    0.01810    0.03569
+  5 Zn   -0.00224    0.01343    0.02846
+  6 O     0.00450    0.02454   -0.04602
+  7 O    -0.00904    0.03196   -0.03580
+  8 O     0.00351    0.01084    0.05278
+
+System changes: positions 
+
+Initializing position-dependent things.
+
+Density initialized from wave functions
+    .-------.  
+   /|       |  
+  / |       |  
+ *  |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  | O     |  
+ |  |       |  
+ |  |       |  
+ |  OZnZnO  |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  O       |  
+ | Zn       |  
+ |O |       |  
+ Zn |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  .-------.  
+ | /       /   
+ |/       /    
+ *-------*     
+
+Atomic positions and initial magnetic moments
+
+Positions:
+   0 Zn     0.000000    0.000000   10.000000    ( 0.0000,  0.0000,  0.0000)
+   1 Zn     0.000000    2.603000   10.000000    ( 0.0000,  0.0000,  0.0000)
+   2 O      0.000000    1.991295   10.000000    ( 0.0000,  0.0000,  0.0000)
+   3 O     -0.000000    4.594295   10.000000    ( 0.0000,  0.0000,  0.0000)
+   4 Zn     2.429491    0.502459   15.731355    ( 0.0000,  0.0000,  0.0000)
+   5 Zn     0.808084    3.406133   15.097367    ( 0.0000,  0.0000,  0.0000)
+   6 O      0.800870    1.536721   15.204308    ( 0.0000,  0.0000,  0.0000)
+   7 O      2.432324    4.040935   14.404854    ( 0.0000,  0.0000,  0.0000)
+   8 O      0.808762    4.802558   16.537353    ( 0.0000,  0.0000,  0.0000)
+
+Unit cell:
+           periodic     x           y           z      points  spacing
+  1. axis:    yes    3.249000    0.000000    0.000000    18     0.1805
+  2. axis:    yes    0.000000    5.206000    0.000000    27     0.1928
+  3. axis:    no     0.000000    0.000000   22.813717   120     0.1901
+
+  Lengths:   3.249000   5.206000  22.813717
+  Angles:   90.000000  90.000000  90.000000
+
+Effective grid spacing dv^(1/3) = 0.1877
+
+     iter     time        total  log10-change:
+                         energy   eigst   dens
+iter:   1 22:52:29   314.555872   -2.58
+iter:   2 22:52:30   314.557440   -3.25  -3.15
+iter:   3 22:52:30   314.556380c  -3.80  -3.11
+iter:   4 22:52:31   314.556639c  -4.51  -3.52
+iter:   5 22:52:32   314.556617c  -5.16  -3.65
+iter:   6 22:52:33   314.556615c  -5.28  -3.72
+iter:   7 22:52:33   314.556601c  -5.66  -4.23c
+iter:   8 22:52:34   314.556613c  -6.37  -4.26c
+iter:   9 22:52:35   314.556590c  -6.78  -4.33c
+iter:  10 22:52:35   314.556620c  -6.94  -4.36c
+iter:  11 22:52:36   314.556613c  -7.60c -4.53c
+
+Converged after 11 iterations.
+
+Dipole moment: (-0.373433, 1.746830, -0.258721) |e|*Ang
+
+Energy contributions relative to reference atoms: (reference = -205649.568117)
+
+Kinetic:       +1076.982084
+Potential:     -692.880328
+External:        +0.000000
+XC:            -126.006589
+Entropy (-ST):   -0.076531
+Local:          +56.499712
+SIC:             +0.000000
+--------------------------
+Free energy:   +314.518348
+Extrapolated:  +314.556613
+
+Showing only first 2 kpts
+ Kpt  Band  Eigenvalues  Occupancy
+  0    37     -4.00440    2.00000
+  0    38     -3.50549    1.99007
+  0    39     -3.24018    0.99701
+  0    40      2.69191    0.00000
+
+  1    37     -3.47194    1.98067
+  1    38     -3.30821    1.58979
+  1    39     -3.10116    0.11614
+  1    40      1.96832    0.00000
+
+
+Fermi level: -3.24047
+
+No gap
+No difference between direct/indirect transitions
+
+Forces in eV/Ang:
+  0 Zn   -0.00048  435.08620    0.06780
+  1 Zn   -0.00126  435.14763    0.06779
+  2 O     0.00025 -435.11568    0.05487
+  3 O     0.00072 -435.06550    0.03975
+  4 Zn   -0.01042    0.01954    0.03776
+  5 Zn   -0.01467    0.02171    0.01873
+  6 O     0.03474    0.00665   -0.04001
+  7 O     0.00497    0.03859   -0.02691
+  8 O     0.00485   -0.02423    0.03645
+
+System changes: positions 
+
+Initializing position-dependent things.
+
+Density initialized from wave functions
+    .-------.  
+   /|       |  
+  / |       |  
+ *  |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  | O     |  
+ |  |       |  
+ |  |Zn     |  
+ |  O  ZnO  |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  O       |  
+ | Zn       |  
+ |O |       |  
+ Zn |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  |       |  
+ |  .-------.  
+ | /       /   
+ |/       /    
+ *-------*     
+
+Atomic positions and initial magnetic moments
+
+Positions:
+   0 Zn     0.000000    0.000000   10.000000    ( 0.0000,  0.0000,  0.0000)
+   1 Zn     0.000000    2.603000   10.000000    ( 0.0000,  0.0000,  0.0000)
+   2 O      0.000000    1.991295   10.000000    ( 0.0000,  0.0000,  0.0000)
+   3 O     -0.000000    4.594295   10.000000    ( 0.0000,  0.0000,  0.0000)
+   4 Zn     2.431081    0.511951   15.734907    ( 0.0000,  0.0000,  0.0000)
+   5 Zn     0.808600    3.414843   15.105068    ( 0.0000,  0.0000,  0.0000)
+   6 O      0.805259    1.544467   15.198510    ( 0.0000,  0.0000,  0.0000)
+   7 O      2.431728    4.046890   14.406241    ( 0.0000,  0.0000,  0.0000)
+   8 O      0.804473    4.810316   16.544511    ( 0.0000,  0.0000,  0.0000)
+
+Unit cell:
+           periodic     x           y           z      points  spacing
+  1. axis:    yes    3.249000    0.000000    0.000000    18     0.1805
+  2. axis:    yes    0.000000    5.206000    0.000000    27     0.1928
+  3. axis:    no     0.000000    0.000000   22.813717   120     0.1901
+
+  Lengths:   3.249000   5.206000  22.813717
+  Angles:   90.000000  90.000000  90.000000
+
+Effective grid spacing dv^(1/3) = 0.1877
+
+     iter     time        total  log10-change:
+                         energy   eigst   dens
+iter:   1 22:52:37   314.549374   -2.52
+iter:   2 22:52:38   314.531057   -3.14  -2.32
+iter:   3 22:52:39   314.544653c  -3.81  -2.57
+iter:   4 22:52:40   314.546683c  -4.37  -2.65
+iter:   5 22:52:40   314.556601c  -4.55  -2.68
+iter:   6 22:52:41   314.556085c  -4.79  -3.08
+iter:   7 22:52:42   314.549566c  -4.69  -2.65
+iter:   8 22:52:43   314.555732c  -5.09  -2.77
+iter:   9 22:52:43   314.556687c  -5.67  -3.72
+iter:  10 22:52:44   314.553432c  -5.57  -3.11
+iter:  11 22:52:45   314.555983c  -6.18  -3.02
+iter:  12 22:52:46   314.556500c  -6.28  -4.11c
+iter:  13 22:52:46   314.555766c  -6.61  -3.35
+iter:  14 22:52:47   314.556310c  -6.84  -3.94
+iter:  15 22:52:48   314.555997c  -7.21  -3.56
+iter:  16 22:52:49   314.555928c  -7.58c -4.27c
+
+Converged after 16 iterations.
+
+Dipole moment: (-0.366413, 1.923692, -0.258642) |e|*Ang
+
+Energy contributions relative to reference atoms: (reference = -205649.568117)
+
+Kinetic:       +1076.723285
+Potential:     -692.684286
+External:        +0.000000
+XC:            -125.944825
+Entropy (-ST):   -0.076612
+Local:          +56.500059
+SIC:             +0.000000
+--------------------------
+Free energy:   +314.517622
+Extrapolated:  +314.555928
+
+Showing only first 2 kpts
+ Kpt  Band  Eigenvalues  Occupancy
+  0    37     -4.01366    2.00000
+  0    38     -3.50608    1.98998
+  0    39     -3.24110    0.99584
+  0    40      2.68830    0.00000
+
+  1    37     -3.47525    1.98151
+  1    38     -3.30869    1.58610
+  1    39     -3.10331    0.11860
+  1    40      1.96811    0.00000
+
+
+Fermi level: -3.24152
+
+No gap
+No difference between direct/indirect transitions
+
+Forces in eV/Ang:
+  0 Zn   -0.00054  435.08409    0.07150
+  1 Zn   -0.00132  435.14582    0.07151
+  2 O     0.00024 -435.11401    0.05663
+  3 O     0.00071 -435.06315    0.04175
+  4 Zn   -0.01921    0.00290    0.01884
+  5 Zn   -0.02568    0.01866    0.00132
+  6 O     0.01464   -0.00787    0.00580
+  7 O     0.01672    0.03733    0.00844
+  8 O     0.01822   -0.01516   -0.01136
+
+Writing to /home/bpdtec/Documents/matmod/qml-co2-splitting-mo/results/pathways/ZnO/bridge/o/ZnO_bridge_o.gpw (mode='all')
+
+Timing:                                      incl.     excl.
+-------------------------------------------------------------------
+Density initialized from wave functions:     2.778     2.777   0.6% |
+ Symmetrize density:                         0.000     0.000   0.0% |
+Forces:                                     12.667    12.667   2.6% ||
+Hamiltonian:                                 3.578     0.044   0.0% |
+ Atomic:                                     0.751     0.285   0.1% |
+  XC Correction:                             0.465     0.465   0.1% |
+ Calculate atomic Hamiltonians:              1.204     1.204   0.2% |
+ Communicate:                                0.001     0.001   0.0% |
+ Initialize Hamiltonian:                     0.000     0.000   0.0% |
+ Poisson:                                    0.039     0.039   0.0% |
+ XC 3D grid:                                 1.539     1.539   0.3% |
+LCAO initialization:                         0.748     0.032   0.0% |
+ LCAO eigensolver:                           0.165     0.000   0.0% |
+  Calculate projections:                     0.000     0.000   0.0% |
+  DenseAtomicCorrection:                     0.000     0.000   0.0% |
+  Distribute overlap matrix:                 0.103     0.103   0.0% |
+  Orbital Layouts:                           0.002     0.002   0.0% |
+  Potential matrix:                          0.058     0.058   0.0% |
+  Sum over cells:                            0.001     0.001   0.0% |
+ LCAO to grid:                               0.512     0.512   0.1% |
+ Set positions (LCAO WFS):                   0.040     0.010   0.0% |
+  Basic WFS set positions:                   0.000     0.000   0.0% |
+  Basis functions set positions:             0.000     0.000   0.0% |
+  P tci:                                     0.013     0.013   0.0% |
+  ST tci:                                    0.014     0.014   0.0% |
+  mktci:                                     0.003     0.003   0.0% |
+PWDescriptor:                                0.006     0.006   0.0% |
+Redistribute:                                0.021     0.021   0.0% |
+SCF-cycle:                                 468.200     0.859   0.2% |
+ Davidson:                                 356.285    83.919  17.1% |------|
+  Apply H:                                  45.983    44.584   9.1% |---|
+   HMM T:                                    1.399     1.399   0.3% |
+  Subspace diag:                            66.977     0.169   0.0% |
+   calc_h_matrix:                           52.342     7.062   1.4% ||
+    Apply H:                                45.279    43.923   9.0% |---|
+     HMM T:                                  1.356     1.356   0.3% |
+   diagonalize:                              1.064     1.064   0.2% |
+   rotate_psi:                              13.402    13.402   2.7% ||
+  calc. matrices:                          129.699    39.246   8.0% |--|
+   Apply H:                                 90.453    87.841  17.9% |------|
+    HMM T:                                   2.611     2.611   0.5% |
+  diagonalize:                               7.061     7.061   1.4% ||
+  rotate_psi:                               22.648    22.648   4.6% |-|
+ Density:                                   49.380     0.007   0.0% |
+  Atomic density matrices:                   0.356     0.356   0.1% |
+  Mix:                                      28.607    28.607   5.8% |-|
+  Multipole moments:                         0.046     0.046   0.0% |
+  Pseudo density:                           20.364    20.360   4.1% |-|
+   Symmetrize density:                       0.005     0.005   0.0% |
+ Hamiltonian:                               60.147     0.722   0.1% |
+  Atomic:                                   12.715     4.870   1.0% |
+   XC Correction:                            7.844     7.844   1.6% ||
+  Calculate atomic Hamiltonians:            20.266    20.266   4.1% |-|
+  Communicate:                               0.022     0.022   0.0% |
+  Poisson:                                   0.646     0.646   0.1% |
+  XC 3D grid:                               25.777    25.777   5.3% |-|
+ Orthonormalize:                             1.528     0.011   0.0% |
+  calc_s_matrix:                             0.193     0.193   0.0% |
+  inverse-cholesky:                          0.021     0.021   0.0% |
+  projections:                               0.906     0.906   0.2% |
+  rotate_psi_s:                              0.397     0.397   0.1% |
+Set symmetry:                                0.000     0.000   0.0% |
+Other:                                       2.703     2.703   0.6% |
+-------------------------------------------------------------------
+Total:                                               490.701 100.0%
+
+Memory usage: 1.06 GiB
+Date: Wed May 13 22:52:49 2026

@@ -1,0 +1,28 @@
+{
+  "input_csv":"results\/datasets\/multitech_expanded_ml_dataset_clean.csv",
+  "samples":150,
+  "train_samples":112,
+  "test_samples":38,
+  "n_features":3,
+  "features":[
+    "feature_md_window_c_surface_distance_mean_a",
+    "feature_md_window_c_surface_distance_std_a",
+    "feature_md_window_mean_oco_angle_deg"
+  ],
+  "feature_set":"md3",
+  "label":"label_site_id",
+  "classes":[
+    0,
+    1,
+    2
+  ],
+  "accuracy":0.9210526316,
+  "balanced_accuracy":0.9166666667,
+  "test_size":0.25,
+  "reps":2,
+  "entanglement":"linear",
+  "feature_map":"ZZFeatureMap",
+  "kernel":"FidelityQuantumKernel",
+  "scaler":"MinMaxScaler(feature_range=(0, pi))",
+  "max_samples":150
+}
