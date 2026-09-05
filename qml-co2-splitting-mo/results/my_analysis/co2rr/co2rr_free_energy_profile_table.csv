@@ -1,0 +1,16 @@
+site,state,relative_free_energy_ev
+top_metal,CO2*,0.0
+top_metal,COOH*,0.6545158761969585
+top_metal,CO*,-0.17659680567944136
+top_metal,after CO desorption,-0.18332890619184986
+top_metal,products,-4.037063283596446
+top_oxygen,CO2*,0.0
+top_oxygen,COOH*,0.8762974802433998
+top_oxygen,CO*,0.8023920712554222
+top_oxygen,after CO desorption,0.7951537680887492
+top_oxygen,products,-3.039667593146909
+bridge,CO2*,0.0
+bridge,COOH*,1.5024772446131376
+bridge,CO*,0.4324666717352379
+bridge,after CO desorption,0.4611573704699303
+bridge,products,-3.71080395555456

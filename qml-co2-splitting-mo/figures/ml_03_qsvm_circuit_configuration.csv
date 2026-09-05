@@ -1,0 +1,6 @@
+experiment,setting,mean_cv_balanced_accuracy,std_cv_balanced_accuracy
+entanglement,linear,0.82,0.04472135954999582
+entanglement,circular,0.7866666666666667,0.050552502960343755
+entanglement,full,0.7733333333333332,0.09249624617007743
+repetitions,1,0.82,0.04472135954999582
+repetitions,2,0.78,0.044721359549995836
