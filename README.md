@@ -1,8 +1,12 @@
-# CO₂ adsorption on ZnO
+# ZnO–CO₂ adsorption: simulations, ML, and QML
 
-Simulation, dataset preparation, SVM/QSVM classification, and analysis of
-top-metal, top-oxygen, and bridge adsorption configurations. The simulation
-code also supports TiO₂ and CeO₂; the saved studies focus on ZnO.
+This repository contains the simulations, datasets, and analyses used to compare
+CO₂ adsorption at the top-metal, top-oxygen, and bridge sites on ZnO. DFT,
+TDDFT, CO₂ reduction, AIMD, and NEB provide the physical results. The reported
+classification experiments use AIMD-window descriptors to compare classical
+machine learning (ML; SVM) with quantum machine learning (QML; QSVM), including
+selected IBM Quantum hardware tests. The simulation code also supports TiO₂ and
+CeO₂; the saved studies focus on ZnO.
 
 ## Setup
 
@@ -22,10 +26,10 @@ See [environment setup](environments/README.md) for installation details.
 
 | Stage | Preview command | Configuration |
 | --- | --- | --- |
-| Simulations | `./run_simulations.sh all ` | `configs/simulations/zno_production.yaml` |
-| Datasets | `./run_datasets.sh all ` | `configs/datasets/zno_existing_results.yaml` |
-| Local models | `./run_models.sh local ` | `configs/models/zno_local.yaml` |
-| Analysis | `./run_analysis.sh all ` | `configs/analysis/zno_current.yaml` |
+| Simulations | `./run_simulations.sh all --dry-run` | `configs/simulations/zno_production.yaml` |
+| Datasets | `./run_datasets.sh all --dry-run` | `configs/datasets/zno_existing_results.yaml` |
+| ML and ideal QML | `./run_models.sh local --dry-run` | `configs/models/zno_local.yaml` |
+| Analysis | `./run_analysis.sh all --dry-run` | `configs/analysis/zno_current.yaml` |
 
 Use `--run-id NAME` for a new output
 directory and `--config PATH` to select settings. Each launcher has `--help`.
