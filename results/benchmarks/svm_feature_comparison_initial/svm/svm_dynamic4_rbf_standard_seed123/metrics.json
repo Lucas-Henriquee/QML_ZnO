@@ -1,0 +1,68 @@
+{
+  "model": "SVM",
+  "input_csv": "results/datasets/multitech_expanded_ml_dataset_clean.csv",
+  "feature_set": "dynamic4",
+  "features": [
+    "feature_tddft_transition_energy_ev",
+    "feature_tddft_transition_oscillator_strength",
+    "feature_md_window_c_surface_distance_mean_a",
+    "feature_md_window_c_surface_distance_std_a"
+  ],
+  "n_features": 4,
+  "samples": 960,
+  "train_samples": 720,
+  "test_samples": 240,
+  "classes": [
+    0,
+    1,
+    2
+  ],
+  "kernel": "rbf",
+  "C": 1.0,
+  "gamma": "scale",
+  "degree": 3,
+  "class_weight": "balanced",
+  "scaler": "standard",
+  "test_size": 0.25,
+  "random_state": 123,
+  "max_samples": 0,
+  "split_file": "results/benchmarks/svm_feature_comparison_initial/splits/split_dynamic4_nall_test0.25_seed123.csv",
+  "shuffle_label": false,
+  "train_metrics": {
+    "accuracy": 0.8013888888888889,
+    "balanced_accuracy": 0.8013888888888889,
+    "f1_macro": 0.8056921093091306,
+    "f1_weighted": 0.8056921093091306,
+    "precision_macro": 0.8644092542677448,
+    "recall_macro": 0.8013888888888889
+  },
+  "test_metrics": {
+    "accuracy": 0.7916666666666666,
+    "balanced_accuracy": 0.7916666666666666,
+    "f1_macro": 0.7932149604027657,
+    "f1_weighted": 0.7932149604027657,
+    "precision_macro": 0.8532477507131886,
+    "recall_macro": 0.7916666666666666
+  },
+  "cv_folds": 5,
+  "cv_balanced_accuracy_mean": 0.8020833333333334,
+  "cv_balanced_accuracy_std": 0.01545041351478263,
+  "fit_diagnosis": {
+    "train_score": 0.8013888888888889,
+    "test_score": 0.7916666666666666,
+    "cv_score": 0.8020833333333334,
+    "train_test_gap": 0.009722222222222299,
+    "diagnosis": "no_obvious_train_test_gap"
+  },
+  "timing": {
+    "fit_time_s": 0.005559572000493063,
+    "predict_test_time_s": 0.0022706560012011323,
+    "predict_train_time_s": 0.0052940089990443084,
+    "fit_plus_test_predict_s": 0.007830228001694195,
+    "cv_time_s": 0.04639228700034437
+  },
+  "environment": {
+    "python": "3.9.23",
+    "scikit_learn": "1.6.1"
+  }
+}

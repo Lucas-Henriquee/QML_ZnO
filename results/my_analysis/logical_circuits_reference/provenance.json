@@ -1,0 +1,34 @@
+[
+  {
+    "source": "results/benchmarks/ibm_shot_comparison/qsvm_ibm/ibm_md3_3q_linear_r1_minmax_512shots_seed42_trial1/run_metadata.json",
+    "fingerprint": "c9d0ce302f85844399c3360210fa12e6eda78c9f3494462cb5fab8ad566fee31",
+    "verified_archived_text": true,
+    "qubits": 3,
+    "depth": 8,
+    "gates": 12,
+    "features": [
+      "feature_md_window_c_surface_distance_mean_a",
+      "feature_md_window_c_surface_distance_std_a",
+      "feature_md_window_mean_oco_angle_deg"
+    ],
+    "scaler": "minmax",
+    "reps": 1,
+    "entanglement": "linear"
+  },
+  {
+    "source": "results/benchmarks/qsvm_unique_windows/qsvm/qsvm_md3_6q_linear_r1_minmax_reference_seed42/metrics.json",
+    "fingerprint": "5d35becd15dd21a065a521d0605d923cdcc06dbefef83c248b0e945b6ac6fcf5",
+    "verified_archived_text": true,
+    "qubits": 6,
+    "depth": 17,
+    "gates": 27,
+    "features": [
+      "feature_md_window_c_surface_distance_mean_a",
+      "feature_md_window_c_surface_distance_std_a",
+      "feature_md_window_mean_oco_angle_deg"
+    ],
+    "scaler": "minmax",
+    "reps": 1,
+    "entanglement": "linear"
+  }
+]

@@ -1,0 +1,30 @@
+__pycache__/
+*.py[cod]
+*$py.class
+
+.venv/
+.venv*/
+venv/
+
+.ipynb_checkpoints/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+.DS_Store
+Thumbs.db
+
+# Large generated simulation runs; keep the directory documentation tracked.
+results/simulations/*/
+
+# Generated dataset runs; keep the directory documentation tracked.
+data/generated/*/
+
+# Isolated model runs; keep the directory documentation tracked.
+results/models/*/
+
+# Isolated analysis runs; keep the directory documentation tracked.
+results/analyses/*/
+
+# Combined-workflow logs and manifests are local run outputs.
+results/workflows/*/

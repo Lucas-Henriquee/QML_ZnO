@@ -1,0 +1,70 @@
+{
+  "model": "SVM",
+  "input_csv": "results/datasets/multitech_expanded_ml_dataset_clean.csv",
+  "feature_set": "static6",
+  "features": [
+    "feature_dft_adsorption_energy_ev",
+    "feature_dft_c_surface_distance_a",
+    "feature_dft_gap_change_ev",
+    "feature_co2rr_deltaG_CO2_to_COOH_ev",
+    "feature_co2rr_deltaG_COOH_to_CO_ev",
+    "feature_co2rr_limiting_potential_v"
+  ],
+  "n_features": 6,
+  "samples": 960,
+  "train_samples": 720,
+  "test_samples": 240,
+  "classes": [
+    0,
+    1,
+    2
+  ],
+  "kernel": "rbf",
+  "C": 1.0,
+  "gamma": "scale",
+  "degree": 3,
+  "class_weight": "balanced",
+  "scaler": "standard",
+  "test_size": 0.25,
+  "random_state": 42,
+  "max_samples": 0,
+  "split_file": "results/benchmarks/svm_feature_comparison_initial/splits/split_static6_nall_test0.25_seed42.csv",
+  "shuffle_label": false,
+  "train_metrics": {
+    "accuracy": 1.0,
+    "balanced_accuracy": 1.0,
+    "f1_macro": 1.0,
+    "f1_weighted": 1.0,
+    "precision_macro": 1.0,
+    "recall_macro": 1.0
+  },
+  "test_metrics": {
+    "accuracy": 1.0,
+    "balanced_accuracy": 1.0,
+    "f1_macro": 1.0,
+    "f1_weighted": 1.0,
+    "precision_macro": 1.0,
+    "recall_macro": 1.0
+  },
+  "cv_folds": 5,
+  "cv_balanced_accuracy_mean": 1.0,
+  "cv_balanced_accuracy_std": 0.0,
+  "fit_diagnosis": {
+    "train_score": 1.0,
+    "test_score": 1.0,
+    "cv_score": 1.0,
+    "train_test_gap": 0.0,
+    "diagnosis": "no_obvious_train_test_gap"
+  },
+  "timing": {
+    "fit_time_s": 0.0021965320011076983,
+    "predict_test_time_s": 0.0007087600024533458,
+    "predict_train_time_s": 0.0007074439999996684,
+    "fit_plus_test_predict_s": 0.002905292003561044,
+    "cv_time_s": 0.018721373999142088
+  },
+  "environment": {
+    "python": "3.9.23",
+    "scikit_learn": "1.6.1"
+  }
+}

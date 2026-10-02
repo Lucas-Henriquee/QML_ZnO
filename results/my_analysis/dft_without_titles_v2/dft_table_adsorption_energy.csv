@@ -1,0 +1,4 @@
+material,site,adsorption_energy_ev,dft_status
+ZnO,top_metal,0.9526809683553559,ok
+ZnO,top_oxygen,-0.025801705925243112,ok
+ZnO,bridge,0.3081946916935756,ok

@@ -1,0 +1,173 @@
+{
+  "model": "QSVM_IBM",
+  "implementation": "manual bound compute-uncompute + SamplerV2 + SVC(precomputed)",
+  "input_csv": "results/datasets/multitech_expanded_ml_dataset_clean.csv",
+  "feature_set": "md3",
+  "features": [
+    "feature_md_window_c_surface_distance_mean_a",
+    "feature_md_window_c_surface_distance_std_a",
+    "feature_md_window_mean_oco_angle_deg"
+  ],
+  "n_features": 3,
+  "n_qubits": 12,
+  "n_feature_map_parameters": 3,
+  "encoding": "custom_multiqubit_zz_reupload",
+  "feature_map_fingerprint": "d52e3ce62712c003f5767ea351a329dbb93ebee8126bde6e81effee1f950f1fb",
+  "reps": 1,
+  "entanglement": "linear",
+  "scaler": "power_minmax",
+  "C": 1.0,
+  "class_weight": "balanced",
+  "samples": 12,
+  "train_samples": 9,
+  "test_samples": 3,
+  "test_size": 0.25,
+  "random_state": 7,
+  "trial": 1,
+  "max_samples": 12,
+  "split_file": "results/benchmarks/svm_qsvm_ibm_reference/run_01/splits/split_md3_n12_test0.25_seed7.csv",
+  "split_sha256": "ef14acf6fe1a072933cd18947a4f8696aa00085d0aee12fe504b55843f372086",
+  "feature_map_depth_pretranspile": 35,
+  "feature_map_size_pretranspile": 57,
+  "transpiled_circuit_stats": {
+    "K_train": {
+      "n_circuits": 36,
+      "depth_min": 14.0,
+      "depth_mean": 129.02777777777777,
+      "depth_max": 170.0,
+      "size_min": 112.0,
+      "size_mean": 226.02777777777777,
+      "size_max": 264.0,
+      "two_qubit_gates_min": 8.0,
+      "two_qubit_gates_mean": 34.833333333333336,
+      "two_qubit_gates_max": 42.0
+    },
+    "K_test": {
+      "n_circuits": 27,
+      "depth_min": 22.0,
+      "depth_mean": 140.03703703703704,
+      "depth_max": 167.0,
+      "size_min": 42.0,
+      "size_mean": 232.88888888888889,
+      "size_max": 267.0,
+      "two_qubit_gates_min": 4.0,
+      "two_qubit_gates_mean": 37.03703703703704,
+      "two_qubit_gates_max": 42.0
+    }
+  },
+  "backend": "ibm_marrakesh",
+  "backend_num_qubits": 156,
+  "shots": 512,
+  "optimization_level": 2,
+  "transpiler_seed": 42,
+  "max_circuits_per_job": 100,
+  "runtime_job_tag": "qsvm-19e19c10a8a5",
+  "kernel_workload_estimate": {
+    "train_off_diagonal_pairs": 36,
+    "test_train_pairs": 27,
+    "approx_total_fidelity_entries": 63
+  },
+  "train_metrics": {
+    "accuracy": 1.0,
+    "balanced_accuracy": 1.0,
+    "f1_macro": 1.0,
+    "f1_weighted": 1.0,
+    "precision_macro": 1.0,
+    "recall_macro": 1.0
+  },
+  "test_metrics": {
+    "accuracy": 0.3333333333333333,
+    "balanced_accuracy": 0.3333333333333333,
+    "f1_macro": 0.16666666666666666,
+    "f1_weighted": 0.16666666666666666,
+    "precision_macro": 0.1111111111111111,
+    "recall_macro": 0.3333333333333333
+  },
+  "fit_diagnosis": {
+    "train_score": 1.0,
+    "test_score": 0.3333333333333333,
+    "train_test_gap": 0.6666666666666667,
+    "diagnosis": "possible_overfitting"
+  },
+  "timing": {
+    "preprocess_train_wall_s": 0.003304562000266742,
+    "preprocess_test_wall_s": 0.0004726920005850843,
+    "kernel_train_wall_s": 14.436384235000332,
+    "kernel_test_wall_s": 22.151487568999983,
+    "kernel_total_wall_s": 36.587871804000315,
+    "model_fit_wall_s": 0.0010039199996754178,
+    "predict_train_wall_s": 0.00016754900025262032,
+    "predict_test_wall_s": 0.00011215399990760488,
+    "quantum_execution_s": 13.0,
+    "circuit_build_wall_s": 0.05993851299990638,
+    "transpile_wall_s": 1.2164684330000455,
+    "submit_wall_s": 2.062356355000702,
+    "job_wait_wall_s": 32.80491828999948,
+    "queue_wall_s": 2.6620960235595703,
+    "service_run_wall_s": 29.274808168411255,
+    "end_to_end_test_wall_s": 36.59276513200075,
+    "precomputed_svc_cpu_wall_s": 0.001283622999835643,
+    "reported_quantum_seconds_sum": 13.0
+  },
+  "classical_baseline": null,
+  "runtime_jobs": [
+    {
+      "job_id": "da3mh243jnrc73af9110",
+      "status": "DONE",
+      "client_submit_wall_s": 1.1968140210001366,
+      "client_wait_wall_s": 12.298438134000207,
+      "queue_wall_s": 1.7751009464263916,
+      "service_run_wall_s": 10.085973024368286,
+      "quantum_seconds": 7.0,
+      "metrics": {
+        "caller": "qiskit_ibm_runtime~sampler.py",
+        "qiskit_version": "qiskit_ibm_runtime-0.43.1,qiskit-1.4.6*,qiskit_aer-0.17.2*,qiskit_machine_learning-0.8.4",
+        "timestamps": {
+          "created": "2026-08-20T20:50:16.377984Z",
+          "finished": "2026-08-20T20:50:28.239058Z",
+          "running": "2026-08-20T20:50:18.153085Z"
+        },
+        "bss": {
+          "seconds": 7
+        },
+        "usage": {
+          "quantum_seconds": 7,
+          "seconds": 7,
+          "status": "complete"
+        }
+      }
+    },
+    {
+      "job_id": "da3mh5jotlns7399sqd0",
+      "status": "DONE",
+      "client_submit_wall_s": 0.8655423340005655,
+      "client_wait_wall_s": 20.50648015599927,
+      "queue_wall_s": 0.8869950771331787,
+      "service_run_wall_s": 19.18883514404297,
+      "quantum_seconds": 6.0,
+      "metrics": {
+        "caller": "qiskit_ibm_runtime~sampler.py",
+        "qiskit_version": "qiskit_ibm_runtime-0.43.1,qiskit-1.4.6*,qiskit_aer-0.17.2*,qiskit_machine_learning-0.8.4",
+        "timestamps": {
+          "created": "2026-08-20T20:50:30.33717Z",
+          "finished": "2026-08-20T20:50:50.413Z",
+          "running": "2026-08-20T20:50:31.224165Z"
+        },
+        "bss": {
+          "seconds": 6
+        },
+        "usage": {
+          "quantum_seconds": 6,
+          "seconds": 6,
+          "status": "complete"
+        }
+      }
+    }
+  ],
+  "environment": {
+    "python": "3.9.23",
+    "qiskit": "1.4.6",
+    "qiskit_ibm_runtime": "0.43.1",
+    "scikit_learn": "1.6.1"
+  }
+}

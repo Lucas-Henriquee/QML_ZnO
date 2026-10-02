@@ -1,0 +1,68 @@
+{
+  "model": "SVM",
+  "input_csv": "results/datasets/multitech_expanded_ml_dataset_clean.csv",
+  "feature_set": "dynamic4",
+  "features": [
+    "feature_tddft_transition_energy_ev",
+    "feature_tddft_transition_oscillator_strength",
+    "feature_md_window_c_surface_distance_mean_a",
+    "feature_md_window_c_surface_distance_std_a"
+  ],
+  "n_features": 4,
+  "samples": 960,
+  "train_samples": 720,
+  "test_samples": 240,
+  "classes": [
+    0,
+    1,
+    2
+  ],
+  "kernel": "rbf",
+  "C": 1.0,
+  "gamma": "scale",
+  "degree": 3,
+  "class_weight": "balanced",
+  "scaler": "standard",
+  "test_size": 0.25,
+  "random_state": 42,
+  "max_samples": 0,
+  "split_file": "results/benchmarks/svm_feature_comparison_initial/splits/split_dynamic4_nall_test0.25_seed42.csv",
+  "shuffle_label": false,
+  "train_metrics": {
+    "accuracy": 0.8041666666666667,
+    "balanced_accuracy": 0.8041666666666667,
+    "f1_macro": 0.8069595030663911,
+    "f1_weighted": 0.806959503066391,
+    "precision_macro": 0.8766404199475065,
+    "recall_macro": 0.8041666666666667
+  },
+  "test_metrics": {
+    "accuracy": 0.7916666666666666,
+    "balanced_accuracy": 0.7916666666666666,
+    "f1_macro": 0.7950480661748266,
+    "f1_weighted": 0.7950480661748267,
+    "precision_macro": 0.8717948717948718,
+    "recall_macro": 0.7916666666666666
+  },
+  "cv_folds": 5,
+  "cv_balanced_accuracy_mean": 0.7895833333333333,
+  "cv_balanced_accuracy_std": 0.014950729265007625,
+  "fit_diagnosis": {
+    "train_score": 0.8041666666666667,
+    "test_score": 0.7916666666666666,
+    "cv_score": 0.7895833333333333,
+    "train_test_gap": 0.012500000000000067,
+    "diagnosis": "no_obvious_train_test_gap"
+  },
+  "timing": {
+    "fit_time_s": 0.005366466997656971,
+    "predict_test_time_s": 0.002158985000278335,
+    "predict_train_time_s": 0.005050460997154005,
+    "fit_plus_test_predict_s": 0.007525451997935306,
+    "cv_time_s": 0.04383826999765006
+  },
+  "environment": {
+    "python": "3.9.23",
+    "scikit_learn": "1.6.1"
+  }
+}

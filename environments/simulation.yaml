@@ -1,0 +1,33 @@
+name: qml-zno-simulation
+
+channels:
+  - conda-forge
+  - nodefaults
+
+dependencies:
+  # Reproducible first-principles stack used by the most recent ZnO runs.
+  - python=3.10.*
+  - gpaw=25.7.*=*mpi_openmpi_omp*
+  - gpaw-data=1.0.*
+  - ase=3.28.*
+  - numpy=2.2.*
+  - scipy=1.15.*
+  - libxc=7.0.*
+
+  # Parallel numerical libraries.
+  - mpi=1.0=openmpi
+  - openmpi=5.0.*
+  - mpi4py
+  - scalapack=2.2.*
+  - fftw=3.3.*=mpi_openmpi_*
+  - elpa
+  - libvdwxc
+
+  # Notebook, configuration, and local analysis support.
+  - pyyaml=6.0.*
+  - pandas=2.3.*
+  - matplotlib=3.10.*
+  - jupyterlab=4.*
+  - nbconvert=7.*
+  - nbclient=0.10.*
+  - ipykernel

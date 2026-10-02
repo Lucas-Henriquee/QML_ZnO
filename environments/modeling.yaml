@@ -1,0 +1,27 @@
+name: qml-zno-modeling
+
+channels:
+  - conda-forge
+  - nodefaults
+
+dependencies:
+  # Shared dataset, analysis, and classical ML stack.
+  - python=3.10.*
+  - numpy=2.1.*
+  - scipy=1.15.*
+  - pandas=2.2.*
+  - scikit-learn=1.6.1
+  - matplotlib=3.10.*
+  - pyyaml=6.0.*
+  - jupyterlab=4.*
+  - nbconvert=7.*
+  - nbclient=0.10.*
+  - ipykernel
+  - pip
+
+  # These versions reproduce the QML and IBM runs recorded in results/.
+  - pip:
+      - qiskit==1.4.6
+      - qiskit-aer==0.17.2
+      - qiskit-machine-learning==0.8.4
+      - qiskit-ibm-runtime==0.43.1

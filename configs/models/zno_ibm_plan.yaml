@@ -1,0 +1,58 @@
+schema_version: 1
+
+project:
+  name: zno-md-window-ibm-plan
+  description: Small matched local and IBM QSVM plan with no automatic submission.
+
+input:
+  dataset: data/generated/zno_existing_v1/multitech/md_window_unique_dataset.csv
+  label: label_site_id
+
+output:
+  root: results/models
+
+execution:
+  environment: qml-zno-modeling
+  timeout_seconds: 300
+  fail_fast: true
+
+split:
+  seeds: [42]
+  test_size: 0.25
+  max_samples: 12
+
+common:
+  feature_sets: [md3]
+  c_parameter: 1.0
+  class_weight: balanced
+
+svm:
+  kernels: [rbf]
+  scalers: [power]
+  gamma: scale
+  degree: 3
+  cv_folds: 3
+
+qsvm:
+  scalers: [power_minmax]
+  entanglements: [linear]
+  reps: [1]
+  qubits: [0]
+  cv_folds: 0
+  simulators: [reference]
+  mps_max_bond_dimension: 0
+  mps_truncation_threshold: 0.0
+
+ibm:
+  feature_sets: [md3]
+  qubits: [3]
+  shots: [512]
+  # Set a backend explicitly before any repeated or real hardware study.
+  backend: null
+  account: null
+  instance: null
+  optimization_level: 2
+  transpiler_seed: 42
+  max_circuits_per_job: 100
+  trials: 1
+  force_ipv4: false

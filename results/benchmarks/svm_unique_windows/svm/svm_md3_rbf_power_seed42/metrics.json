@@ -1,0 +1,81 @@
+{
+  "model": "SVM",
+  "input_csv": "results/datasets/md_window_unique_dataset.csv",
+  "feature_set": "md3",
+  "features": [
+    "feature_md_window_c_surface_distance_mean_a",
+    "feature_md_window_c_surface_distance_std_a",
+    "feature_md_window_mean_oco_angle_deg"
+  ],
+  "n_features": 3,
+  "samples": 30,
+  "train_samples": 22,
+  "test_samples": 8,
+  "classes": [
+    0,
+    1,
+    2
+  ],
+  "kernel": "rbf",
+  "C": 10.0,
+  "gamma": "scale",
+  "degree": 3,
+  "class_weight": "balanced",
+  "scaler": "power",
+  "test_size": 0.25,
+  "random_state": 42,
+  "max_samples": 30,
+  "split_file": "results/benchmarks/svm_unique_windows/splits/split_md3_n30_test0.25_seed42.csv",
+  "split_sha256": "848bae125ad9a5b17bf4d808d7918c5718613679c5205feff5e3d28ff8e6eac3",
+  "shuffle_label": false,
+  "train_metrics": {
+    "accuracy": 1.0,
+    "balanced_accuracy": 1.0,
+    "f1_macro": 1.0,
+    "f1_weighted": 1.0,
+    "precision_macro": 1.0,
+    "recall_macro": 1.0
+  },
+  "test_metrics": {
+    "accuracy": 0.375,
+    "balanced_accuracy": 0.38888888888888884,
+    "f1_macro": 0.38888888888888884,
+    "f1_weighted": 0.3958333333333333,
+    "precision_macro": 0.5277777777777778,
+    "recall_macro": 0.38888888888888884
+  },
+  "cv_folds": 5,
+  "cv_balanced_accuracy_mean": 0.7333333333333334,
+  "cv_balanced_accuracy_std": 0.13333333333333336,
+  "fit_diagnosis": {
+    "train_score": 1.0,
+    "test_score": 0.38888888888888884,
+    "cv_score": 0.7333333333333334,
+    "train_test_gap": 0.6111111111111112,
+    "diagnosis": "possible_overfitting"
+  },
+  "timing": {
+    "preprocess_train_wall_s": 0.002647047000209568,
+    "preprocess_test_wall_s": 0.0006379470014508115,
+    "kernel_train_wall_s": null,
+    "kernel_test_wall_s": null,
+    "kernel_total_wall_s": null,
+    "model_fit_wall_s": 0.0010063879999506753,
+    "predict_train_wall_s": 9.734500054037198e-05,
+    "predict_test_wall_s": 0.00013521800065063871,
+    "quantum_execution_s": null,
+    "transpile_wall_s": null,
+    "job_wait_wall_s": null,
+    "end_to_end_test_wall_s": 0.004426600002261694,
+    "cv_wall_s": 0.030712832000062917,
+    "fit_time_s": 0.0010063879999506753,
+    "predict_test_time_s": 0.00013521800065063871,
+    "predict_train_time_s": 9.734500054037198e-05,
+    "fit_plus_test_predict_s": 0.001141606000601314,
+    "cv_time_s": 0.030712832000062917
+  },
+  "environment": {
+    "python": "3.9.23",
+    "scikit_learn": "1.6.1"
+  }
+}
