@@ -1,16 +1,14 @@
 # ZnO–CO₂ adsorption: simulations, ML, and QML
 
-This repository contains the simulations, datasets, and analyses used to compare
-CO₂ adsorption at the top-metal, top-oxygen, and bridge sites on ZnO. DFT,
-TDDFT, CO₂ reduction, AIMD, and NEB provide the physical results. The reported
-classification experiments use AIMD-window descriptors to compare classical
-machine learning (ML; SVM) with quantum machine learning (QML; QSVM), including
-selected IBM Quantum hardware tests. The simulation code also supports TiO₂ and
-CeO₂; the saved studies focus on ZnO.
+Code and results for comparing CO₂ adsorption at the top-metal, top-oxygen,
+and bridge sites on ZnO. Physical calculations include DFT, TDDFT, CO₂RR,
+AIMD, and NEB. Classical SVM and quantum-kernel SVM models classify adsorption
+sites using AIMD-window descriptors; selected models were also tested on IBM
+Quantum hardware.
 
 ## Setup
 
-Run these commands from the repository root:
+From the repository root:
 
 ```bash
 ./scripts/environment/setup_environment.sh all
@@ -18,63 +16,37 @@ Run these commands from the repository root:
 ./scripts/environment/check_environment.sh modeling
 ```
 
-The launchers use `qml-zno-simulation` for simulations and
-`qml-zno-modeling` for datasets, models, and analysis.
-See [environment setup](environments/README.md) for installation details.
+See [environment setup](environments/README.md) for details.
 
-## Run a stage
+## Run
 
-| Stage | Preview command | Configuration |
-| --- | --- | --- |
-| Simulations | `./run_simulations.sh all --dry-run` | `configs/simulations/zno_production.yaml` |
-| Datasets | `./run_datasets.sh all --dry-run` | `configs/datasets/zno_existing_results.yaml` |
-| ML and ideal QML | `./run_models.sh local --dry-run` | `configs/models/zno_local.yaml` |
-| Analysis | `./run_analysis.sh all --dry-run` | `configs/analysis/zno_current.yaml` |
+Preview each stage before execution:
 
-Use `--run-id NAME` for a new output
-directory and `--config PATH` to select settings. Each launcher has `--help`.
-When no run name is supplied, outputs use numbered names such as
-`simulation_01`, `dataset_01`, `local_01`, and `analysis_01`.
-The next available number is selected; existing results are never replaced.
-Input paths in the supplied profiles refer to existing local campaigns;
-use `--dataset`, `--source-results`, or `--model-run` to select other inputs.
+```bash
+./run_simulations.sh all 
+./run_datasets.sh all 
+./run_models.sh local 
+./run_analysis.sh all 
+```
 
-[Run the complete local workflow](docs/reproduction.md) with `run_all.sh`.
-It takes explicit configurations and prints a plan until `--execute` is supplied.
+The launchers use the profiles in `configs/`. Use `--help` for stage options,
+`--config PATH` for another profile, or `--run-id NAME` to name an output run.
+See [reproduction](docs/reproduction.md) for the complete `run_all.sh` workflow.
 
-IBM planning is available without an account:
+IBM hardware runs require an account and explicit submission. An account-free
+preview is available with:
 
 ```bash
 ./run_models.sh ibm-plan --config configs/models/zno_ibm_plan.yaml
 ```
 
-Hardware execution requires `ibm --submit-ibm --backend NAME`.
-See [models](docs/models.md).
+See [model instructions](docs/models.md) before submitting hardware jobs.
 
-## Layout
+## Repository guide
 
-| Directory | Contents |
-| --- | --- |
-| `configs/` | Execution parameters and input paths |
-| `environments/` | Conda environment definitions |
-| `scripts/simulations/` | DFT, TDDFT, MD, NEB, CO₂RR, and geometry builders |
-| `scripts/datasets/` | Dataset builders |
-| `scripts/models/` | Classical SVM, ideal QSVM, IBM, and benchmarks |
-| `scripts/analysis/` | Tables and numerical summaries |
-| `scripts/visualization/` | Plotting and circuit diagrams |
-| `scripts/workflows/` | Stage coordination |
-| `scripts/common/` | Shared paths and utilities |
-| `scripts/legacy/` | Earlier campaign-specific plotting implementations |
-| `data/` | Geometries and datasets |
-| `results/` | Saved campaigns and new run outputs |
-| `figures/` | Selected manuscript figures |
-| `notebooks/` | ZnO notebook and its launchers |
-| `docs/` | Usage and testing guides |
-| `tests/` | Preservation and workflow checks |
-
-New runs write to `results/simulations/ID`, `data/generated/ID`,
-`results/models/ID`, and `results/analyses/ID`. Their manifests record inputs,
-commands, configurations, and status. Saved campaigns use descriptive names.
+`configs/` holds run settings; `scripts/` holds simulations, dataset builders,
+models, and analysis; `data/` holds inputs and datasets; `results/` holds saved
+outputs. Figures are in `figures/`, and detailed instructions are in `docs/`.
 
 ## Tests
 
@@ -82,12 +54,4 @@ commands, configurations, and status. Saved campaigns use descriptive names.
 conda run -n qml-zno-simulation python -m unittest discover -s tests -v
 ```
 
-Tests cover syntax, launcher arguments, dataset file discovery, and configuration
-consistency. They do not establish convergence of the scientific calculations.
-The [simulation guide](docs/simulations.md) lists the differences between the
-notebook configuration and standalone defaults.
-
-[Documentation index](docs/README.md) ·
-[Reproduction](docs/reproduction.md) ·
-[Dataset reference](docs/datasets_reference.md) ·
-[Manual testing](docs/testing.md)
+Tests check the code and workflows, not scientific convergence.
